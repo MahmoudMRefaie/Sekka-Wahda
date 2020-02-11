@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textColor="#1F67B9"
+        android:id="@+id/forget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="cancelation"
+        android:textSize="30dp"
+        android:textDirection="ltr"
+        android:textAlignment="center"
+
+
+        />
+    <EditText
+        android:scrollbars="vertical"
+        android:inputType="textMultiLine"
+        android:background="@drawable/textedit"
+        android:id="@+id/edittexjornynumber"
+        android:layout_width="304dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textColorHint="#000"
+        android:ems="10"
+        android:textFontWeight="35"
+        android:hint="Journy number"
+        android:textSize="28dp"
+        />
+
+    <EditText
+        android:textFontWeight="35"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:background="@drawable/textedit"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarSize="5dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="#000"
+        android:textSize="28dp"
+        android:id="@+id/describtion"
+        android:layout_width="304dp"
+        android:layout_height="200dp"
+        android:gravity="top"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+
+        android:hint="dscribtion"
+
+        />
+
+<Button
+        android:background="@drawable/buttonedit"
+        android:id="@+id/button"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="Confirm"
+        />
+
+</LinearLayout>
+

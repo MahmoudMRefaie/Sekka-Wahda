@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">sekka Wa7da</string>
+
+    <string-array name="numbers">
+        <item>count</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+
+    </string-array>
+
+    <string name="reg">Register</string>
+    <string name="user">Username</string>
+    <string name="pass">Password</string>
+    <string name="phone">Phone Number</string>
+    <string name="city">City</string>
+    <string name="regBtn">Register Now</string>
+
+    <string-array name="city_spinner">
+        <item>Select City:</item>
+        <item>Aswan</item>
+        <item>Luxor</item>
+        <item>Qena</item>
+        <item>Sohag</item>
+        <item>Assiut</item>
+        <item>Minia</item>
+        <item>Beni Swief</item>
+        <item>Cairo</item>
+        <item>Alexandria</item>
+    </string-array>
+</resources>
