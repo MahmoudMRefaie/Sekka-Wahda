@@ -1,9 +1,9 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.SharedPreferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-class PreferenceHelper {
+public class PreferenceHelper {
 
     private final String INTRO = "intro";
     private final String USERNAME = "UserName";

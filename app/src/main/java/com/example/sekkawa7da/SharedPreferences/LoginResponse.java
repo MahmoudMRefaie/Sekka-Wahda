@@ -1,4 +1,4 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.SharedPreferences;
 
 public class LoginResponse {
     private String access_token;
@@ -35,3 +35,4 @@ public class LoginResponse {
         this.expires_in = expires_in;
     }
 }
+

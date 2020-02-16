@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#EBE6E6"
+    android:background="@drawable/gradient"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Login"
     android:orientation="vertical">
 
     <ImageView
@@ -17,44 +17,46 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="10dp"
         tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="46dp" />
+        tools:layout_editor_absoluteY="46dp"/>
 
-    <EditText
-        android:textAlignment="center"
-        android:background="@drawable/textedit"
-        android:textColorHint="#1B1A1A"
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username"
-        android:textSize="20dp"
         android:layout_width="304dp"
-        android:layout_height="66dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:hint="User name"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="169dp" />
+        android:layout_marginTop="30dp"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        style="@style/TextInputLayoutStyleLogin">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textCursorDrawable="@color/colorBlack"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:textColorHint="#1B1A1A"
-        android:background="@drawable/textedit"
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="62dp"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="50dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="304dp"/>
-
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        style="@style/TextInputLayoutStyleLogin">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textCursorDrawable="@color/colorBlack"/>
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:background="@drawable/buttonedit"
         android:id="@+id/btnLogin"
@@ -98,12 +100,13 @@
         android:textColor="#3643B8"
         android:id="@+id/terms"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:text="Terms ,conditions &amp; privacy policy "
+        android:text="Terms ,conditions &amp; privacy policy"
         android:textAlignment="center"
         android:visibility="visible"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="547dp"/>
+
 </LinearLayout>

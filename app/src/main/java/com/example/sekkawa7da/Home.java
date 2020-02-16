@@ -1,18 +1,16 @@
 package com.example.sekkawa7da;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.sekkawa7da.SharedPreferences.LoginResponse;
+import com.example.sekkawa7da.SharedPreferences.SharedPrefManager;
 
 public class Home extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -48,7 +46,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemSelecte
     protected void onStart() {
         super.onStart();
         if(!SharedPrefManager.getInstance(this).isLoggedIn()) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Login.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }

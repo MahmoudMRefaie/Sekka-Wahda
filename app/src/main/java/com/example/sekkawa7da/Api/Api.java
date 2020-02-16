@@ -1,4 +1,7 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.Api;
+
+import com.example.sekkawa7da.SharedPreferences.LoginResponse;
+import com.example.sekkawa7da.User;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -20,6 +23,5 @@ public interface Api {
             @Field("username") String username,
             @Field("password") String password,
             @Field("grant_type") String grant_type
-
     );
 }

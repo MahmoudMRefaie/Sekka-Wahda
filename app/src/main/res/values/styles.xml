@@ -4,8 +4,30 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorBlue</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutStyleLogin" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#6415E2</item>
+        <item name="boxStrokeWidth">10dp</item>
+        <item name="hintTextAppearance">@style/active</item>
+    </style>
+    <style name="TextInputLayoutStyleRegisteration" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#6415E2</item>
+        <item name="boxStrokeWidth">10dp</item>
+        <item name="hintTextAppearance">@style/active</item>
+    </style>
+
+    <style name="inactive" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+
+    <style name="active" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColor">#6415E2</item>
+        <item name="android:textSize">12dp</item>
     </style>
 
 </resources>

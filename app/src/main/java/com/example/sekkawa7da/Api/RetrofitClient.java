@@ -1,4 +1,4 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.Api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

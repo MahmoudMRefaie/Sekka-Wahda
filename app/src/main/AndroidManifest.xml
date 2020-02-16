@@ -3,20 +3,21 @@
     package="com.example.sekkawa7da">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Forgetpassword"></activity>
-        <activity android:name=".Registeration" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Forgetpassword" />
+        <activity android:name=".Registeration"/>
         <activity android:name=".Cancelation" />
         <activity android:name=".Reservation" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

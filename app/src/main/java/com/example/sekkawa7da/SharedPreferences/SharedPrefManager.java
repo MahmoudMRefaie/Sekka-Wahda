@@ -1,7 +1,9 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.SharedPreferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.example.sekkawa7da.User;
 
 public class SharedPrefManager {
     private static final String SHARED_PREF_NAME = "my_shared_pref";
