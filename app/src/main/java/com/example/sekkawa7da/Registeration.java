@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,9 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sekkawa7da.Api.RetrofitClient;
@@ -24,6 +27,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -31,11 +35,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Registeration extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class Registeration extends AppCompatActivity implements AdapterView.OnItemSelectedListener , View.OnClickListener{
 
     private Button registerBtn;
     private TextInputLayout username,email,password,ssn,phone_no;
-    private ImageView backArrow;
+    private TextView signIn;
     private Spinner city;
     private CheckBox ifAgree;
     private PreferenceHelper preferenceHelper;
@@ -53,12 +57,21 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         city = (Spinner)findViewById(R.id.city);
         ifAgree = (CheckBox)findViewById(R.id.agreeCheck);
         registerBtn = (Button)findViewById(R.id.regBtn);
-        backArrow = (ImageView) findViewById(R.id.back_arraw);
+        signIn = (TextView) findViewById(R.id.signIn);
 
-        /*if(ifAgree.isChecked())
-            button.setEnabled(true);
-        else
-            button.setEnabled(true);*/
+        ifAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked) {
+                    registerBtn.setEnabled(true);
+                    registerBtn.setBackgroundResource(R.drawable.register_button);
+                }
+                else {
+                    registerBtn.setEnabled(false);
+                    registerBtn.setBackgroundResource(R.drawable.register_unclickable_button);
+                }
+            }
+        });
 
         preferenceHelper = new PreferenceHelper(this);
         if(preferenceHelper.getIsLogin()) {
@@ -74,41 +87,43 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         city.setAdapter(adapter);
         //spinner.setOnItemSelectedListener(this);
 
+        registerBtn.setOnClickListener(this);
+        signIn.setOnClickListener(this);
 
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String getUserName = username.getEditText().getText().toString().trim();
-                String getEmail = email.getEditText().getText().toString().trim();
-                String getPassword = password.getEditText().getText().toString().trim();
-                String getSsn = ssn.getEditText().getText().toString().trim();
-                String getPhone = phone_no.getEditText().getText().toString().trim();
-                String getCity = city.getSelectedItem().toString();
+    }
+    @Override
+    public void onClick(View view) {
+        if(view.getId()==R.id.regBtn){
+            String getUserName = username.getEditText().getText().toString().trim();
+            String getEmail = email.getEditText().getText().toString().trim();
+            String getPassword = password.getEditText().getText().toString().trim();
+            String getSsn = ssn.getEditText().getText().toString().trim();
+            String getPhone = phone_no.getEditText().getText().toString().trim();
+            String getCity = city.getSelectedItem().toString();
 
-                User user = new User(getUserName,getEmail,getPassword,getSsn,getPhone,getCity);
+            User user = new User(getUserName,getEmail,getPassword,getSsn,getPhone,getCity);
 
-                Call<String> call = RetrofitClient.getInstance().getApi().createUser(user);
+            Call<String> call = RetrofitClient.getInstance().getApi().createUser(user);
 
-                //Toast.makeText(Registeration.this, getUserName, Toast.LENGTH_LONG).show();
-                call.enqueue(new Callback<String>() {
-                    @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        try {
-                            if (response.isSuccessful()) {
-                                String res = response.body();
-                                Toast.makeText(Registeration.this, "Registered Successfully" , Toast.LENGTH_LONG).show();
-                                openActivityLogin();
-                                //text.setText(res);
-                            } else {
-                                String res = response.errorBody().string();
-                                Toast.makeText(Registeration.this, res, Toast.LENGTH_LONG).show();
-                                Log.e("Error Code", String.valueOf(response.code()));
-                                Log.e("Error Body", response.errorBody().toString());
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
+            call.enqueue(new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    try {
+                        if (response.isSuccessful()) {
+                            String res = response.body();
+                            Toast.makeText(Registeration.this, "Registered Successfully" , Toast.LENGTH_LONG).show();
+                            openActivityLogin();
+                            //text.setText(res);
+                        } else {
+                            String res = response.errorBody().string();
+                            Toast.makeText(Registeration.this, res, Toast.LENGTH_LONG).show();
+                            Log.e("Error Code", String.valueOf(response.code()));
+                            Log.e("Error Body", response.errorBody().toString());
                         }
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
+                }
             /*public void onResponse(Call<String> call, Response<String> response) {
                 Log.i("Responsestring", response.body().toString());
                 //Toast.makeText(Registeration.this,"Registered Successfully",Toast.LENGTH_LONG).show();
@@ -130,25 +145,17 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
                 }
             }*/
 
-                    @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-                        Toast.makeText(Registeration.this,"On Failure",Toast.LENGTH_LONG).show();
-                    }
-                });
-            }
-        });
-
-        backArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                backArrow.setColorFilter(ContextCompat.getColor(Registeration.this, R.color.colorArrowDarker),
-                        android.graphics.PorterDuff.Mode.MULTIPLY);
-
-                openActivityLogin();
-            }
-        });
-
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Toast.makeText(Registeration.this,"Check Your Connection",Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+        else if(view.getId()== R.id.signIn){
+            openActivityLogin();
+        }
     }
+
 
     @Override
     protected void onStart() {
@@ -159,7 +166,6 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
             startActivity(intent);
         }
     }
-
 
     private void registerMe() {
 
@@ -230,7 +236,6 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 
-
     private void saveInfo(String response){
 
         preferenceHelper.putIsLogin(true);
@@ -294,5 +299,4 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         Intent intent = new Intent(this , Login.class);
         startActivity(intent);
     }
-
 }

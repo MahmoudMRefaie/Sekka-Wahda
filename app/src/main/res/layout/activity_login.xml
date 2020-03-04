@@ -58,7 +58,7 @@
             android:textCursorDrawable="@color/colorBlack"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:background="@drawable/buttonedit"
+        android:background="@drawable/register_button"
         android:id="@+id/btnLogin"
         android:layout_width="188dp"
         android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
 
     <Button
         android:id="@+id/register"
-        android:background="@drawable/buttonedit"
+        android:background="@drawable/register_button"
         android:layout_width="188dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

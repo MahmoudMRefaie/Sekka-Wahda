@@ -6,15 +6,7 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-
     </string-array>
-
-    <string name="reg">Register</string>
-    <string name="user">Username</string>
-    <string name="pass">Password</string>
-    <string name="phone">Phone Number</string>
-    <string name="city">City</string>
-    <string name="regBtn">Register Now</string>
 
     <string-array name="city_spinner">
         <item>Select City:</item>
@@ -28,4 +20,35 @@
         <item>Cairo</item>
         <item>Alexandria</item>
     </string-array>
+
+
+    <string name="registerReg">Register</string>
+    <string name="createAcc">Create your accont</string>
+    <string name="userReg">Username</string>
+    <string name="emailReg">Email</string>
+    <string name="passReg">Password</string>
+    <string name="ssnReg">SSN</string>
+    <string name="phoneReg">Phone Number</string>
+    <string name="privacy">I agree the Terms of Use &amp; Privacy Policy</string>
+    <string name="alreadyHave">already have an account? </string>
+    <string name="signIn">Sign In </string>
+
+    <dimen name="viewWidth">115dp</dimen>
+    <dimen name="viewHeight">2dp</dimen>
+    <dimen name="viewMarginTop">40dp</dimen>
+    <dimen name="headerSize">50sp</dimen>
+    <dimen name="createAccSize">20sp</dimen>
+    <dimen name="createMarginTop">5dp</dimen>
+    <dimen name="boxWidth">270dp</dimen>
+    <dimen name="userBoxMarginTop">10dp</dimen>
+    <dimen name="boxPaddingLeftRight">10dp</dimen>
+    <dimen name="spinnerHeight">45dp</dimen>
+    <dimen name="privacyMarginTop">10dp</dimen>
+    <dimen name="regBtnWidth">300dp</dimen>
+    <dimen name="regBtnMarginTop">10dp</dimen>
+    <dimen name="regBtnSize">45sp</dimen>
+    <dimen name="alreadySize">20sp</dimen>
+    <dimen name="signInSize">20sp</dimen>
+
+
 </resources>

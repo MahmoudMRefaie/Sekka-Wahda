@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_spinner">
+        <item>اختر المدينة :</item>
+        <item>أسوان</item>
+        <item>الأقصر</item>
+        <item>قنا</item>
+        <item>سوهاج</item>
+        <item>أسيوط</item>
+        <item>المنيا</item>
+        <item>بنى سويف</item>
+        <item>القاهرة</item>
+        <item>الاسكندرية</item>
+    </string-array>
+
+    <string name="registerReg">التسجيل</string>
+    <string name="createAcc">انشأ حسابك</string>
+    <string name="userReg">الاسم</string>
+    <string name="emailReg">البريد الإلكترونى</string>
+    <string name="passReg">كلمة المرور</string>
+    <string name="ssnReg">الرقم القومى</string>
+    <string name="phoneReg">رقم التليفون</string>
+    <string name="privacy">اوافق على الشروط والأحكام</string>
+    <string name="alreadyHave">تملك حساباً بالفعل ؟ </string>
+    <string name="signIn">سجل الدخول </string>
+</resources>

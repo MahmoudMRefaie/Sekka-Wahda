@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@android:dimen/app_icon_size"></corners>
+    <gradient
+        android:startColor="@color/Button_gredient_start"
+        android:centerColor="@color/Button_gredient_center"
+        android:endColor="@color/Button_gredient_end"
+        android:angle="0"/>
+    <!--<stroke android:color="#196AC7" android:width="3dp"/>-->
+</shape>

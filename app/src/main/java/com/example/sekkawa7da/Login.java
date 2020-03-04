@@ -53,8 +53,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
         preferenceHelper = new PreferenceHelper(this);
-
-
     }
     @Override
     public void onClick(View view) {
@@ -208,7 +206,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             etUname.setError(null);
             return true;
         }
-        //private EditText etUname, etPass;
     }
 
     private boolean validatePassword() {
@@ -222,7 +219,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             return true;
         }
     }
-
 
         /*findViewById(R.id.forget).setOnClickListener(this);
         findViewById(R.id.login).setOnClickListener(this);

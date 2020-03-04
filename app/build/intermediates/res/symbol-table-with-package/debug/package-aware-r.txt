@@ -613,6 +613,7 @@ color colorBlack
 color colorBlue
 color colorBorder
 color colorGreen
+color colorGrey
 color colorPrimaryDark
 color colorSolid
 color colorUser
@@ -1009,7 +1010,6 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable back_arrow_button
-drawable buttonedit
 drawable checked
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1017,6 +1017,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dropdown_border
 drawable edit_text_background
 drawable gradient
 drawable ic_arrow_back_blue_24dp
@@ -1048,8 +1049,10 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable person_background
+drawable register_button
 drawable register_edit_text_border
 drawable register_page_border
+drawable register_unclickable_button
 drawable relative_layout_background
 drawable text_view_register
 drawable textedit
@@ -1088,7 +1091,6 @@ id all
 id always
 id async
 id auto
-id back_arraw
 id barrier
 id beginning
 id blocking
@@ -1250,6 +1252,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signIn
 id smallLabel
 id snackbar_action
 id snackbar_text
