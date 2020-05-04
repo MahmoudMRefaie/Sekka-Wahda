@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Home_navigation" />
         <activity android:name=".Forgetpassword" />
-        <activity android:name=".Registeration"/>
+        <activity android:name=".Registeration" />
         <activity android:name=".Cancelation" />
         <activity android:name=".Reservation" />
         <activity android:name=".Home" />

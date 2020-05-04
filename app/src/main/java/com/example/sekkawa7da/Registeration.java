@@ -152,7 +152,10 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
             });
         }
         else if(view.getId()== R.id.signIn){
-            openActivityLogin();
+            //openActivityLogin();
+            Intent intent = new Intent(this, Home_navigation.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
     }
 

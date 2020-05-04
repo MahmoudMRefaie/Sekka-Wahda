@@ -105,7 +105,6 @@ public class User {
         this.city = city;
     }
 
-
     public String getGrant_type() {
         return grant_type;
     }

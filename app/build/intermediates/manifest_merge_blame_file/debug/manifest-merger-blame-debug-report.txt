@@ -15,11 +15,11 @@
 11-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:7:5-27:19
+13-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:7:5-28:19
 14        android:allowBackup="true"
 14-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.0.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\36e3e9561b56dfae3649040dc909bb65\core-1.0.1\AndroidManifest.xml:22:18-86
+15-->[androidx.core:core:1.1.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\da95e0dd41fd0c634661df2a0f122634\core-1.1.0\AndroidManifest.xml:24:18-86
 16        android:debuggable="true"
 17        android:icon="@drawable/logo"
 17-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:9:9-38
@@ -34,35 +34,49 @@
 22-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:13:9-40
 23        android:usesCleartextTraffic="true" >
 23-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:14:9-44
-24        <activity android:name="com.example.sekkawa7da.Forgetpassword" />
-24-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:15:9-52
-24-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:15:19-49
-25        <activity android:name="com.example.sekkawa7da.Registeration" />
-25-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:16:9-50
-25-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:16:19-48
-26        <activity android:name="com.example.sekkawa7da.Cancelation" />
-26-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:17:9-49
-26-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:17:19-46
-27        <activity android:name="com.example.sekkawa7da.Reservation" />
+24        <activity android:name="com.example.sekkawa7da.Home_navigation" />
+24-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:15:9-53
+24-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:15:19-50
+25        <activity android:name="com.example.sekkawa7da.Forgetpassword" />
+25-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:16:9-52
+25-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:16:19-49
+26        <activity android:name="com.example.sekkawa7da.Registeration" />
+26-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:17:9-51
+26-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:17:19-48
+27        <activity android:name="com.example.sekkawa7da.Cancelation" />
 27-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:18:9-49
 27-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:18:19-46
-28        <activity android:name="com.example.sekkawa7da.Home" />
-28-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:19:9-42
-28-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:19:19-39
-29        <activity android:name="com.example.sekkawa7da.Login" >
-29-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:20:9-26:20
-29-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:20:19-40
-30            <intent-filter>
-30-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:21:13-25:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:22:17-69
-31-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:22:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:24:17-77
-33-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:24:27-74
-34            </intent-filter>
-35        </activity>
-36    </application>
+28        <activity android:name="com.example.sekkawa7da.Reservation" />
+28-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:19:9-49
+28-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:19:19-46
+29        <activity android:name="com.example.sekkawa7da.Home" />
+29-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:20:9-42
+29-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:20:19-39
+30        <activity android:name="com.example.sekkawa7da.Login" >
+30-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:21:9-27:20
+30-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:21:19-40
+31            <intent-filter>
+31-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:22:13-26:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:23:17-69
+32-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:23:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:25:17-77
+34-->C:\Users\User1\Downloads\sekkaWa7da\app\src\main\AndroidManifest.xml:25:27-74
+35            </intent-filter>
+36        </activity>
 37
-38</manifest>
+38        <provider
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\090434a1b2305b2572c380a8c896bb3c\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+39            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\090434a1b2305b2572c380a8c896bb3c\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+40            android:authorities="com.example.sekkawa7da.lifecycle-process"
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\090434a1b2305b2572c380a8c896bb3c\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+41            android:exported="false"
+41-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\090434a1b2305b2572c380a8c896bb3c\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+42            android:multiprocess="true" />
+42-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\090434a1b2305b2572c380a8c896bb3c\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+43    </application>
+44
+45</manifest>

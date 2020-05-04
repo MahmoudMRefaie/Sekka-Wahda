@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_navigation">
+        <RelativeLayout
+            android:id="@+id/create_post"
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/relative_layout_background">
+
+            <ImageView
+                android:id="@+id/profPicUser"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_person_black_24dp"
+                android:background="@drawable/person_background"/>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mahmoud Refaie"
+                android:layout_toRightOf="@+id/profPicUser"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/colorUser"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/writePost"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_below="@+id/profPicUser"
+                android:hint="Write a post"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/edit_text_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/posts_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/create_post"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

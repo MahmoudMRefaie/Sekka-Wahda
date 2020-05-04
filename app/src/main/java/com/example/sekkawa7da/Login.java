@@ -107,7 +107,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void openHomeActivity() {
-        Intent intent = new Intent(this, Home.class);
+        Intent intent = new Intent(this, Home_navigation.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
