@@ -1,4 +1,4 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,15 +6,15 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 
-import com.example.sekkawa7da.homeNavigationFragments.HomeFragment;
-import com.example.sekkawa7da.homeNavigationFragments.MoreFragment;
-import com.example.sekkawa7da.homeNavigationFragments.NotificationsFragment;
-import com.example.sekkawa7da.homeNavigationFragments.SearchFragment;
+import com.example.sekkawa7da.R;
+import com.example.sekkawa7da.MainPageNavigationFragments.HomeFragment;
+import com.example.sekkawa7da.MainPageNavigationFragments.MoreFragment;
+import com.example.sekkawa7da.MainPageNavigationFragments.NotificationsFragment;
+import com.example.sekkawa7da.MainPageNavigationFragments.SearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Home_navigation extends AppCompatActivity {
+public class MainPage extends AppCompatActivity {
 
     BottomNavigationView topNav;
     //FrameLayout mainFragments;

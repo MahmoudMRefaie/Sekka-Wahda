@@ -12,13 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Home_navigation" />
+        <activity android:name=".ui.MainPage" />
         <activity android:name=".Forgetpassword" />
-        <activity android:name=".Registeration" />
+        <activity android:name=".ui.Registeration" />
         <activity android:name=".Cancelation" />
         <activity android:name=".Reservation" />
-        <activity android:name=".Home" />
-        <activity android:name=".Login">
+        <activity android:name=".ui.Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

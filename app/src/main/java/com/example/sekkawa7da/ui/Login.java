@@ -1,4 +1,4 @@
-package com.example.sekkawa7da;
+package com.example.sekkawa7da.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sekkawa7da.Api.RetrofitClient;
+import com.example.sekkawa7da.R;
 import com.example.sekkawa7da.SharedPreferences.LoginResponse;
 import com.example.sekkawa7da.SharedPreferences.PreferenceHelper;
 import com.example.sekkawa7da.SharedPreferences.SharedPrefManager;
@@ -107,7 +108,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void openHomeActivity() {
-        Intent intent = new Intent(this, Home_navigation.class);
+        Intent intent = new Intent(this, MainPage.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
@@ -158,7 +159,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 saveInfo(response);
 
                 Toast.makeText(Login.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Login.this, Home.class);
+                Intent intent = new Intent(Login.this, MainPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 this.finish();

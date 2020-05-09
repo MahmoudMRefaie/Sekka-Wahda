@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">سكة واحدة</string>
+
     <string-array name="city_spinner">
         <item>اختر المدينة :</item>
         <item>أسوان</item>

@@ -22,13 +22,12 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.sekkawa7da.Home_navigation" />
+        <activity android:name="com.example.sekkawa7da.ui.MainPage" />
         <activity android:name="com.example.sekkawa7da.Forgetpassword" />
-        <activity android:name="com.example.sekkawa7da.Registeration" />
+        <activity android:name="com.example.sekkawa7da.ui.Registeration" />
         <activity android:name="com.example.sekkawa7da.Cancelation" />
         <activity android:name="com.example.sekkawa7da.Reservation" />
-        <activity android:name="com.example.sekkawa7da.Home" />
-        <activity android:name="com.example.sekkawa7da.Login" >
+        <activity android:name="com.example.sekkawa7da.ui.Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

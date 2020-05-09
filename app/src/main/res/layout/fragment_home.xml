@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:id="@+id/fragment_container"
@@ -10,18 +11,21 @@
         android:layout_below="@+id/top_navigation">
         <RelativeLayout
             android:id="@+id/create_post"
-            android:layout_below="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="@drawable/relative_layout_background">
+            android:elevation="10dp"
+            android:background="@drawable/relative_layout_background"
+            android:layout_marginHorizontal="5dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profPicUser"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/ic_person_black_24dp"
-                android:background="@drawable/person_background"/>
+                app:civ_border_width="2dp"
+                app:civ_border_color="#000000"
+                android:padding="5dp"
+                android:src="@drawable/ic_person_black_24dp"/>
             <TextView
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
@@ -32,17 +36,122 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/colorUser"
                 android:layout_marginLeft="15dp"/>
-            <EditText
+            <TextView
                 android:id="@+id/writePost"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_below="@+id/profPicUser"
                 android:hint="Write a post"
-                android:textColor="@color/colorBlack"
-                android:background="@drawable/edit_text_background"
+                android:textSize="25sp"
+                android:background="@drawable/write_post_border"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"/>
+            <RelativeLayout
+                android:id="@+id/extended_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profPicUser"
+                android:background="@drawable/post_details_background"
+                android:layout_centerHorizontal="true"
+                android:padding="15dp"
+                android:visibility="invisible">
+                <TextView
+                    android:id="@+id/journey_from_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journey From"
+                    android:textSize="20sp"
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorBlack"/>
+                <Spinner
+                    android:id="@+id/from_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBlack"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown"
+                    android:layout_toRightOf="@+id/journey_from_TextView"/>
+                <TextView
+                    android:id="@+id/to_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To"
+                    android:textSize="20sp"
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/from_city"/>
+                <Spinner
+                    android:id="@+id/to_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorBlack"
+                    android:overlapAnchor="false"
+                    android:spinnerMode="dropdown"
+                    android:layout_toRightOf="@+id/to_TextView"/>
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@+id/journey_from_TextView"/>
+                <TextView
+                    android:id="@+id/date_time_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date &amp; Time"
+                    android:textSize="20dp"
+                    android:fontFamily="serif"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/line1"/>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="trip date"
+                    android:textSize="20sp"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="trip time"
+                    android:textSize="20sp"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/date"/>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@+id/date_time_TextView"/>
+                <EditText
+                    android:id="@+id/post_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line2"
+                    android:textColor="@color/colorBlack"
+                    android:hint="Description..."
+                    android:background="@null"/>
+                <Button
+                    android:id="@+id/submit_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POST"
+                    android:layout_below="@+id/post_description"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/order_post_button"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
         </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/posts_recycler"
@@ -50,8 +159,6 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/create_post"/>
 
-
     </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>

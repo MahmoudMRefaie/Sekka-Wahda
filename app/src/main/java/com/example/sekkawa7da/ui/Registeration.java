@@ -1,10 +1,6 @@
-package com.example.sekkawa7da;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+package com.example.sekkawa7da.ui;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,60 +9,66 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.sekkawa7da.Api.RetrofitClient;
+import com.example.sekkawa7da.R;
 import com.example.sekkawa7da.SharedPreferences.PreferenceHelper;
 import com.example.sekkawa7da.SharedPreferences.SharedPrefManager;
+import com.example.sekkawa7da.User;
 import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Registeration extends AppCompatActivity implements AdapterView.OnItemSelectedListener , View.OnClickListener{
+public class Registeration extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+    @BindView(R.id.user)
+    TextInputLayout username;
+    @BindView(R.id.email)
+    TextInputLayout email;
+    @BindView(R.id.pass)
+    TextInputLayout password;
+    @BindView(R.id.ssn)
+    TextInputLayout ssn;
+    @BindView(R.id.phone)
+    TextInputLayout phone_no;
+    @BindView(R.id.city)
+    Spinner city;
+    @BindView(R.id.agreeCheck)
+    CheckBox ifAgree;
+    @BindView(R.id.regBtn)
+    Button registerBtn;
+    @BindView(R.id.signIn)
+    TextView signIn;
 
-    private Button registerBtn;
-    private TextInputLayout username,email,password,ssn,phone_no;
-    private TextView signIn;
-    private Spinner city;
-    private CheckBox ifAgree;
     private PreferenceHelper preferenceHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registeration);
-
-        username = (TextInputLayout)findViewById(R.id.user);
-        email = (TextInputLayout)findViewById(R.id.email);
-        password = (TextInputLayout)findViewById(R.id.pass);
-        ssn = (TextInputLayout)findViewById(R.id.ssn);
-        phone_no = (TextInputLayout)findViewById(R.id.phone);
-        city = (Spinner)findViewById(R.id.city);
-        ifAgree = (CheckBox)findViewById(R.id.agreeCheck);
-        registerBtn = (Button)findViewById(R.id.regBtn);
-        signIn = (TextView) findViewById(R.id.signIn);
+        ButterKnife.bind(this);
 
         ifAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if(isChecked) {
+                if (isChecked) {
                     registerBtn.setEnabled(true);
                     registerBtn.setBackgroundResource(R.drawable.register_button);
-                }
-                else {
+                } else {
                     registerBtn.setEnabled(false);
                     registerBtn.setBackgroundResource(R.drawable.register_unclickable_button);
                 }
@@ -74,8 +76,8 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         });
 
         preferenceHelper = new PreferenceHelper(this);
-        if(preferenceHelper.getIsLogin()) {
-            Intent intent = new Intent(Registeration.this, Home.class);
+        if (preferenceHelper.getIsLogin()) {
+            Intent intent = new Intent(Registeration.this, MainPage.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             this.finish();
@@ -91,9 +93,10 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
         signIn.setOnClickListener(this);
 
     }
+
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.regBtn){
+        if (view.getId() == R.id.regBtn) {
             String getUserName = username.getEditText().getText().toString().trim();
             String getEmail = email.getEditText().getText().toString().trim();
             String getPassword = password.getEditText().getText().toString().trim();
@@ -101,7 +104,7 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
             String getPhone = phone_no.getEditText().getText().toString().trim();
             String getCity = city.getSelectedItem().toString();
 
-            User user = new User(getUserName,getEmail,getPassword,getSsn,getPhone,getCity);
+            User user = new User(getUserName, getEmail, getPassword, getSsn, getPhone, getCity);
 
             Call<String> call = RetrofitClient.getInstance().getApi().createUser(user);
 
@@ -111,7 +114,7 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
                     try {
                         if (response.isSuccessful()) {
                             String res = response.body();
-                            Toast.makeText(Registeration.this, "Registered Successfully" , Toast.LENGTH_LONG).show();
+                            Toast.makeText(Registeration.this, "Registered Successfully", Toast.LENGTH_LONG).show();
                             openActivityLogin();
                             //text.setText(res);
                         } else {
@@ -147,13 +150,12 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
 
                 @Override
                 public void onFailure(Call<String> call, Throwable t) {
-                    Toast.makeText(Registeration.this,"Check Your Connection",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Registeration.this, "Check Your Connection", Toast.LENGTH_LONG).show();
                 }
             });
-        }
-        else if(view.getId()== R.id.signIn){
+        } else if (view.getId() == R.id.signIn) {
             //openActivityLogin();
-            Intent intent = new Intent(this, Home_navigation.class);
+            Intent intent = new Intent(this, MainPage.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
@@ -163,8 +165,8 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onStart() {
         super.onStart();
-        if(SharedPrefManager.getInstance(this).isLoggedIn()) {
-            Intent intent = new Intent(this, Home.class);
+        if (SharedPrefManager.getInstance(this).isLoggedIn()) {
+            Intent intent = new Intent(this, MainPage.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
@@ -225,7 +227,7 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
     private void parseRegData(String response) throws JSONException {
 
         JSONObject jsonObject = new JSONObject(response);
-        if (jsonObject.optString("status").equals("true")){
+        if (jsonObject.optString("status").equals("true")) {
 
             saveInfo(response);
 
@@ -234,12 +236,12 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             this.finish();
-        }else {
+        } else {
             Toast.makeText(Registeration.this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void saveInfo(String response){
+    private void saveInfo(String response) {
 
         preferenceHelper.putIsLogin(true);
         try {
@@ -298,8 +300,8 @@ public class Registeration extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    public void openActivityLogin(){
-        Intent intent = new Intent(this , Login.class);
+    public void openActivityLogin() {
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
 }

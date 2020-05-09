@@ -1,4 +1,4 @@
-package com.example.sekkawa7da.homeNavigationFragments;
+package com.example.sekkawa7da.MainPageNavigationFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.sekkawa7da.R;
 
-public class NotificationsFragment extends Fragment {
-
-    @Nullable
-    @Override
+public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.fragment_notifications,container,false);
+        return inflater.inflate(R.layout.fragment_search,container,false);
     }
 }

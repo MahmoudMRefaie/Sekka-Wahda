@@ -1,4 +1,4 @@
-package com.example.sekkawa7da.homeNavigationFragments;
+package com.example.sekkawa7da.MainPageNavigationFragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
