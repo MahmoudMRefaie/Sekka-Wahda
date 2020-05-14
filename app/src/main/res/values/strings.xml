@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sekka Wa7da</string>
+    <string name="app_name">Sekka Wahda</string>
 
     <string-array name="numbers">
         <item>count</item>
@@ -49,11 +49,8 @@
     <dimen name="regBtnSize">45sp</dimen>
     <dimen name="alreadySize">20sp</dimen>
     <dimen name="signInSize">20sp</dimen>
-    <string name="title_activity_home_navigation">Home_navigation</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_asd">asd</string>
+    <dimen name="postUsername">20sp</dimen>
+    <dimen name="postDetail">15sp</dimen>
 
 
 </resources>

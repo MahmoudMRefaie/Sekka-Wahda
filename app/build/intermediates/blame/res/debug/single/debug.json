@@ -1,202 +1,234 @@
 [
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cancelation.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_cancelation.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_artistica.ttf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\artistica.ttf"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_more.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\fragment_more.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_swera_bold_demo.otf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\swera_bold_demo.otf"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_person_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_person_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_notifications.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_write_post_border.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\write_post_border.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\anim_top_animation.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\anim\\top_animation.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\fragment_search.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_bangers.ttf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\bangers.ttf"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_vovchik_personal_use.otf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\vovchik_personal_use.otf"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_person_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\person_background.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_gradient.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\gradient.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_post_background.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\post_background.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom_animation.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\anim\\bottom_animation.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_order_post_button.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\order_post_button.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_splash_screen.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\splash_screen.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\menu_home_top_navigation.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\menu\\home_top_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_post_cardview.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\post_cardview.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_selected_notifications_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_selected_notifications_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_play_circle_filled_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_play_circle_filled_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_gradient.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\gradient.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_navigation.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_home_navigation.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textedit.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\textedit.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_home_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_write_post_border.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\write_post_border.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_post_details_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\post_details_background.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_register_unclickable_button.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\register_unclickable_button.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_search_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_search_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_search_black_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_search_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgetpassword.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_forgetpassword.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_relative_layout_background.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\relative_layout_background.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_register_button.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\register_button.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_more.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_more.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dropdown_border.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\dropdown_border.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_play_circle_filled_black_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_play_circle_filled_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_page.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_main_page.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_back_blue_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_arrow_back_blue_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dropdown_border.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\dropdown_border.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpeg.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\logo.jpeg"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_post_details_background.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\post_details_background.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_register_page_border.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\register_page_border.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_arrow_button.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\back_arrow_button.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sw_logo.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\sw_logo.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_person_background.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\person_background.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_order_post_button.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\order_post_button.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\menu_home_top_navigation.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\menu\\home_top_navigation.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_register_page_border.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\register_page_border.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back_arrow_button.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\back_arrow_button.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_artisticaline.ttf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\artisticaline.ttf"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_menu_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_menu_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_home_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registeration.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_registeration.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textedit.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\textedit.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpeg.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable\\logo.jpeg"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_register_button.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\register_button.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reservation.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_reservation.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_post_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\post_background.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notifications_none_black_24dp.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\drawable-v24\\ic_notifications_none_black_24dp.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_person_black_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_person_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_registeration.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_registeration.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_notifications_none_black_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_notifications_none_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_menu_black_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_menu_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reservation.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_reservation.xml"
     },
     {
-        "merged": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgetpassword.xml.flat",
-        "source": "C:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\src\\main\\res\\layout\\activity_forgetpassword.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_cancelation.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_cancelation.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_post_cardview.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\post_cardview.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_back_blue_24dp.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_arrow_back_blue_24dp.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_register_unclickable_button.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\register_unclickable_button.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_relative_layout_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\relative_layout_background.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_badge.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\notification_badge.xml"
     }
 ]

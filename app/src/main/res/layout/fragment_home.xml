@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:focusable="false">
 
     <RelativeLayout
         android:id="@+id/fragment_container"
@@ -32,17 +33,18 @@
                 android:layout_height="wrap_content"
                 android:text="Mahmoud Refaie"
                 android:layout_toRightOf="@+id/profPicUser"
-                android:textSize="25dp"
+                android:textSize="@dimen/postUsername"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/colorUser"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="10dp"/>
             <TextView
                 android:id="@+id/writePost"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_below="@+id/profPicUser"
                 android:hint="Write a post"
-                android:textSize="25sp"
+                android:textSize="20sp"
+                android:gravity="center_vertical"
                 android:background="@drawable/write_post_border"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
@@ -61,12 +63,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Journey From"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"/>
                 <Spinner
                     android:id="@+id/from_city"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorBlack"
                     android:overlapAnchor="false"
@@ -77,13 +80,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="To"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"
                     android:layout_toRightOf="@+id/from_city"/>
                 <Spinner
                     android:id="@+id/to_city"
-                    android:layout_width="wrap_content"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorBlack"
                     android:overlapAnchor="false"
@@ -101,8 +105,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date &amp; Time"
-                    android:textSize="20dp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"
                     android:layout_below="@+id/line1"/>
                 <TextView
@@ -110,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="trip date"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
                     android:layout_marginLeft="10dp"
                     android:layout_below="@+id/line1"
@@ -120,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="trip time"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
                     android:layout_marginLeft="10dp"
                     android:layout_below="@+id/line1"
@@ -139,6 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line2"
                     android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/postDetail"
                     android:hint="Description..."
                     android:background="@null"/>
                 <Button

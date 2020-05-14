@@ -21,8 +21,8 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/post_profPic"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:civ_border_width="2dp"
                 app:civ_border_color="#000000"
                 android:padding="5dp"
@@ -34,10 +34,10 @@
                 android:layout_height="wrap_content"
                 android:text="Mahmoud Refaie"
                 android:layout_toRightOf="@+id/post_profPic"
-                android:textSize="25dp"
+                android:textSize="@dimen/postUsername"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/colorUser"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="10dp"/>
 
             <TextView
                 android:id="@+id/post_date"
@@ -75,26 +75,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Journey From"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"/>
                 <TextView
                     android:id="@+id/from_city"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Luxor"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/journey_from_TextView"/>
                 <TextView
                     android:id="@+id/to_TextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:text="To"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"
                     android:layout_toRightOf="@+id/from_city"/>
                 <TextView
@@ -102,9 +104,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cairo"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/to_TextView"/>
                 <View
                     android:id="@+id/line1"
@@ -118,8 +120,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date &amp; Time"
-                    android:textSize="20dp"
+                    android:textSize="@dimen/postDetail"
                     android:fontFamily="serif"
+                    android:textStyle="bold"
                     android:textColor="@color/colorBlack"
                     android:layout_below="@+id/line1"/>
                 <TextView
@@ -127,9 +130,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 May"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="20dp"
                     android:layout_below="@+id/line1"
                     android:layout_toRightOf="@+id/date_time_TextView"/>
 
@@ -138,9 +141,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10:30 AM"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/postDetail"
                     android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_below="@+id/line1"
                     android:layout_toRightOf="@+id/date"/>
 
@@ -158,6 +161,7 @@
                     android:layout_below="@+id/line2"
                     android:textColor="@color/colorBlack"
                     android:text="Description..."
+                    android:textSize="@dimen/postDetail"
                     android:background="@null"/>
             </RelativeLayout>
 

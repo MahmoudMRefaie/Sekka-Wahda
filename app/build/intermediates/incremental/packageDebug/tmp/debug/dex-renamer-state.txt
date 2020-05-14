@@ -1,4 +1,4 @@
-#Sun May 10 01:34:18 EET 2020
-base.0=C\:\\Users\\User1\\Downloads\\sekkaWa7da\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+#Thu May 14 22:33:28 EET 2020
+base.0=E\:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
