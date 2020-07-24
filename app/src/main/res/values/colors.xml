@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="register_gredient_start">#A8A8AA</color>
-    <color name="register_gredient_center">#F0F0F0</color>
-    <color name="register_gredient_end">#FAFAFA</color>
+    <color name="register_gredient_start">#C3C9ED</color>
+    <color name="register_gredient_center">#B0B8E9</color>
+    <color name="register_gredient_end">#9FA9E8</color>
+    <color name="login_bottons">#B0B8E9</color>
     <color name="colorBlue">#1971D5</color>
     <color name="colorGreen">#60FF60</color>
     <color name="colorPrimaryDark">#00574B</color>
@@ -18,9 +19,14 @@
     <color name="Button_gredient_start">#FF9800</color>
     <color name="Button_gredient_center">#FF9F20</color>
     <color name="Button_gredient_end">#FFB756</color>
-    <color name="unclickable_Button_gredient_start">#424242</color>
-    <color name="unclickable_Button_gredient_center">#696969</color>
-    <color name="unclickable_Button_gredient_end">#8D8D8D</color>
+    <color name="unclickable_Button">#8D8D8D</color>
+    <color name="background_gredient_start">#D5D5D5</color>
+    <color name="background_gredient_center">#E8E8E8</color>
+    <color name="background_gredient_end">#F6F6F6</color>
+    <color name="light_logo_color">#9FA9E8</color>
+    <color name="medium_logo_color">#838AB6</color>
+    <color name="dark_logo_color">#1C0458</color>
+
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#000000</color>
 </resources>

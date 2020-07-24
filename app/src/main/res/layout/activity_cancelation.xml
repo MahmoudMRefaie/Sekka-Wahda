@@ -59,7 +59,7 @@
         />
 
 <Button
-        android:background="@drawable/register_button"
+        android:background="@drawable/login_register_bottons"
         android:id="@+id/button"
         android:layout_width="188dp"
         android:layout_height="wrap_content"

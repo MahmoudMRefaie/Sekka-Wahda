@@ -21,8 +21,8 @@
         <item>Alexandria</item>
     </string-array>
 
-
     <string name="registerReg">Register</string>
+    <string name="registerHint">Create an account to access all features</string>
     <string name="createAcc">Create your accont</string>
     <string name="userReg">Username</string>
     <string name="emailReg">Email</string>
@@ -33,24 +33,12 @@
     <string name="alreadyHave">already have an account? </string>
     <string name="signIn">Sign In </string>
 
-    <dimen name="viewWidth">115dp</dimen>
-    <dimen name="viewHeight">2dp</dimen>
-    <dimen name="viewMarginTop">40dp</dimen>
-    <dimen name="headerSize">50sp</dimen>
-    <dimen name="createAccSize">20sp</dimen>
-    <dimen name="createMarginTop">5dp</dimen>
-    <dimen name="boxWidth">270dp</dimen>
-    <dimen name="userBoxMarginTop">10dp</dimen>
-    <dimen name="boxPaddingLeftRight">10dp</dimen>
-    <dimen name="spinnerHeight">45dp</dimen>
-    <dimen name="privacyMarginTop">10dp</dimen>
-    <dimen name="regBtnWidth">300dp</dimen>
-    <dimen name="regBtnMarginTop">10dp</dimen>
-    <dimen name="regBtnSize">45sp</dimen>
-    <dimen name="alreadySize">20sp</dimen>
-    <dimen name="signInSize">20sp</dimen>
-    <dimen name="postUsername">20sp</dimen>
-    <dimen name="postDetail">15sp</dimen>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">1114891582215561</string>
+    <string name="fb_login_protocol_scheme">fb1114891582215561</string>
 
 
 </resources>

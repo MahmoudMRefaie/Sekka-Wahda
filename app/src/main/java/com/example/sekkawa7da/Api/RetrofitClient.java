@@ -4,7 +4,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static final String BASE_URL = "https://sekkawahdaa.azurewebsites.net/";
+    private static final String BASE_URL = "https://seka.azurewebsites.net/";
+    //private static final String BASE_URL = "https://sekkawahdaa.azurewebsites.net/";
+    //private static final String BASE_URL = "https://sekkawahda.somee.com/";
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -23,10 +25,6 @@ public class RetrofitClient {
     }
 
     public Api getApi(){
-        return retrofit.create(Api.class);
-    }
-
-    public Api getLoginApi(){
         return retrofit.create(Api.class);
     }
 }

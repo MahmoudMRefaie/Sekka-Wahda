@@ -1,10 +1,10 @@
 package com.example.sekkawa7da.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,14 +12,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sekkawa7da.Api.RetrofitClient;
 import com.example.sekkawa7da.R;
-import com.example.sekkawa7da.SharedPreferences.LoginResponse;
+import com.example.sekkawa7da.Model.LoginResponse;
 import com.example.sekkawa7da.SharedPreferences.PreferenceHelper;
 import com.example.sekkawa7da.SharedPreferences.SharedPrefManager;
+import com.example.sekkawa7da.ui.Registeration.Registeration;
+import com.example.sekkawa7da.ui.UserProfile.Profile;
 import com.google.android.material.textfield.TextInputLayout;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+/*import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.IdpResponse;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthCredential;
+import com.google.firebase.auth.FacebookAuthProvider;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+ */
 
 import java.io.IOException;
 
@@ -28,10 +46,13 @@ import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+/*import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.squareup.picasso.Picasso;
+ */
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.imageView)
-    ImageView imageView;
+    private static final int MY_REQUIST_CODE = 2222; //Any number
     @BindView(R.id.username)
     TextInputLayout etUname;
     @BindView(R.id.password)
@@ -41,23 +62,35 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.forget)
     TextView forget;
     @BindView(R.id.register)
-    Button btnRegister;
+    TextView register;
     @BindView(R.id.terms)
     TextView terms;
+
     private PreferenceHelper preferenceHelper;
 
+    private LoginResponse loginResponse;
+
+    private SharedPreferences sharedPre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        sharedPre = getSharedPreferences("LOGIN",MODE_PRIVATE);
+
+        if(sharedPre.getBoolean("logged",false))
+            openHomeActivity();
+
         btnLogin.setOnClickListener(this);
-        btnRegister.setOnClickListener(this);
+        register.setOnClickListener(this);
         preferenceHelper = new PreferenceHelper(this);
     }
+
+
     @Override
     public void onClick(View view) {
-        if(view.getId()==R.id.btnLogin){
+        if(view.getId() == R.id.btnLogin){
             if (!validateUsername() | !validatePassword()) {
                 return;
             }
@@ -65,24 +98,25 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             String password = etPass.getEditText().getText().toString().trim();
             String grant_type = "password";
 
-            //User user = new User(username,password,grant_type);
-
-            Call<LoginResponse> call = RetrofitClient.getInstance().getLoginApi()
+            Call<LoginResponse> call = RetrofitClient.getInstance().getApi()
                     .getUserLogin(username, password, grant_type);
 
             //Toast.makeText(Login.this, username, Toast.LENGTH_LONG).show();
             call.enqueue(new Callback<LoginResponse>() {
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                    LoginResponse loginResponse = response.body();
+                    loginResponse = response.body();
                     try {
                         if (response.isSuccessful()) {
-                            String res = loginResponse.getAccess_token();
+                            String token = loginResponse.getAccess_token();
+                            SharedPreferences.Editor editor = getSharedPreferences("MY_APP", MODE_PRIVATE).edit();
+                            editor.putString("TOKEN", token);
+                            editor.apply();
 
-                            //Toast.makeText(Login.this, res , Toast.LENGTH_LONG).show();
-                            SharedPrefManager.getInstance(Login.this)
-                                    .saveUser(loginResponse);  //
-                            openHomeActivity();
+                            SharedPrefManager.getInstance(Login.this).saveUser(loginResponse);
+
+                            openHomeActivity();  //Problem at main Page
+                            sharedPre.edit().putBoolean("logged",true).apply();
                         } else {
                             String res = response.errorBody().string();
                             Toast.makeText(Login.this, "Incorrect username or password", Toast.LENGTH_LONG).show();
@@ -91,7 +125,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }
+                       }
                 }
 
                 @Override
@@ -100,91 +134,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 }
             });
         }
-        else if(view.getId()== R.id.register){
+        else if(view.getId() == R.id.register){
             Intent intent = new Intent(Login.this, Registeration.class);
             startActivity(intent);
-            Login.this.finish();
         }
     }
 
     public void openHomeActivity() {
-        Intent intent = new Intent(this, MainPage.class);
+        Intent intent = new Intent(this, Profile.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }
-
-    /*private void loginUser() {
-
-
-
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Api.LOGINURL)
-                .addConverterFactory(ScalarsConverterFactory.create())
-                .build();
-
-        Api api = retrofit.create(Api.class);
-
-        Call<String> call = api.getUserLogin(username,password);
-
-        call.enqueue(new Callback<String>() {
-            @Override
-            public void onResponse(Call<String> call, Response<String> response) {
-                Log.i("Responsestring", response.body().toString());
-
-                if (response.isSuccessful()) {
-                    if (response.body() != null) {
-                        Log.i("onSuccess", response.body().toString());
-                        Toast.makeText(Login.this , response.body(),Toast.LENGTH_LONG).show();
-                        String jsonresponse = response.body().toString();
-                        parseLoginData(jsonresponse);
-                    } else {
-                        Log.i("onEmptyResponse", "Returned empty response");//Toast.makeText(getContext(),"Nothing returned",Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<String> call, Throwable t) {
-
-            }
-        });
-
-    }*/
-
-    private void parseLoginData(String response) {
-        try {
-            JSONObject jsonObject = new JSONObject(response);
-            if (jsonObject.getString("status").equals("true")) {
-
-                saveInfo(response);
-
-                Toast.makeText(Login.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(Login.this, MainPage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                this.finish();
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void saveInfo(String response) {
-
-        preferenceHelper.putIsLogin(true);
-        try {
-            JSONObject jsonObject = new JSONObject(response);
-            if (jsonObject.getString("status").equals("true")) {
-                JSONArray dataArray = jsonObject.getJSONArray("data");
-                for (int i = 0; i < dataArray.length(); i++) {
-
-                    JSONObject dataobj = dataArray.getJSONObject(i);
-                    preferenceHelper.putUserName(dataobj.getString("UserName"));
-                }
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        finish();
     }
 
     @Override
@@ -192,6 +152,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         super.onStart();
         if (SharedPrefManager.getInstance(this).isLoggedIn())
             openHomeActivity();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 
     private boolean validateUsername() {
@@ -221,31 +186,4 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-        /*findViewById(R.id.forget).setOnClickListener(this);
-        findViewById(R.id.login).setOnClickListener(this);
-        findViewById(R.id.register).setOnClickListener(this);
-        loginbtn = findViewById(R.id.login);
-        register=findViewById(R.id.register);
-
-        txt = findViewById(R.id.forget);*/
-
-
-    /*public void onClick(View v) {
-        if (v == loginbtn) {
-            Intent in = new Intent(v.getContext(), Home.class);
-            startActivity(in);
-        }
-        else if(v==txt)
-        {
-            Intent in1;
-            in1 = new Intent(v.getContext(), Forgetpassword.class);
-            startActivity(in1);
-        }
-        else if(v== register)
-        {
-            Intent in2;
-            in2 = new Intent(v.getContext(), Registeration.class);
-            startActivity(in2);
-        }
-    }*/
 }

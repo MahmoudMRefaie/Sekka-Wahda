@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="sekka Wa7da/app" />
-      <module fileurl="file://$PROJECT_DIR$/sekka Wa7da.iml" filepath="$PROJECT_DIR$/sekka Wa7da.iml" group="sekka Wa7da" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" filepath="$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" group="sekka_Wa7da" />
     </modules>
   </component>
 </project>

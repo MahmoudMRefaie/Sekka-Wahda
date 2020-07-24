@@ -2,4 +2,24 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="viewWidth">115dp</dimen>
+    <dimen name="viewHeight">2dp</dimen>
+    <dimen name="viewMarginTop">40dp</dimen>
+    <dimen name="headerSize">50sp</dimen>
+    <dimen name="createAccSize">20sp</dimen>
+    <dimen name="createMarginTop">5dp</dimen>
+    <dimen name="boxWidth">270dp</dimen>
+    <dimen name="userBoxMarginTop">2dp</dimen>
+    <dimen name="boxPaddingHorizontal">10dp</dimen>
+    <dimen name="spinnerHeight">45dp</dimen>
+    <dimen name="privacyMarginTop">5dp</dimen>
+    <dimen name="regBtnWidth">300dp</dimen>
+    <dimen name="regBtnMarginTop">10dp</dimen>
+    <dimen name="regBtnSize">15sp</dimen>
+    <dimen name="alreadySize">20sp</dimen>
+    <dimen name="signInSize">20sp</dimen>
+    <dimen name="postUsername">20sp</dimen>
+    <dimen name="postDetail">15sp</dimen>
+    <dimen name="loginBottonsRadius">10dp</dimen>
 </resources>

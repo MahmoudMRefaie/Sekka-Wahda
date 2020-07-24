@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/sw_logo"
@@ -35,6 +35,9 @@
             android:hint="Username"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
             android:textCursorDrawable="@color/colorBlack"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,56 +60,83 @@
             android:textCursorDrawable="@color/colorBlack"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:background="@drawable/register_button"
-        android:id="@+id/btnLogin"
-        android:layout_width="188dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Login"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="458dp"/>
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="100dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp">
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/RippleStyleGrey">
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Login"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/light_logo_color"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+        </com.balysv.materialripple.MaterialRippleLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
-        android:textColor="#3643B8"
         android:id="@+id/forget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:text="forgotten password?"
+        android:textColor="@color/colorBlack"
         android:textAlignment="center"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Don't have an account ? "
+            android:textColor="@color/colorBlack"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="REGISTER"
+            android:textColor="@color/dark_logo_color"
+            android:textStyle="bold"/>
+    </LinearLayout>
     <TextView
-        android:textColor="#3643B8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:text="Don't have an account ? "
-        android:textAlignment="center"/>
-
-    <Button
-        android:id="@+id/register"
-        android:background="@drawable/register_button"
-        android:layout_width="188dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Create Account"/>
+        android:text="OR"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="10dp" />
 
     <TextView
-        android:textColor="#3643B8"
         android:id="@+id/terms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="Terms ,conditions &amp; privacy policy"
+        android:textColor="@color/colorBlack"
         android:textAlignment="center"
         android:visibility="visible"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="547dp"/>
-
 </LinearLayout>
