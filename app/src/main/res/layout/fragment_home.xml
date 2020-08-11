@@ -37,6 +37,12 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/colorUser"
                 android:layout_marginLeft="10dp"/>
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LogOut"
+                android:layout_alignParentRight="true"/>
             <TextView
                 android:id="@+id/writePost"
                 android:layout_width="match_parent"

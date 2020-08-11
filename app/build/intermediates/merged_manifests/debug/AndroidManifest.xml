@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sekkawa7da"
+    package="com.mahmoudrefaie.sekkawahda"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -28,14 +28,15 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.example.sekkawa7da.ui.Profile" />
-        <activity android:name="com.example.sekkawa7da.ui.MainPage" />
-        <activity android:name="com.example.sekkawa7da.Forgetpassword" />
-        <activity android:name="com.example.sekkawa7da.ui.Registeration.Registeration" />
-        <activity android:name="com.example.sekkawa7da.Cancelation" />
-        <activity android:name="com.example.sekkawa7da.Reservation" />
-        <activity android:name="com.example.sekkawa7da.ui.Login" />
-        <activity android:name="com.example.sekkawa7da.SplashScreen" >
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.UserProfile.EditMyProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.UserProfile.MyProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Forgetpassword" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Registeration.Registeration" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Cancelation" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Reservation" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Login.Login" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.SplashScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -78,7 +79,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="cct.com.example.sekkawa7da"
+                    android:host="cct.com.mahmoudrefaie.sekkawahda"
                     android:scheme="fbconnect" />
             </intent-filter>
         </activity>
@@ -150,7 +151,7 @@
 
         <provider
             android:name="com.firebase.ui.auth.data.client.AuthUiInitProvider"
-            android:authorities="com.example.sekkawa7da.authuiinitprovider"
+            android:authorities="com.mahmoudrefaie.sekkawahda.authuiinitprovider"
             android:exported="false"
             android:initOrder="90" />
 
@@ -158,7 +159,7 @@
 
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.example.sekkawa7da.com.squareup.picasso"
+            android:authorities="com.mahmoudrefaie.sekkawahda.com.squareup.picasso"
             android:exported="false" />
 
         <activity
@@ -188,7 +189,7 @@
         -->
         <provider
             android:name="com.facebook.internal.FacebookInitProvider"
-            android:authorities="com.example.sekkawa7da.FacebookInitProvider"
+            android:authorities="com.mahmoudrefaie.sekkawahda.FacebookInitProvider"
             android:exported="false" />
 
         <receiver
@@ -220,12 +221,12 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.sekkawa7da.firebaseinitprovider"
+            android:authorities="com.mahmoudrefaie.sekkawahda.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.example.sekkawa7da.lifecycle-process"
+            android:authorities="com.mahmoudrefaie.sekkawahda.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
     </application>

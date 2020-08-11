@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorBlue</item>
-        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="colorPrimary">@color/proj_sub_color</item>
+        <item name="colorPrimaryDark">@color/proj_main_color</item>
         <item name="colorAccent">@color/colorWhite</item>
     </style>
 
@@ -22,6 +22,12 @@
         <item name="boxStrokeWidth">1dp</item>
         <item name="hintTextAppearance">@style/active</item>
     </style>
+    <style name="TextInputLayoutStyleEditProfile" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="hintTextAppearance">@style/active</item>
+    </style>
 
     <style name="inactive" parent="Theme.MaterialComponents.Light">
         <item name="android:textColorPrimary">@android:color/darker_gray</item>
@@ -30,10 +36,16 @@
 
     <style name="active" parent="Theme.MaterialComponents.Light">
         <item name="android:textColorPrimary">@android:color/black</item>
-        <item name="android:textColor">#6415E2</item>
+        <item name="android:textColor">@color/proj_main_color</item>
         <item name="android:textSize">12dp</item>
     </style>
-    
+
+    <style name="activeUsername" parent="Theme.MaterialComponents.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColor">@color/proj_main_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
     <style name="RippleStyleGrey">
         <item name="mrl_rippleOverlay">true</item>
         <item name="mrl_rippleColor">@color/colorGrey</item>
@@ -43,6 +55,10 @@
         <item name="mrl_rippleOverlay">true</item>
         <item name="mrl_rippleColor">@color/colorWhite</item>
         <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+
+    <style name="TextInputLayoutStyleEdit" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="colorControlActivated">@color/proj_main_color</item>    //Floating label color
     </style>
 
 </resources>

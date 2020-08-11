@@ -27,6 +27,11 @@
     <color name="medium_logo_color">#838AB6</color>
     <color name="dark_logo_color">#1C0458</color>
 
+    <color name="proj_sub_color">#C65D01</color>
+    <color name="proj_main_color">#022135</color>
+
+    <color name="black_with_ten_transparency">#1A000000</color>
+
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#000000</color>
 </resources>

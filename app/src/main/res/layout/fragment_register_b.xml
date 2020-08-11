@@ -1,45 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.Registeration.FragmentRegisterB">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/phone"
-        style="@style/TextInputLayoutStyleRegisteration"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ssn"
-        android:layout_gravity="center"
-        app:errorEnabled="true"
-        app:layout_constraintTop_toTopOf="parent">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phoneReg"
-            android:paddingHorizontal="@dimen/boxPaddingHorizontal"
-            android:maxLines="1"
-            android:lines="1"
-            android:singleLine="true"
-            android:textCursorDrawable="@color/colorBlack" />
-    </com.google.android.material.textfield.TextInputLayout>
-
+        android:layout_height="match_parent">
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ssn"
+            android:id="@+id/phone"
             style="@style/TextInputLayoutStyleRegisteration"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/ssn"
             android:layout_gravity="center"
             app:errorEnabled="true"
-            app:layout_constraintTop_toBottomOf="@+id/phone">
-
+            app:layout_constraintTop_toTopOf="parent">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/ssnReg"
-                android:inputType="number"
+                android:hint="@string/phoneReg"
                 android:paddingHorizontal="@dimen/boxPaddingHorizontal"
                 android:maxLines="1"
                 android:lines="1"
@@ -47,115 +30,137 @@
                 android:textCursorDrawable="@color/colorBlack" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
-    <LinearLayout
-        android:id="@+id/spinner_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/phone"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:background="@drawable/dropdown_border"
-        app:layout_constraintTop_toBottomOf="@+id/ssn"
-        tools:ignore="UselessParent">
-
-        <Spinner
-            android:id="@+id/city"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/spinnerHeight"
-            android:backgroundTint="@color/colorBlack"
-            android:overlapAnchor="false"
-            android:paddingHorizontal="@dimen/boxPaddingHorizontal"
-            android:spinnerMode="dropdown" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/checkbox_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinner_layout"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_layout">
-
-        <CheckBox
-            android:id="@+id/agreeCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/privacy"
-            app:buttonTint="@color/medium_logo_color" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttons_Layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/checkbox_layout"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_layout">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/previous_cardview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="10dp">
-
-            <com.balysv.materialripple.MaterialRippleLayout
-                style="@style/RippleStyleGrey"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ssn"
+                style="@style/TextInputLayoutStyleRegisteration"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/phone">
 
-                <TextView
-                    android:id="@+id/previous"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:fontFamily="sans-serif-light"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="Previous"
-                    android:textColor="#6415E2"
-                    android:textSize="20sp" />
-            </com.balysv.materialripple.MaterialRippleLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/regBtn_cardview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="5"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="5dp">
-
-            <com.balysv.materialripple.MaterialRippleLayout
-                style="@style/RippleStyleGrey"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/regBtn"
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/unclickable_Button"
-                    android:enabled="false"
-                    android:gravity="center"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:text="@string/registerReg"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/regBtnSize" />
-            </com.balysv.materialripple.MaterialRippleLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                    android:hint="@string/ssnReg"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/boxPaddingHorizontal"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textCursorDrawable="@color/colorBlack" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/spinner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/dropdown_border"
+            app:layout_constraintTop_toBottomOf="@+id/ssn"
+            tools:ignore="UselessParent">
+
+            <Spinner
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinnerHeight"
+                android:backgroundTint="@color/colorBlack"
+                android:overlapAnchor="false"
+                android:paddingHorizontal="@dimen/boxPaddingHorizontal"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkbox_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_layout">
+
+            <CheckBox
+                android:id="@+id/agreeCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy"
+                app:buttonTint="@color/medium_logo_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkbox_layout"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_layout">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/previous_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="10dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    style="@style/RippleStyleGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/previous"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Previous"
+                        android:textColor="#6415E2"
+                        android:textSize="20sp" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/regBtn_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="5"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    style="@style/RippleStyleGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/regBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/unclickable_Button"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/registerReg"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/regBtnSize" />
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

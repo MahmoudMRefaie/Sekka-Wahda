@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\3e31e81fa721df5f45570a49a840bd3a\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\03fb87fcfa05bc3aadc3a1b9d210b05b\navigation-ui-2.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:2:1-109:12
@@ -30,6 +30,7 @@ MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\User1\.gradle\caches\tra
 MERGED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:17:1-42:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\0957c132b850d65cd4fea76e53711e42\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\591911f850d55da442588655dc1b909d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\b28bbf6a0a1243a80db01738fc12b697\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\cec246cf7cba4f112366d642d0b99b8b\jetified-facebook-core-5.15.3\AndroidManifest.xml:21:1-53:12
@@ -78,49 +79,49 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\User1\.gradle\
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\764c64f8f9d031964fb76b4bbd65df73\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\868af24722f0cad59a9b4d9098383d7c\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\43522b26bcf439d38d861b9c89b95e16\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
 	package
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:4:5-37
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:4:5-43
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-58:12
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-59:12
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:13:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:13:5-67
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:7:5-79
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:7:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:8:5-80
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:8:22-78
 uses-permission#android.permission.READ_INTERNAL_STORAGE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:9:5-79
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:9:5-80
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:9:22-77
 uses-permission#android.permission.WRITE_INTERNAL_STORAGE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:10:5-80
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:10:5-81
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:10:22-78
 application
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:12:5-56:19
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:12:5-57:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\c9dcd4206ba37ece7b14281b4e0be7d8\material-1.2.0-alpha06\AndroidManifest.xml:22:5-20
@@ -181,77 +182,81 @@ MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\User1\.gr
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:18:9-40
 	android:usesCleartextTraffic
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:19:9-44
-activity#com.example.sekkawa7da.ui.Profile
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:20:9-47
+activity#com.mahmoudrefaie.sekkawahda.ui.UserProfile.EditMyProfile
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:20:9-75
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:20:19-45
-activity#com.example.sekkawa7da.ui.MainPage
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:21:9-49
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:20:19-63
+activity#com.mahmoudrefaie.sekkawahda.ui.UserProfile.MyProfile
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:21:9-62
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:21:19-46
-activity#com.example.sekkawa7da.Forgetpassword
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:22:9-52
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:21:19-59
+activity#com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:22:9-58
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:22:19-49
-activity#com.example.sekkawa7da.ui.Registeration.Registeration
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:23:9-68
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:22:19-55
+activity#com.mahmoudrefaie.sekkawahda.ui.Forgetpassword
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:23:9-55
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:23:19-65
-activity#com.example.sekkawa7da.Cancelation
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:24:9-49
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:23:19-52
+activity#com.mahmoudrefaie.sekkawahda.ui.Registeration.Registeration
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:24:9-68
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:24:19-46
-activity#com.example.sekkawa7da.Reservation
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:25:9-49
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:24:19-65
+activity#com.mahmoudrefaie.sekkawahda.ui.Cancelation
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:25:9-52
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:25:19-46
-activity#com.example.sekkawa7da.ui.Login
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:26:9-46
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:25:19-49
+activity#com.mahmoudrefaie.sekkawahda.ui.Reservation
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:26:9-52
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:26:19-43
-activity#com.example.sekkawa7da.SplashScreen
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:27:9-33:20
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:26:19-49
+activity#com.mahmoudrefaie.sekkawahda.ui.Login.Login
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:27:9-52
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:27:19-47
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:27:19-49
+activity#com.mahmoudrefaie.sekkawahda.ui.SplashScreen
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:28:9-34:20
+	android:name
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:28:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:28:13-32:29
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:29:17-69
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:29:25-66
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:31:17-77
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:31:27-74
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:32:27-74
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:35:9-38:45
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:36:9-39:45
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:19:9-21:63
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:19:9-21:63
 	tools:replace
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:38:13-42
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:39:13-42
 	android:value
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:37:13-52
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:38:13-52
 		REJECTED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:21:13-60
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:36:13-58
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:37:13-58
 activity#com.facebook.FacebookActivity
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:40:9-43:48
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:41:9-44:48
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:83:9-87:48
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:83:9-87:48
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
 	android:label
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:43:13-45
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:44:13-45
 	tools:ignore
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:87:13-45
 	android:configChanges
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:42:13-96
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:43:13-96
 	android:theme
 		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:41:13-57
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:42:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:44:9-55:20
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:45:9-56:20
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:88:9-100:20
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:88:9-100:20
 MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
@@ -259,29 +264,29 @@ MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle
 	tools:node
 		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:38:13-31
 	android:exported
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:46:13-36
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:47:13-36
 	tools:ignore
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:91:13-45
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:45:13-58
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:46:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:47:13-54:29
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:48:13-55:29
 action#android.intent.action.VIEW
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:48:17-69
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:48:25-66
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.DEFAULT
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:50:17-76
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:51:17-76
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:50:27-73
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:51:27-73
 category#android.intent.category.BROWSABLE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:51:17-78
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:52:17-78
 	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:51:27-75
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:52:27-75
 data
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:53:17-75
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:54:17-75
 	android:scheme
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:53:23-72
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:54:23-72
 uses-sdk
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
@@ -338,6 +343,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\User1\.g
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\0957c132b850d65cd4fea76e53711e42\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\591911f850d55da442588655dc1b909d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\591911f850d55da442588655dc1b909d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\b28bbf6a0a1243a80db01738fc12b697\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
@@ -594,7 +601,7 @@ ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\
 		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:19-68
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.${applicationId}+data:scheme:fbconnect
 ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.example.sekkawa7da+data:scheme:fbconnect
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.mahmoudrefaie.sekkawahda+data:scheme:fbconnect
 ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\47428cde55cef463238acd4c86a0d0c1\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
 provider#com.squareup.picasso.PicassoProvider
 ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\User1\.gradle\caches\transforms-2\files-2.1\4bfd716fd6ff618a175b77a1897f1056\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40

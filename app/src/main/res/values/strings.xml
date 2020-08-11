@@ -19,6 +19,13 @@
         <item>Beni Swief</item>
         <item>Cairo</item>
         <item>Alexandria</item>
+        <item>Red Sea</item>
+        <item>Esmailia</item>
+        <item>Suiz</item>
+        <item>El-Sharkia</item>
+        <item>El-Monofia</item>
+        <item>El-Gharbia</item>
+        <item>El-Dakahlia</item>
     </string-array>
 
     <string name="registerReg">Register</string>

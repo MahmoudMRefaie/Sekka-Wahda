@@ -12,13 +12,16 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite">
+        android:background="@color/colorWhite"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@color/colorGrey"/>
+            app:titleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:background="@color/proj_main_color"/>
 
         <RelativeLayout
             android:id="@+id/tab_lay_relative"
