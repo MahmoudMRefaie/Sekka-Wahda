@@ -4,15 +4,13 @@ import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse
 import com.mahmoudrefaie.sekkawahda.Pojo.User
 import com.mahmoudrefaie.sekkawahda.Pojo.UserIdResponse
 import okhttp3.MultipartBody
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface Api {
     @POST("api/Account/Register")
     fun createUser(@Body user: User): Call<String>
-
-    @GET("api/Account/GetCurrentUser")
-    fun getInfo(@Body user: User?): Call<String?>?
 
     @FormUrlEncoded
     @POST("token")
@@ -40,4 +38,46 @@ interface Api {
             @Path("id") id : Int?,
             @Header("Authorization") authToken: String?
     ) : Call<User>
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileFullName(
+            @Field("FullName") fullname: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileCity(
+            @Field("city") city: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileEmail(
+            @Field("UserEmailID") email: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfilePhone(
+            @Field("PhoneNumber") phone: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileCarModel(
+            @Field("CarModel") carModel: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @Multipart
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileCarImage(
+            @Part carImage: MultipartBody.Part?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
 }

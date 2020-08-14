@@ -22,7 +22,7 @@ import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
 import com.mahmoudrefaie.sekkawahda.Pojo.UserIdResponse
 import com.mahmoudrefaie.sekkawahda.R
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
-import com.mahmoudrefaie.sekkawahda.ui.UserProfile.MyProfile
+import com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import retrofit2.Call
@@ -188,6 +188,13 @@ class HomeFragment : Fragment() {
 
                     imageName = imageName?.replace("~/","")
                     val imageUrl = "https://seka.azurewebsites.net/$imageName"
+
+                    Log.e("UserId ",userId.toString())
+                    Log.e("profileUserName ",profileUserName)
+                    Log.e("imageUrl ",imageUrl)
+                    Toast.makeText(activity,userId.toString(),Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity,profileUserName,Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity,imageUrl,Toast.LENGTH_LONG).show()
 
                     Picasso.get()
                             .load(imageUrl)

@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient;
 import com.mahmoudrefaie.sekkawahda.R;
 import com.mahmoudrefaie.sekkawahda.Pojo.User;
+import com.mahmoudrefaie.sekkawahda.ui.Login.Login;
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -123,7 +124,7 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
                         if (response.isSuccessful()) {
                             String res = response.body();
                             Toast.makeText(getActivity(), "Registered Successfully", Toast.LENGTH_LONG).show();
-                            openMainPage();
+                            openLoginPage();
                         } else {
                             String res = response.errorBody().string();
                             Toast.makeText(getActivity(), "Not Registered", Toast.LENGTH_LONG).show();
@@ -192,8 +193,8 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
         }
     }
 
-    private void openMainPage(){
-        Intent intent = new Intent(getActivity(), MainPage.class);
+    private void openLoginPage(){
+        Intent intent = new Intent(getActivity(), Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         getActivity().finish();

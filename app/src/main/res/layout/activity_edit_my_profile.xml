@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/user_profile_background"
-    tools:context=".ui.UserProfile.EditMyProfile">
+    tools:context=".ui.Profile.EditMyProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

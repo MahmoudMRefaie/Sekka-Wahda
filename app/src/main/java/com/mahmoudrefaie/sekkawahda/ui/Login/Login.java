@@ -18,7 +18,6 @@ import com.mahmoudrefaie.sekkawahda.SharedPreferences.SharedPrefManager;
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage;
 import com.mahmoudrefaie.sekkawahda.ui.Registeration.Registeration;
 import com.google.android.material.textfield.TextInputLayout;
-import com.mahmoudrefaie.sekkawahda.ui.UserProfile.MyProfile;
 /*import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
@@ -142,7 +141,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void openHomeActivity() {
-        Intent intent = new Intent(this, MyProfile.class);
+        Intent intent = new Intent(this, MainPage.class);
         //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();

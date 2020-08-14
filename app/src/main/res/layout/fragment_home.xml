@@ -24,8 +24,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 app:civ_border_width="2dp"
-                app:civ_border_color="#000000"
-                android:padding="5dp"
+                app:civ_border_color="@color/colorBlack"
                 android:src="@drawable/ic_person_black_24dp"/>
             <TextView
                 android:id="@+id/username"
@@ -63,7 +62,7 @@
                 android:background="@drawable/post_details_background"
                 android:layout_centerHorizontal="true"
                 android:padding="15dp"
-                android:visibility="invisible">
+                android:visibility="gone">
                 <TextView
                     android:id="@+id/journey_from_TextView"
                     android:layout_width="wrap_content"

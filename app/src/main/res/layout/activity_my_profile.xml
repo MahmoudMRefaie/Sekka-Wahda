@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/user_profile_background"
-    tools:context=".ui.UserProfile.MyProfile">
+    tools:context=".ui.Profile.MyProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Username"
+            android:text=""
             android:textSize="25sp"
             android:textStyle="bold"
             android:layout_marginTop="@dimen/_5sdp"
@@ -57,13 +57,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profile_image"/>
+
         <ImageView
             android:id="@+id/edit_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/edit_pin_white"
-            android:layout_marginLeft="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/edit_pin_white"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toRightOf="@+id/username"
             app:layout_constraintTop_toTopOf="@+id/username" />
         <RatingBar
@@ -128,7 +130,7 @@
                             android:layout_below="@+id/header_city"
                             android:layout_alignLeft="@+id/header_city"
                             android:layout_marginLeft="10dp"
-                            android:text="Luxor"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
                         <ImageView
@@ -158,7 +160,6 @@
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/email_result"
                             android:layout_width="wrap_content"
@@ -166,9 +167,18 @@
                             android:layout_below="@+id/header_email"
                             android:layout_alignLeft="@+id/header_email"
                             android:layout_marginLeft="10dp"
-                            android:text="example@example.com"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -195,9 +205,18 @@
                             android:layout_below="@+id/header_phone"
                             android:layout_alignLeft="@+id/header_phone"
                             android:layout_marginLeft="10dp"
-                            android:text="01145525919"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -224,7 +243,7 @@
                             android:layout_below="@+id/header_ssn"
                             android:layout_alignLeft="@+id/header_ssn"
                             android:layout_marginLeft="10dp"
-                            android:text="14num"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
                     </RelativeLayout>
@@ -264,15 +283,24 @@
                             android:text="Car Image"
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"/>
 
                         <ImageView
                             android:id="@+id/car_image_img"
                             android:layout_width="wrap_content"
-                            android:layout_height="100dp"
+                            android:layout_height="@dimen/_100sdp"
                             android:layout_centerHorizontal="true"
                             android:layout_below="@+id/header_car_image"
                             android:src="@drawable/ic_baseline_directions_car" />
+                        <ImageView
+                            android:id="@+id/edit_car_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/header_car_image"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
                     </RelativeLayout>
 
                     <View
@@ -305,7 +333,7 @@
                             android:layout_alignLeft="@+id/header_driver_license"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="30dp"
-                            android:text="1100"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
                     </RelativeLayout>
@@ -340,7 +368,7 @@
                             android:layout_alignLeft="@+id/header_car_license"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="30dp"
-                            android:text="1655498415"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp" />
                     </RelativeLayout>
@@ -366,7 +394,6 @@
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/car_model_result"
                             android:layout_width="wrap_content"
@@ -375,39 +402,22 @@
                             android:layout_alignLeft="@+id/header_car_model"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="30dp"
-                            android:text="sh2015"
+                            android:text=""
                             android:textColor="@color/proj_main_color"
                             android:textSize="20sp"/>
+                        <ImageView
+                            android:id="@+id/edit_car_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
                     </RelativeLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/editBtn_cardview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="5dp"
-                android:layout_gravity="center">
-
-                <com.balysv.materialripple.MaterialRippleLayout
-                    style="@style/RippleStyleGrey"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/edit_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Edit"
-                        android:backgroundTint="@color/proj_main_color"
-                        android:gravity="center"
-                        android:insetTop="0dp"
-                        android:insetBottom="0dp"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/regBtnSize" />
-                </com.balysv.materialripple.MaterialRippleLayout>
-            </androidx.cardview.widget.CardView>
             <Button
                 android:id="@+id/logout"
                 android:layout_width="wrap_content"

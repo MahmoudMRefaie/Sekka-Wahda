@@ -6,124 +6,80 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df1b2f02-fcbb-4e03-9d53-1deb07a7e167" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_intuit_sdp_sdp_android_1_0_6_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/Graduation Project-sekka_Wa7da.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/app/sekka Wa7da-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher_car-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Network/RetrofitClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Pojo/UserIdResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/Registeration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/EditMyProfile.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/EditUsernameBottomSheetDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/MyProfileViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/edit_city_dropdown_border.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/buttons.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/user_profile_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_baseline_directions_car.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_pin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_pin_white.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_image_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_car_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_car_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/profile_details_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_my_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/city_bottom_sheet_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/username_bottom_sheet_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_car.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_car_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_car_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_car_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_car_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_car_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_car_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditCarImageBottomSheetDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditCarModelBottomSheetDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditCityBottomSheetDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditEmailBottomSheetDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditPhoneBottomSheetDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_directions_car_white.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_baseline_image_white_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/email_bottom_sheet_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/phone_bottom_sheet_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/sekkawa7da/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/mahmoudrefaie/sekkawahda/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-ar.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/sekkawa7da/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/sekkawa7da/Cancelation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/sekkawa7da/Forgetpassword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/sekkawa7da/Reservation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/example/sekkawa7da/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/output.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_forgetpassword.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_forgetpassword.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_reservation.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_reservation.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_menu_black_24dp.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_notifications_none_black_24dp.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_person_black_24dp.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_play_circle_filled_black_24dp.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_ic_search_black_24dp.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_person_background.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_register_page_border.xml.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-v24_relative_layout_background.xml.flat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/sekkawa7da/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/mahmoudrefaie/sekkawahda/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/Api/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Network/Api.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/Api/RetrofitClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/Model/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Pojo/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/Model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/OurData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/OurData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/SharedPreferences/PreferenceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/PreferenceHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/SharedPreferences/SharedPrefManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/SharedPrefManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Cancelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Cancelation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Forgetpassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Forgetpassword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/NavigationFragments/Home/HomeFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/NavigationFragments/Home/PostsListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/PostsListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/NavigationFragments/MoreFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/MoreFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/NavigationFragments/NotificationsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/NotificationsFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/MainPage/NavigationFragments/SearchFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/SearchFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Registeration/FragmentRegisterA.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Registeration/FragmentRegisterB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Registeration/Registeration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/SplashScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/sekkawa7da/ui/UserProfile/Profile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/MyProfile.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dropdown_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dropdown_border.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_blue_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_arrow_back_blue_24dp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Network/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Network/Api.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/Pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/EditMyProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditMyProfile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/EditUsernameBottomSheetDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/EditUsernameBottomSheetDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/MyProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/MyProfile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/UserProfile/MyProfileViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/MyProfileViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/blank_profile_pic.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blank_profile_pic.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/buttons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/buttons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/gradient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/gradient.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_menu_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_notifications_none_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_none_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_person_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_person_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_play_circle_filled_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_play_circle_filled_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_search_black_24dp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_search_black_24dp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/person_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/person_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/register_page_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/register_page_border.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/relative_layout_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/relative_layout_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/sw_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sw_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/sw_logo_emp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/sw_logo_emp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/user_profile_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/user_profile_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/write_post_border.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/write_post_border.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_my_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_my_profile.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/city_bottom_sheet_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/city_bottom_sheet_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register_b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/username_bottom_sheet_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/username_bottom_sheet_dialog.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/sekkawa7da/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/mahmoudrefaie/sekkawahda/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,13 +132,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_26_Oreo" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-08-11T13:34:27.754Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-08-13T23:54:44.243Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SelectDeploymentTargetsDialog.selectedDevices" value="Pixel_2_API_26_Oreo&#10;192.168.1.5:5555" />
     <property name="android.sdk.path" value="G:/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -197,9 +153,9 @@
     <key name="android.template.-1061446216">
       <recent name="com.example.sekkawa7da" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User1\Downloads\sekkaWa7da\app\src\main\res\drawable-v24" />
-      <recent name="C:\Users\User1\Downloads\sekkaWa7da\app\src\main\res\drawable" />
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.mahmoudrefaie.sekkawahda.ui.Profile" />
+      <recent name="com.mahmoudrefaie.sekkawahda.ui.UserProfile" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.sekkawa7da" />
@@ -207,15 +163,20 @@
     <key name="android.template.482100883">
       <recent name="com.mahmoudrefaie.sekkawahda.ui.UserProfile" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable" />
+      <recent name="C:\Users\User1\Downloads\sekkaWa7da\app\src\main\res\drawable-v24" />
+      <recent name="C:\Users\User1\Downloads\sekkaWa7da\app\src\main\res\drawable" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.sekkawa7da.ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable-v24" />
+      <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\layout" />
       <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable" />
       <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable-v21" />
-      <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\layout" />
       <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable-xxhdpi" />
-      <recent name="E:\3\Android\Projects\Graduation Project\app\src\main\res\drawable-v24" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.sekkawa7da.homeNavigationFragments" />
@@ -407,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595606883688</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="User details in profile activity&#10;using Bottom sheet dialog&#10;using MVVM architecture pattern with profile">
+      <created>1597164486007</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597164486007</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,7 +398,8 @@
     <MESSAGE value="Home Page" />
     <MESSAGE value="Add Splash Screen and edit at Home Page" />
     <MESSAGE value="Registeration : add 2fragments&#10;Add user profile acitvity : pick profile picture from gallery - show this picture&#10;add Navigation fragments at main page contain home page, notification, settings&#10;Add posts in home fragment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registeration : add 2fragments&#10;Add user profile acitvity : pick profile picture from gallery - show this picture&#10;add Navigation fragments at main page contain home page, notification, settings&#10;Add posts in home fragment" />
+    <MESSAGE value="User details in profile activity&#10;using Bottom sheet dialog&#10;using MVVM architecture pattern with profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="User details in profile activity&#10;using Bottom sheet dialog&#10;using MVVM architecture pattern with profile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="288" y="144" key="#PSD" timestamp="1596904586835">
@@ -441,10 +410,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="496" y="56" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1596887511139" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1597145306475">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1597350859957">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1597145306475" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1597350859957" />
     <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1596453948182">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -461,10 +430,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="225" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1597051003291" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597065385171">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597231192922">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597065385171" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1597231192922" />
     <state x="548" y="63" width="463" height="698" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1595606101776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -477,38 +446,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1597139815824" />
-    <state x="36" y="6" key="CommitChangelistDialog2" timestamp="1595606773194">
+    <state x="36" y="0" key="CommitChangelistDialog2" timestamp="1597164462535">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="36" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595606773194" />
+    <state x="36" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597164462535" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1596741307884">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596741307884" />
-    <state width="1491" height="245" key="GridCell.Tab.0.bottom" timestamp="1597160640346">
+    <state width="1456" height="182" key="GridCell.Tab.0.bottom" timestamp="1597360519939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="245" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597160640346" />
-    <state width="1491" height="245" key="GridCell.Tab.0.center" timestamp="1597160640344">
+    <state width="1456" height="182" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597360519939" />
+    <state width="1456" height="182" key="GridCell.Tab.0.center" timestamp="1597360519939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="245" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597160640344" />
-    <state width="1491" height="245" key="GridCell.Tab.0.left" timestamp="1597160640282">
+    <state width="1456" height="182" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597360519939" />
+    <state width="1456" height="182" key="GridCell.Tab.0.left" timestamp="1597360519921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="245" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597160640282" />
-    <state width="1491" height="245" key="GridCell.Tab.0.right" timestamp="1597160640346">
+    <state width="1456" height="182" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597360519921" />
+    <state width="1456" height="182" key="GridCell.Tab.0.right" timestamp="1597360519939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="245" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597160640346" />
+    <state width="1456" height="182" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597360519939" />
     <state x="277" y="59" key="SettingsEditor" timestamp="1596887593376">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="59" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596887593376" />
-    <state x="363" y="145" key="Vcs.Push.Dialog.v2" timestamp="1595606949273">
+    <state x="363" y="145" key="Vcs.Push.Dialog.v2" timestamp="1597164600854">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="363" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595606949273" />
+    <state x="363" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597164600854" />
     <state x="584" y="190" key="chooseDestDirectoryDialog" timestamp="1595471189377">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -521,6 +490,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="399" y="111" width="738" height="602" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1596749919188" />
+    <state x="427" y="189" key="run.anything.popup" timestamp="1597253962615">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="427" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1597253962615" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596904483980">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -533,6 +506,14 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt</url>
           <line>90</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/MyProfile.kt</url>
+          <line>292</line>
+          <properties class="com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile" method="getProfileDataObserver">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

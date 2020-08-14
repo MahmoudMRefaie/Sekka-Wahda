@@ -61,6 +61,13 @@ public class User {
         this.carLicense = carLicense;
         this.carModel = carModel;
     }
+    public User(String fullName , String city , String phoneNumber ,String userEmailID , String carModel){
+        this.fullName = fullName;
+        this.city = city;
+        this.phoneNumber = phoneNumber;
+        this.userEmailID = userEmailID;
+        this.carModel = carModel;
+    }
 
     public String getUserID() {
         return userID;
