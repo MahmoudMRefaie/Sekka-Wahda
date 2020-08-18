@@ -1,175 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:focusable="false">
 
-    <RelativeLayout
-        android:id="@+id/fragment_container"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/top_navigation">
-        <RelativeLayout
-            android:id="@+id/create_post"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:elevation="10dp"
-            android:background="@drawable/relative_layout_background"
-            android:layout_marginHorizontal="5dp">
+            android:layout_height="match_parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profPicUser"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="@color/colorBlack"
-                android:src="@drawable/ic_person_black_24dp"/>
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mahmoud Refaie"
-                android:layout_toRightOf="@+id/profPicUser"
-                android:textSize="@dimen/postUsername"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textColor="@color/colorUser"
-                android:layout_marginLeft="10dp"/>
-            <Button
-                android:id="@+id/logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LogOut"
-                android:layout_alignParentRight="true"/>
-            <TextView
-                android:id="@+id/writePost"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@+id/profPicUser"
-                android:hint="Write a post"
-                android:textSize="20sp"
-                android:gravity="center_vertical"
-                android:background="@drawable/write_post_border"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="5dp"
-                android:padding="10dp"/>
-            <RelativeLayout
-                android:id="@+id/extended_post"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/profPicUser"
-                android:background="@drawable/post_details_background"
-                android:layout_centerHorizontal="true"
-                android:padding="15dp"
-                android:visibility="gone">
-                <TextView
-                    android:id="@+id/journey_from_TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Journey From"
-                    android:textSize="@dimen/postDetail"
-                    android:fontFamily="serif"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorBlack"/>
-                <Spinner
-                    android:id="@+id/from_city"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/colorBlack"
-                    android:overlapAnchor="false"
-                    android:spinnerMode="dropdown"
-                    android:layout_toRightOf="@+id/journey_from_TextView"/>
-                <TextView
-                    android:id="@+id/to_TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="To"
-                    android:textSize="@dimen/postDetail"
-                    android:fontFamily="serif"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorBlack"
-                    android:layout_toRightOf="@+id/from_city"/>
-                <Spinner
-                    android:id="@+id/to_city"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/colorBlack"
-                    android:overlapAnchor="false"
-                    android:spinnerMode="dropdown"
-                    android:layout_toRightOf="@+id/to_TextView"/>
-                <View
-                    android:id="@+id/line1"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/colorBlack"
-                    android:layout_below="@+id/journey_from_TextView"/>
-                <TextView
-                    android:id="@+id/date_time_TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date &amp; Time"
-                    android:textSize="@dimen/postDetail"
-                    android:fontFamily="serif"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorBlack"
-                    android:layout_below="@+id/line1"/>
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="trip date"
-                    android:textSize="@dimen/postDetail"
-                    android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
-                    android:layout_below="@+id/line1"
-                    android:layout_toRightOf="@+id/date_time_TextView"/>
-                <TextView
-                    android:id="@+id/time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="trip time"
-                    android:textSize="@dimen/postDetail"
-                    android:textColor="#3F51B5"
-                    android:layout_marginLeft="10dp"
-                    android:layout_below="@+id/line1"
-                    android:layout_toRightOf="@+id/date"/>
-
-                <View
-                    android:id="@+id/line2"
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@color/colorBlack"
-                    android:layout_below="@+id/date_time_TextView"/>
-                <EditText
-                    android:id="@+id/post_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/line2"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="@dimen/postDetail"
-                    android:hint="Description..."
-                    android:background="@null"/>
-                <Button
-                    android:id="@+id/submit_post"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="POST"
-                    android:layout_below="@+id/post_description"
-                    android:layout_centerHorizontal="true"
-                    android:background="@drawable/order_post_button"
-                    android:layout_marginTop="20dp"/>
-
-            </RelativeLayout>
-        </RelativeLayout>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/posts_recycler"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/create_post"/>
+            app:layout_constraintVertical_bias="1">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/create_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/relative_layout_background"
+                android:elevation="10dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profPicUser"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:src="@drawable/blank_profile_pic"/>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/profPicUser"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text=""
+                    android:textColor="@color/colorUser"
+                    android:textSize="@dimen/postUsername" />
+
+                <TextView
+                    android:id="@+id/writePost"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/profPicUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/write_post_border"
+                    android:gravity="center_vertical"
+                    android:hint="Write a post"
+                    android:padding="10dp"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/extended_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profPicUser"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/post_details_background"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/journey_from_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:text="Journey From"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/postDetail"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/from_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/journey_from_TextView"
+                        android:backgroundTint="@color/colorBlack"
+                        android:minWidth="@dimen/_15sdp"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown" />
+
+                    <TextView
+                        android:id="@+id/to_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/from_city"
+                        android:fontFamily="serif"
+                        android:text="To"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/postDetail"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/to_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/to_TextView"
+                        android:backgroundTint="@color/colorBlack"
+                        android:minWidth="@dimen/_15sdp"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown" />
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/journey_from_TextView"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/date_time_TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:fontFamily="serif"
+                        android:text="Date &amp; Time"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/postDetail"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/date_time_TextView"
+                        android:hint="trip date"
+                        android:textColor="#3F51B5"
+                        android:textSize="@dimen/postDetail" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/date"
+                        android:hint="trip time"
+                        android:textColor="#3F51B5"
+                        android:textSize="@dimen/postDetail" />
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/date_time_TextView"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/place_to_meet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/line2"
+                        android:background="@null"
+                        android:hint="place to meet"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/postDetail" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/postBtn_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/place_to_meet"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/RippleStyleGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/submit_post"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/proj_main_color"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="POST" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/posts_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/create_post"/>
+            <ProgressBar
+                android:id="@+id/trips_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/proj_sub_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </ScrollView>

@@ -9,7 +9,6 @@
     app:cardElevation="10dp"
     app:cardCornerRadius="15dp"
     card_view:cardBackgroundcolor="#000000"
-
     android:id="@+id/post_card">
 
         <RelativeLayout
@@ -23,9 +22,6 @@
                 android:id="@+id/post_profPic"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#000000"
-                android:padding="5dp"
                 android:src="@drawable/ic_person_black_24dp"/>
 
             <TextView
@@ -40,26 +36,52 @@
                 android:layout_marginLeft="10dp"/>
 
             <TextView
-                android:id="@+id/post_date"
+                android:id="@+id/post_date_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2 days ago"
+                android:text="2"
                 android:textSize="15dp"
                 android:layout_below="@+id/usernameProf"
                 android:layout_toRightOf="@+id/post_profPic"
                 android:layout_alignLeft="@+id/usernameProf"
-                android:layout_marginLeft="5dp"/>
+                android:layout_marginLeft="10dp"/>
 
-            <Button
-                android:id="@+id/order"
+            <TextView
+                android:id="@+id/post_date_unit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Order"
-                android:background="@drawable/order_post_button"
+                android:text="days ago"
+                android:textSize="15dp"
+                android:layout_below="@+id/usernameProf"
+                android:layout_toRightOf="@+id/post_date_time"
+                android:layout_marginLeft="5dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reserveBtn_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_above="@+id/post_details"
                 android:layout_alignRight="@+id/post_details"
                 android:layout_alignTop="@+id/usernameProf"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp">
+                <com.balysv.materialripple.MaterialRippleLayout
+                    style="@style/RippleStyleGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/reserve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reserve"
+                        android:background="@drawable/order_post_button"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:backgroundTint="@color/proj_sub_color"/>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </androidx.cardview.widget.CardView>
 
             <RelativeLayout
                 android:id="@+id/post_details"
@@ -111,7 +133,7 @@
                 <View
                     android:id="@+id/line1"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
+                    android:layout_height="1dp"
                     android:layout_marginTop="5dp"
                     android:background="@color/colorBlack"
                     android:layout_below="@+id/journey_from_TextView"/>
@@ -150,17 +172,17 @@
                 <View
                     android:id="@+id/line2"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
+                    android:layout_height="1dp"
                     android:layout_marginTop="5dp"
                     android:background="@color/colorBlack"
                     android:layout_below="@+id/date_time_TextView"/>
                 <TextView
-                    android:id="@+id/post_description"
+                    android:id="@+id/place_to_meet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/line2"
                     android:textColor="@color/colorBlack"
-                    android:text="Description..."
+                    android:text="place to meet"
                     android:textSize="@dimen/postDetail"
                     android:background="@null"/>
             </RelativeLayout>

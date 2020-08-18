@@ -127,7 +127,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         e.printStackTrace();
                        }
                 }
-
                 @Override
                 public void onFailure(Call<LoginResponse> call, Throwable t) {
                     Toast.makeText(Login.this, "Internet isn't connect", Toast.LENGTH_LONG).show();

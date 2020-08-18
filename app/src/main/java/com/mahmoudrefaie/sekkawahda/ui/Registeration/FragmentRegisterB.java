@@ -72,7 +72,7 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 if (isChecked) {
                     registerBtn.setEnabled(true);
-                    registerBtn.setBackgroundColor(getResources().getColor(R.color.light_logo_color));
+                    registerBtn.setBackgroundColor(getResources().getColor(R.color.proj_sub_color));
                 } else {
                     registerBtn.setEnabled(false);
                     registerBtn.setBackgroundColor(getResources().getColor(R.color.unclickable_Button));

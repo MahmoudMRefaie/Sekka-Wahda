@@ -1,4 +1,4 @@
-package com.mahmoudrefaie.sekkawahda.ui.Profile
+package com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -22,7 +22,6 @@ class MyProfileViewModel : ViewModel() {
     val carLicense = MutableLiveData<String>()
     val carModel = MutableLiveData<String>()
 
-
     //to get profile details from Retrofit
     fun getProfileData (userId: Int , authToken : String) {
         getProfilePic(authToken)
@@ -42,10 +41,13 @@ class MyProfileViewModel : ViewModel() {
                     phoneNumber.value = response.body()?.phoneNumber
                     ssn.value = response.body()?.ssn
                     carImageUrl.value = response.body()?.carImageUrl
-                    driverLicense.value = response.body()?.driverLicense
+                    if(driverLicense.value.equals("")  || driverLicense.value == null){
+                        driverLicense.value = response.body()?.driverLicense
+                    }else{
+                        Log.e("Driver License ","You can edit driver license one time")
+                    }
                     carLicense.value = response.body()?.carLicense
                     carModel.value = response.body()?.carModel
-
                 } else {
                     Log.e("OnResponse Details : ", "isn't successful")
                 }

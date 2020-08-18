@@ -317,7 +317,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio1/plugins/android/lib/android.jar!/images/material/icons/materialicons/edit/baseline_edit_24.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/arrow_left/baseline_arrow_left_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -328,7 +328,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="022135" />
-                            <entry key="outputName" value="edit_pin" />
+                            <entry key="outputName" value="ic_baseline_arrow_left_24" />
                             <entry key="sourceFile" value="C:\Users\User1\Downloads\gmail_logo.svg" />
                           </map>
                         </option>

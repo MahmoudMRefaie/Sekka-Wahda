@@ -1,9 +1,11 @@
-package com.mahmoudrefaie.sekkawahda.ui.Profile
+package com.mahmoudrefaie.sekkawahda.ui.Profile.EditBottomSheetDialogs
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,41 +20,55 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
 
-class EditUsernameBottomSheetDialog : BottomSheetDialogFragment() , View.OnClickListener {
+class EditPhoneBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickListener {
 
-    private var bottomSheetListener : BottomSheetListener ?= null
+    private var bottomSheetListener : BottomSheetListener?= null
 
-    private lateinit var editUsername : TextInputLayout
+    private lateinit var editPhone : TextInputLayout
     private lateinit var cancel : Button
     private lateinit var save : Button
 
     private var appAuth: SharedPreferences? = null
     private var accessToken: String? = null
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v : View = inflater.inflate(R.layout.username_bottom_sheet_dialog,container,false)
+        val v : View = inflater.inflate(R.layout.phone_bottom_sheet_dialog,container,false)
 
         appAuth = activity?.getSharedPreferences("MY_APP", Context.MODE_PRIVATE)
         accessToken = appAuth?.getString("TOKEN", null)
 
-        editUsername = v.findViewById(R.id.username)
+        editPhone = v.findViewById(R.id.phone)
         cancel= v.findViewById(R.id.cancel_btn)
         save = v.findViewById(R.id.save_btn)
 
-        val username : String? = this.arguments?.getString("username")
+        val phone : String? = this.arguments?.getString("phone")
 
-        editUsername.editText?.setText(username)
-        editUsername.isFocusable = true
-        editUsername.requestFocus()
+        editPhone.editText?.setText(phone)
+        editPhone.isFocusable = true
+        editPhone.requestFocus()
 
-        cancel?.setOnClickListener(this)
+        cancel.setOnClickListener(this)
         save.setOnClickListener (this)
 
         return v
     }
+    override fun onClick(p0: View?) {
+        if(view?.id == R.id.cancel_btn){
+            dismiss()
+        }
+        else if(view?.id == R.id.save_btn){
+            if(!validatePhoneNo())
+                return
+
+            val editedphone = editPhone?.editText?.text.toString()
+            updatePhone(editedphone, accessToken!!)
+            dismiss()
+        }
+    }
 
     interface BottomSheetListener{
-        fun onEditUsernameButtonClicked(text : String)
+        fun onEditPhoneButtonClicked(text : String)
     }
 
     override fun onAttach(context: Context) {
@@ -64,22 +80,8 @@ class EditUsernameBottomSheetDialog : BottomSheetDialogFragment() , View.OnClick
         }
     }
 
-    override fun onClick(view: View?) {
-        if(view?.id == R.id.cancel_btn){
-            dismiss()
-        }
-        else if(view?.id == R.id.save_btn){
-            if(!validateUsername()){
-                return
-            }
-            val editedUsername = editUsername?.editText?.text.toString()
-            updateUsername(editedUsername,accessToken!!)
-            dismiss()
-        }
-    }
-
-    private fun updateUsername(newUsername : String, token : String){
-        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileFullName(newUsername, "Bearer $token")
+    private fun updatePhone(newPhoneNumber: String, token: String) {
+        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfilePhone(newPhoneNumber, "Bearer $token")
         call?.enqueue(object : Callback<String> {
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 Toast.makeText(context, "Check your connection", Toast.LENGTH_LONG).show()
@@ -89,7 +91,7 @@ class EditUsernameBottomSheetDialog : BottomSheetDialogFragment() , View.OnClick
                     if (response.isSuccessful) {
                         val res = response.body().toString()
                         Log.e("onResponse Successfully", res)
-                        bottomSheetListener?.onEditUsernameButtonClicked(newUsername)
+                        bottomSheetListener?.onEditPhoneButtonClicked(newPhoneNumber)
                     } else {
                         val res = response.errorBody().toString()
                         Log.e("Error Body", res)
@@ -101,17 +103,25 @@ class EditUsernameBottomSheetDialog : BottomSheetDialogFragment() , View.OnClick
         })
     }
 
-    private fun validateUsername(): Boolean {
-        val valiUsername: String = editUsername.getEditText()?.getText().toString()
-        return if (valiUsername.isEmpty()) {
-            editUsername.setError("Username can't be empty")
+    private fun validatePhoneNo(): Boolean {
+        val valiPhone: String = editPhone.getEditText()?.getText().toString().trim()
+        return if (valiPhone.isEmpty()) {
+            editPhone.setError("SSN can't be empty")
             false
-        } else if (valiUsername.length > 22) {
-            editUsername.setError("Username is too long")
+        } else if (!isValidPhone(valiPhone)) {
+            editPhone.setError("Not valid phone number")
             false
         } else {
-            editUsername.setError(null)
+            editPhone.setError(null)
             true
         }
     }
+    fun isValidPhone(phone: CharSequence?): Boolean {
+        return if (TextUtils.isEmpty(phone)) {
+            false
+        } else {
+            Patterns.PHONE.matcher(phone).matches()
+        }
+    }
+
 }

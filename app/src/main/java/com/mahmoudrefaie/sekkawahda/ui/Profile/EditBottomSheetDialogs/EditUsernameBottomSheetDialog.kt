@@ -1,4 +1,4 @@
-package com.mahmoudrefaie.sekkawahda.ui.Profile
+package com.mahmoudrefaie.sekkawahda.ui.Profile.EditBottomSheetDialogs
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -17,61 +17,42 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
-import java.util.regex.Pattern
 
-class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickListener {
+class EditUsernameBottomSheetDialog : BottomSheetDialogFragment() , View.OnClickListener {
 
-    private var bottomSheetListener : BottomSheetListener ?= null
+    private var bottomSheetListener : BottomSheetListener?= null
 
-    private lateinit var editEmail : TextInputLayout
+    private lateinit var editUsername : TextInputLayout
     private lateinit var cancel : Button
     private lateinit var save : Button
-
 
     private var appAuth: SharedPreferences? = null
     private var accessToken: String? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v : View = inflater.inflate(R.layout.email_bottom_sheet_dialog,container,false)
+        val v : View = inflater.inflate(R.layout.username_bottom_sheet_dialog,container,false)
 
         appAuth = activity?.getSharedPreferences("MY_APP", Context.MODE_PRIVATE)
         accessToken = appAuth?.getString("TOKEN", null)
 
-        editEmail = v.findViewById(R.id.email)
+        editUsername = v.findViewById(R.id.username)
         cancel= v.findViewById(R.id.cancel_btn)
         save = v.findViewById(R.id.save_btn)
 
-        val email : String? = this.arguments?.getString("email")
+        val username : String? = this.arguments?.getString("username")
 
-        editEmail.editText?.setText(email)
-        editEmail.isFocusable = true
-        editEmail.requestFocus()
+        editUsername.editText?.setText(username)
+        editUsername.isFocusable = true
+        editUsername.requestFocus()
 
-        cancel.setOnClickListener(View.OnClickListener {
-            dismiss()
-        })
-
+        cancel?.setOnClickListener(this)
         save.setOnClickListener (this)
+
         return v
     }
 
-
-    override fun onClick(p0: View?) {
-        if(view?.id == R.id.cancel_btn){
-            dismiss()
-        }
-        else if(view?.id == R.id.save_btn){
-            if (!validateEmail()) {
-                return
-            }
-            val editedEmail = editEmail.editText?.text.toString().trim()
-            updateEmail(editedEmail,accessToken!!)
-            dismiss()
-        }
-    }
-
     interface BottomSheetListener{
-        fun onEditEmailButtonClicked(text : String)
+        fun onEditUsernameButtonClicked(text : String)
     }
 
     override fun onAttach(context: Context) {
@@ -83,8 +64,22 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
         }
     }
 
-    private fun updateEmail(newEmail: String, token: String) {
-        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileEmail(newEmail, "Bearer $token")
+    override fun onClick(view: View?) {
+        if(view?.id == R.id.cancel_btn){
+            dismiss()
+        }
+        else if(view?.id == R.id.save_btn){
+            if(!validateUsername()){
+                return
+            }
+            val editedUsername = editUsername?.editText?.text.toString()
+            updateUsername(editedUsername,accessToken!!)
+            dismiss()
+        }
+    }
+
+    private fun updateUsername(newUsername : String, token : String){
+        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileFullName(newUsername, "Bearer $token")
         call?.enqueue(object : Callback<String> {
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 Toast.makeText(context, "Check your connection", Toast.LENGTH_LONG).show()
@@ -94,10 +89,11 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
                     if (response.isSuccessful) {
                         val res = response.body().toString()
                         Log.e("onResponse Successfully", res)
-                        bottomSheetListener?.onEditEmailButtonClicked(newEmail)
+                        bottomSheetListener?.onEditUsernameButtonClicked(newUsername)
                     } else {
                         val res = response.errorBody().toString()
-                        Log.e("Error Body", res) }
+                        Log.e("Error Body", res)
+                    }
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -105,24 +101,17 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
         })
     }
 
-    private fun validateEmail(): Boolean {
-        val valiEmail: String = editEmail.getEditText()?.getText().toString().trim()
-
-        return if (valiEmail.isEmpty()) {
-            editEmail.setError("Email can't be empty")
+    private fun validateUsername(): Boolean {
+        val valiUsername: String = editUsername.getEditText()?.getText().toString()
+        return if (valiUsername.isEmpty()) {
+            editUsername.setError("Username can't be empty")
             false
-        } else if (!isValidEmailAddress(valiEmail)) {
-            editEmail.setError("Not valid email")
+        } else if (valiUsername.length > 22) {
+            editUsername.setError("Username is too long")
             false
         } else {
-            editEmail.setError(null)
+            editUsername.setError(null)
             true
         }
-    }
-    fun isValidEmailAddress(email: String?): Boolean {
-        val emailPattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
-        val p = Pattern.compile(emailPattern)
-        val m = p.matcher(email)
-        return m.matches()
     }
 }

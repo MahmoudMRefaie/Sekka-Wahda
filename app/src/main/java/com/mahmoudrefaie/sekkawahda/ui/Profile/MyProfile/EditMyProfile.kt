@@ -1,4 +1,4 @@
-package com.mahmoudrefaie.sekkawahda.ui.Profile
+package com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -119,13 +119,6 @@
             android:textColor="@color/dark_logo_color"
             android:textStyle="bold"/>
     </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="OR"
-        android:gravity="center"
-        android:textColor="@color/colorBlack"
-        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/terms"

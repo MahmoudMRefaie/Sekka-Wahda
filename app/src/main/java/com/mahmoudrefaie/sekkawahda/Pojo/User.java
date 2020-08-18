@@ -7,6 +7,8 @@ public class User {
     private String userID;
     @SerializedName("UserName")
     private String userName;
+    @SerializedName("ImageUrl")
+    private String profilePicImage;
     @SerializedName("UserEmailID")
     private String userEmailID;
     @SerializedName("UserPassword")
@@ -31,6 +33,8 @@ public class User {
     private String carLicense;
     @SerializedName("CarModel")
     private String carModel;
+    @SerializedName("TypeOfProfile")
+    private String profileType;
 
     public User(String userName, String userEmailID, String userPassword, String ssn, String phoneNumber, String city) {
         this.userName = userName;
@@ -69,6 +73,8 @@ public class User {
         this.carModel = carModel;
     }
 
+
+
     public String getUserID() {
         return userID;
     }
@@ -83,6 +89,14 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getProfilePicImage() {
+        return profilePicImage;
+    }
+
+    public void setProfilePicImage(String profilePicImage) {
+        this.profilePicImage = profilePicImage;
     }
 
     public String getUserEmailID() {
@@ -179,5 +193,13 @@ public class User {
 
     public void setCarModel(String carModel) {
         this.carModel = carModel;
+    }
+
+    public String getProfileType() {
+        return profileType;
+    }
+
+    public void setProfileType(String profileType) {
+        this.profileType = profileType;
     }
 }

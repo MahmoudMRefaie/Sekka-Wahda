@@ -8,13 +8,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/_10sdp">
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
             app:errorEnabled="true"
             app:counterEnabled="true"
             app:counterMaxLength="20"

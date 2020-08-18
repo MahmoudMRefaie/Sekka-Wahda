@@ -30,8 +30,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.EditMyProfile" />
-        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.NotReservedUserProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.ReservedUserProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile.EditMyProfile" />
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile.MyProfile" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Forgetpassword" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Registeration.Registeration" />

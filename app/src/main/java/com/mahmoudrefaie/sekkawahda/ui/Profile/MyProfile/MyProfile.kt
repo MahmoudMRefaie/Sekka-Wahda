@@ -1,4 +1,4 @@
-package com.mahmoudrefaie.sekkawahda.ui.Profile
+package com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile
 
 import android.Manifest
 import android.app.Activity
@@ -29,6 +29,7 @@ import butterknife.ButterKnife
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
 import com.mahmoudrefaie.sekkawahda.R
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
+import com.mahmoudrefaie.sekkawahda.ui.Profile.EditBottomSheetDialogs.*
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import okhttp3.MediaType
@@ -39,11 +40,12 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.File
 import java.io.IOException
+import java.lang.Exception
 
 class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomSheetDialog.BottomSheetListener,
                     EditEmailBottomSheetDialog.BottomSheetListener, EditPhoneBottomSheetDialog.BottomSheetListener,
                     EditCityBottomSheetDialog.BottomSheetListener, EditCarModelBottomSheetDialog.BottomSheetListener,
-                    EditCarImageBottomSheetDialog.BottomSheetListener {
+                    EditDriverLicenseBottomSheetDialog.BottomSheetListener, EditCarLicenseBottomSheetDialog.BottomSheetListener{
     @BindView(R.id.toolbar)
     lateinit var toolbar: Toolbar
     @BindView(R.id.show_image)
@@ -72,20 +74,21 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     lateinit var carImage: ImageView
     @BindView(R.id.edit_car_image)
     lateinit var editCarImage: ImageView
+    @BindView(R.id.driver_license)
+    lateinit var driverLicenseLayout: RelativeLayout
     @BindView(R.id.driver_license_result)
     lateinit var driverLicense: TextView
     @BindView(R.id.car_license_result)
     lateinit var carLicense: TextView
+    @BindView(R.id.edit_car_license)
+    lateinit var editCarLicense: ImageView
     @BindView(R.id.car_model_result)
     lateinit var carModel: TextView
     @BindView(R.id.edit_car_model)
     lateinit var editCarModel: ImageView
-    @BindView(R.id.logout)
-    lateinit var logOut: Button
-    @BindView(R.id.progress)
-    lateinit var progressBar: ProgressBar
+    @BindView(R.id.profile_progress_bar)
+    lateinit var profileProgressBar: ProgressBar
 
-    private var imageUri: Uri? = null
     private var accessToken: String? = null
 
     private var sharedPre: SharedPreferences? = null
@@ -110,7 +113,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
         appAuth = getSharedPreferences("MY_APP", Context.MODE_PRIVATE)
         accessToken = appAuth?.getString("TOKEN", null)
-        userId = appAuth?.getInt("userId",0)
+        userId = appAuth?.getInt("userId",userId!!)
 
         Log.e("ID ",userId.toString())
 
@@ -119,15 +122,13 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         getProfileDataObserver()
 
         showProfilePic.setOnClickListener(this)
-        logOut.setOnClickListener(this)
         editUsername.setOnClickListener(this)
         editCity.setOnClickListener(this)
         editEmail.setOnClickListener(this)
         editPhone.setOnClickListener(this)
         editCarImage.setOnClickListener(this)
+        editCarLicense.setOnClickListener(this)
         editCarModel.setOnClickListener(this)
-
-        carImage.setTag(R.drawable.ic_baseline_directions_car_white)    //to know weather image send to bottom Dialog , Static or downloaded image
 
     }
 
@@ -143,11 +144,11 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
                     requestPermissions(permissions, PERMISSION_CODE)
                 } else {
                     //permission already granted
-                    pickImageFromGallery()
+                    pickImageFromGallery(IMAGE_PICK_CODE)
                 }
             } else {
                 //System OS < Marshmallow
-                pickImageFromGallery()
+                pickImageFromGallery(IMAGE_PICK_CODE)
             }
         }
         else if(view?.id == R.id.edit_username){
@@ -166,16 +167,10 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
             editCarModelBottomDialog()
         }
         else if(view?.id == R.id.edit_car_image){
-            editCarImageBottomDialog()
+            pickImageFromGallery(CAR_IMAGE_PICK_CODE)
         }
-        else if(view?.id == R.id.logout) {
-            val editor: SharedPreferences.Editor = sharedPre?.edit()!!
-            Log.e("Log Out" , sharedPre?.getBoolean("logged",true).toString())
-            editor.remove("logged")
-            editor.commit()
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
-            finish()
+        else if(view?.id == R.id.edit_car_license){
+            editCarLicenseBottomDialog()
         }
     }
 
@@ -243,31 +238,12 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     override fun onEditCarModelButtonClicked(text: String) {
         carModel.text = text
     }
-
-    private fun editCarImageBottomDialog() {
-        val carImageBottomSheetDialog = EditCarImageBottomSheetDialog()
-        carImageBottomSheetDialog.show(supportFragmentManager,"EditCarImageBottomSheetDialog")
-        val bundle = Bundle()
-        bundle.putString("car_Image_URL",carImage.tag.toString())
-        carImageBottomSheetDialog.arguments = bundle
-    }
-    override fun onEditPhoneButtonClicked(imageUri: Uri) {
-        carImage.setImageURI(imageUri)
-        try {
-            val carImagePart = uriToMultipart(imageUri)
-            uploadCarImage(carImagePart , "Bearer $accessToken")
-        } catch (e: IOException) {
-            e.message
-        }
-    }
-
     private fun uploadCarImage(carImagePart: MultipartBody.Part, token: String) {
-        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileCarImage(carImagePart , token)
+        val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileCarImage(carImagePart , "Bearer $token")
         call?.enqueue(object : Callback<String>{
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 Toast.makeText(this@MyProfile, "Check your connection", Toast.LENGTH_LONG).show()
             }
-
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 Log.e("onResponse ", response.body().toString())
                 Toast.makeText(this@MyProfile, "Image Uploaded", Toast.LENGTH_LONG).show()
@@ -275,17 +251,45 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         })
     }
 
+    private fun editDriverLicenseBottomDialog() {
+        val driverLicenseBottomSheetDialog = EditDriverLicenseBottomSheetDialog()
+        driverLicenseBottomSheetDialog.show(supportFragmentManager,"EditDriverLicenseBottomSheetDialog")
+        val bundle = Bundle()
+        bundle.putString("driver_license",carLicense.text.toString())
+        driverLicenseBottomSheetDialog.arguments = bundle
+    }
+    override fun onEditDriverLicenseButtonClicked(text: String) {
+        driverLicense.text = text
+    }
+
+    private fun editCarLicenseBottomDialog() {
+        val carLicenseBottomSheetDialog = EditCarLicenseBottomSheetDialog()
+        carLicenseBottomSheetDialog.show(supportFragmentManager,"EditCarLicenseBottomSheetDialog")
+        val bundle = Bundle()
+        bundle.putString("car_license",carLicense.text.toString())
+        carLicenseBottomSheetDialog.arguments = bundle
+    }
+    override fun onEditCarLicenseButtonClicked(text: String) {
+        carLicense.text = text
+    }
+
     private fun getProfilePicObserver(){
         myProfileViewModel.profilePic.observe(this, object : Observer<String>{
             override fun onChanged(t: String?) {
-                var imageName  = t
+                var imageName = t
                 imageName = imageName?.replace("~/","")
                 val imageUrl = "https://seka.azurewebsites.net/$imageName"
-                Log.e("OnResponse pic : ", imageName)
+                Log.e("OnResponse pic : ", imageUrl)
                 Picasso.get()
                         .load(imageUrl)
                         .placeholder(R.drawable.blank_profile_pic)
-                        .into(showProfilePic)
+                        .into(showProfilePic, object : com.squareup.picasso.Callback{
+                            override fun onSuccess() {
+                            }
+                            override fun onError(e: Exception?) {
+                                showProfilePic.setImageDrawable(ContextCompat.getDrawable(applicationContext, R.drawable.blank_profile_pic))
+                            }
+                        })
             }
         })
     }
@@ -324,7 +328,21 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         })
         myProfileViewModel.driverLicense.observe(this, object : Observer<String> {
             override fun onChanged(t: String?) {
-                driverLicense.text = t
+                if(driverLicense.text.toString().equals("") || driverLicense.text == null){
+                    //Create ImageView to editing driverLicense if driver text is empty or null
+                    val addDriverLicense = ImageView(applicationContext)
+                    addDriverLicense.setImageResource(R.drawable.edit_pin)
+                    val relativeParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT)
+                    relativeParams.addRule(RelativeLayout.CENTER_HORIZONTAL)
+                    relativeParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
+                    relativeParams.addRule(RelativeLayout.BELOW, R.id.header_car_image);
+                    relativeParams.setMargins(0,0,20,0)
+                    addDriverLicense.layoutParams = relativeParams
+                    driverLicenseLayout.addView(addDriverLicense)
+                    addDriverLicense.setOnClickListener(View.OnClickListener {
+                        editDriverLicenseBottomDialog()
+                    })
+                }
             }
         })
         myProfileViewModel.carLicense.observe(this, object : Observer<String> {
@@ -345,17 +363,17 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
                         .load(imageUrl)
                         .placeholder(R.drawable.ic_baseline_directions_car)
                         .into(carImage)
-                carImage.setTag(imageUrl)
+                profileProgressBar.visibility = View.INVISIBLE //hide profile details progress bar
             }
         })
     }
 
-    private fun pickImageFromGallery() {
+    private fun pickImageFromGallery(selectedImageStatic : Int) {
         //Intent to pick image
         val gallery = Intent(Intent.ACTION_OPEN_DOCUMENT)
         gallery.addCategory(Intent.CATEGORY_OPENABLE)
         gallery.type = "image/*"
-        startActivityForResult(gallery, IMAGE_PICK_CODE)
+        startActivityForResult(gallery,selectedImageStatic)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -364,7 +382,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
                 if (grantResults.size > 0 && grantResults[0] ==
                         PackageManager.PERMISSION_GRANTED) {
                     //permission from popup granted
-                    pickImageFromGallery()
+                    pickImageFromGallery(IMAGE_PICK_CODE)
                    } else {
                     //permission from popup denied
                     Toast.makeText(this, "Permission Denied", Toast.LENGTH_LONG).show()
@@ -376,11 +394,21 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE && data != null) {
-            imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
+            val imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
             showProfilePic.setImageURI(imageUri)
             try {
-                val imagePart = uriToMultipart(imageUri)
-                uploadProfilePic(imagePart , "Bearer $accessToken")
+                val imagePartProfile = uriToMultipart(imageUri)
+                uploadProfilePic(imagePartProfile , accessToken!!)
+            } catch (e: IOException) {
+                e.message
+            }
+        }
+        else if (resultCode == Activity.RESULT_OK && requestCode == CAR_IMAGE_PICK_CODE && data != null) {
+            val imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
+            carImage.setImageURI(imageUri)
+            try {
+                val carImagePart = uriToMultipart(imageUri)
+                uploadCarImage(carImagePart, accessToken!!)
             } catch (e: IOException) {
                 e.message
             }
@@ -398,7 +426,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     }
 
     private fun uploadProfilePic(imageFile : MultipartBody.Part , token : String){
-        val call : Call<String>? = RetrofitClient.instance?.api?.addProfilePic( imageFile , token )
+        val call : Call<String>? = RetrofitClient.instance?.api?.addProfilePic( imageFile , "Bearer $token" )
         call?.enqueue(object : Callback<String>{
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 Toast.makeText(this@MyProfile, "Check your connection", Toast.LENGTH_LONG).show()
@@ -497,6 +525,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     companion object {
         private val IMAGE_PICK_CODE = 1000;
         private val PERMISSION_CODE = 1001;
+        private val CAR_IMAGE_PICK_CODE = 2002;
     }
 
 }

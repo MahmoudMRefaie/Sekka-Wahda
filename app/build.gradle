@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -92,4 +93,7 @@ dependencies {
 
     //sdp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //alerter
+    implementation 'com.tapadoo.android:alerter:3.0.0'
 }

@@ -18,8 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.Profile.EditMyProfile"></activity>
-        <activity android:name=".ui.Profile.MyProfile" />
+        <activity android:name=".ui.MainPage.Search"></activity>
+        <activity android:name=".ui.Profile.NotReservedUserProfile" />
+        <activity android:name=".ui.Profile.ReservedUserProfile" />
+        <activity android:name=".ui.Profile.MyProfile.EditMyProfile" />
+        <activity android:name=".ui.Profile.MyProfile.MyProfile" />
         <activity android:name=".ui.MainPage.MainPage" />
         <activity android:name=".ui.Forgetpassword" />
         <activity android:name=".ui.Registeration.Registeration" />

@@ -1,6 +1,8 @@
 package com.mahmoudrefaie.sekkawahda.Network
 
+import com.google.gson.annotations.SerializedName
 import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse
+import com.mahmoudrefaie.sekkawahda.Pojo.Trip
 import com.mahmoudrefaie.sekkawahda.Pojo.User
 import com.mahmoudrefaie.sekkawahda.Pojo.UserIdResponse
 import okhttp3.MultipartBody
@@ -80,4 +82,39 @@ interface Api {
             @Part carImage: MultipartBody.Part?,
             @Header("Authorization") authToken: String?
     ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileDriverLicense(
+            @Field("DriverLicense") carLicense: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/Profile/UpdateProfile")
+    fun updateProfileCarLicense(
+            @Field("CarLicense") carLicense: String?,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @FormUrlEncoded
+    @POST("api/HomePage/PostTrip")
+    fun postTrip(
+            @Field("FromCity") fromCity : String,
+            @Field("ToCity") toCity : String,
+            @Field("PlaceToMeet") placeToMeet : String,
+            @Field("DateOfTrip") tripDate : String,
+            @Field("TimeOfTrip") tripTime : String,
+            @Header("Authorization") authToken: String?
+    ): Call<String>?
+
+    @GET("api/HomePage/GetAllTrips")
+    fun getTrips( @Header("Authorization") authToken: String? ): Call<List<Trip>>?
+
+    @POST("api/Reservation/MakeResrvation")
+    fun reserveTrip(
+            @Query("TripID") tripId : String,
+            @Header("Authorization") authToken: String?
+    ): Call<String>
+
 }
