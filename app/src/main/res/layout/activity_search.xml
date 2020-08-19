@@ -4,26 +4,169 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/proj_main_color"
     tools:context=".ui.MainPage.Search">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        style="@style/TextInputLayoutStyleEdit"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        app:errorEnabled="true">
-        <com.google.android.material.textfield.TextInputEditText
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/emailReg"
-            android:paddingHorizontal="@dimen/boxPaddingHorizontal"
-            android:maxLines="1"
-            android:lines="1"
-            android:singleLine="true"
-            android:textCursorDrawable="@color/colorBlack" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <LinearLayout
+                    android:id="@+id/search_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Journey from"
+                            android:textColor="@color/proj_sub_color"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/spinner_layout"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_city_dropdown_border"
+                            tools:ignore="UselessParent">
+
+                            <Spinner
+                                android:id="@+id/from_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spinnerHeight"
+                                android:backgroundTint="@color/white"
+                                android:overlapAnchor="false"
+                                android:paddingHorizontal="@dimen/boxPaddingHorizontal"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Journey to"
+                            android:textColor="@color/proj_sub_color"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/spinner_layout2"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_city_dropdown_border"
+                            tools:ignore="UselessParent">
+
+                            <Spinner
+                                android:id="@+id/to_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spinnerHeight"
+                                android:backgroundTint="@color/white"
+                                android:overlapAnchor="false"
+                                android:paddingHorizontal="@dimen/boxPaddingHorizontal"
+                                android:spinnerMode="dropdown" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Date"
+                            android:textColor="@color/proj_sub_color"
+                            android:textSize="@dimen/_18sdp" />
+
+                        <LinearLayout
+                            android:id="@+id/date_layout"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/edit_city_dropdown_border"
+                            tools:ignore="UselessParent">
+
+                            <TextView
+                                android:id="@+id/show_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="select date"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_20sdp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/postBtn_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/place_to_meet"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            style="@style/RippleStyleGrey"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/search_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/proj_sub_color"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="Search"
+                                android:textColor="@color/proj_main_color"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="bold" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/search_layout"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

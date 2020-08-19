@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.View
-import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -18,7 +17,7 @@ import com.mahmoudrefaie.sekkawahda.R
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Home.HomeFragment
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.MoreFragment
-import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.NotificationsFragment
+import com.mahmoudrefaie.sekkawahda.ui.MainPage.Notifications.NotificationsFragment
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*
 
@@ -51,6 +50,7 @@ class MainPage : AppCompatActivity() {
         viewPagerAdapter.addFragment(moreFragment!!, "More")
         viewPager?.setAdapter(viewPagerAdapter)
 
+        searchIcon = findViewById(R.id.search)
         searchIcon?.setOnClickListener(View.OnClickListener {
             var intent = Intent(this,Search::class.java)
             startActivity(intent)

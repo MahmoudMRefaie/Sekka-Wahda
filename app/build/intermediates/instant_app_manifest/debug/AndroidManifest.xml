@@ -30,6 +30,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.mahmoudrefaie.sekkawahda.ui.MainPage.Search" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.NotReservedUserProfile" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.ReservedUserProfile" />
         <activity android:name="com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile.EditMyProfile" />

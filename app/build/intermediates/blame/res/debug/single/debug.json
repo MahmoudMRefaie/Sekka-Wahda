@@ -56,6 +56,10 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-xxhdpi\\ic_baseline_directions_car.xml"
     },
     {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_search.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_baseline_directions_car_white.xml.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable-v24\\ic_baseline_directions_car_white.xml"
     },
@@ -214,6 +218,10 @@
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_left_24.xml.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_left_24.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_item.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\notification_item.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_register_b.xml.flat",

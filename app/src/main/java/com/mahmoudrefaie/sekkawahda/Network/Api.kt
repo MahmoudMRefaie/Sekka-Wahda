@@ -1,10 +1,7 @@
 package com.mahmoudrefaie.sekkawahda.Network
 
 import com.google.gson.annotations.SerializedName
-import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse
-import com.mahmoudrefaie.sekkawahda.Pojo.Trip
-import com.mahmoudrefaie.sekkawahda.Pojo.User
-import com.mahmoudrefaie.sekkawahda.Pojo.UserIdResponse
+import com.mahmoudrefaie.sekkawahda.Pojo.*
 import okhttp3.MultipartBody
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -117,4 +114,15 @@ interface Api {
             @Header("Authorization") authToken: String?
     ): Call<String>
 
+    @FormUrlEncoded
+    @POST("api/HomePage/SearchForTrip")
+    fun search(
+            @Field("FromCity") fromCity: String,
+            @Field("ToCity") toCity: String,
+            @Field("DateOfTrip") dateOfTrip: String,
+            @Header("Authorization") authToken: String?
+    ): Call<List<Trip>>
+
+    @GET("api/Notification/GetNotifications")
+    fun notifications( @Header("Authorization") authToken: String?): Call<List<NotificationResponse>>
 }
