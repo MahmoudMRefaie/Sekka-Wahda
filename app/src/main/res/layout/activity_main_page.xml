@@ -44,7 +44,7 @@
                 android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabSelectedTextColor="@color/colorBlue"
+                app:tabSelectedTextColor="@color/proj_sub_color"
                 app:tabRippleColor="@color/colorGrey"
                 app:tabIndicatorColor="@color/colorBlue"/>
         </RelativeLayout>

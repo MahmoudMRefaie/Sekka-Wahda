@@ -15,7 +15,8 @@
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="message"
-        android:textSize="@dimen/_18sdp"
-        android:gravity="center"/>
+        android:textSize="@dimen/_15sdp"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/proj_main_color"/>
 </androidx.cardview.widget.CardView>

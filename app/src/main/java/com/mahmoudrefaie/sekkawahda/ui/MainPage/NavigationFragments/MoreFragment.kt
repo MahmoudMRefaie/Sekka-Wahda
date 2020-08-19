@@ -36,8 +36,6 @@ class MoreFragment : Fragment(), View.OnClickListener {
     private var appAuth: SharedPreferences? = null
     private var accessToken: String? = null
 
-
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //return super.onCreateView(inflater, container, savedInstanceState);
         val view = inflater.inflate(R.layout.fragment_more, container, false)
@@ -66,7 +64,6 @@ class MoreFragment : Fragment(), View.OnClickListener {
             startActivity(intent)
         }
         else if(v?.id == R.id.logout){
-            Toast.makeText(activity,"Logout clicked",Toast.LENGTH_LONG).show()
             val editor: SharedPreferences.Editor = sharedPre?.edit()!!
             Log.e("Log Out", sharedPre?.getBoolean("logged", true).toString())
             val editorAuth: SharedPreferences.Editor = appAuth?.edit()!!
