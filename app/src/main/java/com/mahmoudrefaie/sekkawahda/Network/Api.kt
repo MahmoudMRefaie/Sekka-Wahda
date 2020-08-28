@@ -2,6 +2,7 @@ package com.mahmoudrefaie.sekkawahda.Network
 
 import com.google.gson.annotations.SerializedName
 import com.mahmoudrefaie.sekkawahda.Pojo.*
+import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.More.MyTrips
 import okhttp3.MultipartBody
 import okhttp3.ResponseBody
 import retrofit2.Call
@@ -125,4 +126,7 @@ interface Api {
 
     @GET("api/Notification/GetNotifications")
     fun notifications( @Header("Authorization") authToken: String?): Call<List<NotificationResponse>>
+
+    @GET("api/HomePage/GetMyReservedTrips")
+    fun myTrips( @Header("Authorization") authToken: String?): Call<List<Trip>>
 }

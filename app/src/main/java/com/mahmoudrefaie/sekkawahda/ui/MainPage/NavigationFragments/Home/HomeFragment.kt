@@ -174,6 +174,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
         //recycler.layoutManager = layoutManager
 
         refreshLayout = view.findViewById(R.id.refreshLayout)
+        refreshLayout.setColorSchemeResources(R.color.proj_sub_color)
         refreshLayout.setOnRefreshListener {
             getTrips(accessToken!!)
             getUserImageandName(accessToken!!)

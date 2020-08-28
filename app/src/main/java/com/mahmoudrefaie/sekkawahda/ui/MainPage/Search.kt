@@ -86,6 +86,7 @@ class Search : AppCompatActivity(), View.OnClickListener {
         }
 
         search_btn.setOnClickListener(this)
+        refreshLayout.setColorSchemeResources(R.color.proj_sub_color)
         refreshLayout.setOnRefreshListener {
             getTrips(from_city.selectedItem.toString(),to_city.selectedItem.toString(),show_date.text.toString(),accessToken!!)
         }

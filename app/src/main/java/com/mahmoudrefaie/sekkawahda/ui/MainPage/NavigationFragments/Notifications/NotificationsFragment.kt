@@ -15,6 +15,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
 import com.mahmoudrefaie.sekkawahda.Pojo.NotificationResponse
 import com.mahmoudrefaie.sekkawahda.R
+import kotlinx.android.synthetic.main.activity_my_trips.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -26,8 +27,8 @@ class NotificationsFragment : Fragment() {
     private var appAuth: SharedPreferences? = null
     private var accessToken: String? = null
 
-
     lateinit var recycler: RecyclerView
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         //return super.onCreateView(inflater, container, savedInstanceState);
         val view = inflater.inflate(R.layout.fragment_notifications, container, false)
@@ -38,6 +39,7 @@ class NotificationsFragment : Fragment() {
         recycler = view.findViewById(R.id.notifications)
 
         refreshLayout = view.findViewById(R.id.refreshLayout)
+        refreshLayout?.setColorSchemeResources(R.color.proj_sub_color)
         refreshLayout?.setOnRefreshListener {
             getNotification(accessToken!!)
         }

@@ -23,7 +23,6 @@
             android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mahmoud"
             android:textColor="@color/proj_main_color"
             android:fontFamily="sans-serif-condensed-medium"
             android:textSize="@dimen/_20sdp"
@@ -50,6 +49,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile"/>
 
+    <RelativeLayout
+        android:id="@+id/my_trips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <ImageView
+            android:id="@+id/my_trips_logo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_baseline_directions_car"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_toRightOf="@id/my_trips_logo"
+            android:fontFamily="sans-serif-medium"
+            android:text="My Trips"
+            android:textColor="@color/proj_main_color"
+            android:textSize="@dimen/_25sdp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_trips"/>
+
 
     <RelativeLayout
         android:id="@+id/logout"
@@ -58,7 +94,7 @@
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view1">
+        app:layout_constraintTop_toBottomOf="@+id/view2">
 
         <ImageView
             android:id="@+id/logout_logo"

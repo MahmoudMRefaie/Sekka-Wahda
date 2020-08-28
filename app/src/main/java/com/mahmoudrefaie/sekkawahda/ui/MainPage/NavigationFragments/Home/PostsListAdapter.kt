@@ -10,9 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
 import com.mahmoudrefaie.sekkawahda.Pojo.Trip
@@ -20,9 +18,8 @@ import com.mahmoudrefaie.sekkawahda.Pojo.User
 import com.mahmoudrefaie.sekkawahda.R
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Home.PostsListAdapter.PostsHolder
 import com.mahmoudrefaie.sekkawahda.ui.Profile.MyProfile.MyProfile
-import com.mahmoudrefaie.sekkawahda.ui.Profile.NotReservedUserProfile
-import com.mahmoudrefaie.sekkawahda.ui.Profile.ReservedUserProfile
-import com.squareup.picasso.Callback
+import com.mahmoudrefaie.sekkawahda.ui.Profile.OtherProfiles.NotReservedUserProfile
+import com.mahmoudrefaie.sekkawahda.ui.Profile.OtherProfiles.ReservedUserProfile
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import retrofit2.Call
@@ -34,12 +31,10 @@ class PostsListAdapter(private val context: Context, private val trips: List<Tri
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.post_cardview, parent, false)
-        Log.d(TAG, "onCreateViewHolder: called.")
         return PostsHolder(view)
     }
 
     override fun onBindViewHolder(holder: PostsHolder, position: Int) {
-        Log.d(TAG, "onBindViewHolder: called.")
         val trip = trips[position]
         holder.bindView(trip)
     }
@@ -85,7 +80,7 @@ class PostsListAdapter(private val context: Context, private val trips: List<Tri
 
             appAuth = context.getSharedPreferences("MY_APP", Context.MODE_PRIVATE)
             accessToken = appAuth?.getString("TOKEN", null)
-            userId = appAuth?.getInt("userId",userId!!)
+            userId = appAuth?.getInt("userId", userId!!)
 
             reserveBtn.setOnClickListener(this)
             postProfPic.setOnClickListener(this)
@@ -101,8 +96,12 @@ class PostsListAdapter(private val context: Context, private val trips: List<Tri
             tripDate.text = postItem.tripDate
             tripTime.text = postItem.tripTime
             placeToMeet.text = postItem.placeToMeet
-            postTime.text = postItem.postTime.time.toString()
-            postUnit.text = postItem.postTime.unit
+            try {
+                postTime.text = postItem.postTime.time.toString()
+                postUnit.text = postItem.postTime.unit
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
             var imageName = postItem.driverImageUrl
 
@@ -138,21 +137,21 @@ class PostsListAdapter(private val context: Context, private val trips: List<Tri
             else if(profileType.equals("ProfileReserved")){
                 val intent = Intent(context, ReservedUserProfile::class.java)
                 val bundle = Bundle()
-                bundle.putInt("profile_id",driverId)
+                bundle.putInt("profile_id", driverId)
                 intent.putExtras(bundle)
                 context.startActivity(intent)
             }
             else{       //if ProfileNotReserved
                 val intent = Intent(context, NotReservedUserProfile::class.java)
                 val bundle = Bundle()
-                bundle.putInt("profile_id",driverId)
+                bundle.putInt("profile_id", driverId)
                 intent.putExtras(bundle)
                 context.startActivity(intent)
             }
         }
 
-        private fun determineProfileType(profileId : Int, authToken : String){
-            val call: Call<User>? = RetrofitClient.instance?.api?.getProfileDetails(profileId,"Bearer $authToken")
+        private fun determineProfileType(profileId: Int, authToken: String){
+            val call: Call<User>? = RetrofitClient.instance?.api?.getProfileDetails(profileId, "Bearer $authToken")
             call?.enqueue(object : retrofit2.Callback<User> {
                 override fun onFailure(call: Call<User?>, t: Throwable) {
                     Log.e("onFailure : ", t.message!!)
@@ -172,10 +171,8 @@ class PostsListAdapter(private val context: Context, private val trips: List<Tri
         private fun openConfirmReservationDialog(){
             val confirmReservationDialog = ConfirmReservationDialog(tripId, accessToken!!, username.text.toString())
             val sfm = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
-            confirmReservationDialog.show(sfm,"Confirm Reservation Dialog")
+            confirmReservationDialog.show(sfm, "Confirm Reservation Dialog")
         }
-
-
 
     }
 

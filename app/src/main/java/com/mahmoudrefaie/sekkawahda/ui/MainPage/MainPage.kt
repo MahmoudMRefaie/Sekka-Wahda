@@ -16,8 +16,7 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.mahmoudrefaie.sekkawahda.R
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Home.HomeFragment
-import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.MoreFragment
-import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Notifications.NotificationAdapter
+import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.More.MoreFragment
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Notifications.NotificationsFragment
 import de.hdodenhof.circleimageview.CircleImageView
 import java.util.*

@@ -393,7 +393,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE && data != null) {
+        if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE && data != null && data.getData() != null) {
             val imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
             showProfilePic.setImageURI(imageUri)
             try {
@@ -417,8 +417,10 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
     //this step to convert imageUri to Multipart and send it to API directly
     private fun uriToMultipart(fileUri : Uri?) : MultipartBody.Part {
-        Log.e("RealPath ", getRealPathFromUri(fileUri!!)) //this function to get real path from Uri
-        val realPath = getRealPathFromUri(fileUri)!!
+        //Log.e("RealPath ", getRealPathFromUri(fileUri!!)) //this function to get real path from Uri
+        //val realPath = getRealPathFromUri(fileUri)!!
+        Log.e("RealPath ", RealPathUtil.getRealPath(this,fileUri))
+        val realPath = RealPathUtil.getRealPath(this,fileUri)!!
         val file = File(realPath)
         val fileBody = RequestBody.create(MediaType.parse("multipart/form-data"), file)  //convert file to multipart
         val filePart = MultipartBody.Part.createFormData("image", file.name, fileBody)
