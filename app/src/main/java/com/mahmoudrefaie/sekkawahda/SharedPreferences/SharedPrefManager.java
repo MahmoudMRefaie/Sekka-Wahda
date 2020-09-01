@@ -7,7 +7,7 @@ import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse;
 import com.mahmoudrefaie.sekkawahda.Pojo.User;
 
 public class SharedPrefManager {
-    private static final String SHARED_PREF_NAME = "my_shared_pref";
+    private static final String APP_SHARED_PREF = "MY_APP";
     private static SharedPrefManager mInstance;
     private Context cont;
 
@@ -22,21 +22,21 @@ public class SharedPrefManager {
     }
 
     public void saveUser(LoginResponse loginResponse){
-        SharedPreferences sharedPreferences = cont.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = cont.getSharedPreferences(APP_SHARED_PREF,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("access_token",loginResponse.getAccess_token());
+        editor.putString("TOKEN",loginResponse.getAccess_token());
         editor.apply();
     }
 
     public boolean isLoggedIn(){
-        SharedPreferences sharedPreferences = cont.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = cont.getSharedPreferences(APP_SHARED_PREF,Context.MODE_PRIVATE);
         if(sharedPreferences.getInt("expires_in" , -1 )!=-1)
             return true;
         return false;
     }
 
     public LoginResponse getResponse(){
-        SharedPreferences sharedPreferences = cont.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = cont.getSharedPreferences(APP_SHARED_PREF,Context.MODE_PRIVATE);
         LoginResponse loginResponse = new LoginResponse(
                 sharedPreferences.getString("access_token" , null ),
                 sharedPreferences.getString("token_type" , null),
@@ -46,7 +46,7 @@ public class SharedPrefManager {
     }
 
     public User getUser(){
-        SharedPreferences sharedPreferences = cont.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = cont.getSharedPreferences(APP_SHARED_PREF,Context.MODE_PRIVATE);
         User user = new User(
                 sharedPreferences.getString("UserName" , null ),
                 sharedPreferences.getString("UserEmailID" , null),
@@ -59,7 +59,7 @@ public class SharedPrefManager {
     }
 
     public void clear(){
-        SharedPreferences sharedPreferences = cont.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = cont.getSharedPreferences(APP_SHARED_PREF,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();

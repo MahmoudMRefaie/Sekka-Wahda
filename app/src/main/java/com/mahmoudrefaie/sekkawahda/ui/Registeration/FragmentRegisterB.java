@@ -1,6 +1,7 @@
 package com.mahmoudrefaie.sekkawahda.ui.Registeration;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -21,8 +22,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient;
+import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse;
 import com.mahmoudrefaie.sekkawahda.R;
 import com.mahmoudrefaie.sekkawahda.Pojo.User;
+import com.mahmoudrefaie.sekkawahda.SharedPreferences.SharedPrefManager;
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login;
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage;
 import com.google.android.material.textfield.TextInputLayout;
@@ -33,6 +36,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.content.Context.MODE_PRIVATE;
+
 public class FragmentRegisterB extends Fragment implements View.OnClickListener {
 
     private TextInputLayout ssn , phone_no;
@@ -41,6 +46,10 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
 
     private TextView previous;
     private Button registerBtn;
+
+    private LoginResponse loginResponse;
+
+    private SharedPreferences sharedPre;
 
     public FragmentRegisterB() {
         // Required empty public constructor
@@ -59,6 +68,8 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
         previous.setOnClickListener(this);
         registerBtn = view.findViewById(R.id.regBtn);
         registerBtn.setOnClickListener(this);
+
+        sharedPre = getActivity().getSharedPreferences("LOGIN",MODE_PRIVATE);
 
         //City Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
@@ -113,35 +124,76 @@ public class FragmentRegisterB extends Fragment implements View.OnClickListener 
             String getEmail = getArguments().getString("email");
             String getPassword = getArguments().getString("password");
 
-            User user = new User(getUserName, getEmail, getPassword, getSsn, getPhone, getCity);
-
-            Call<String> call = RetrofitClient.getInstance().getApi().createUser(user);
-
-            call.enqueue(new Callback<String>() {
-                @Override
-                public void onResponse(Call<String> call, Response<String> response) {
-                    try {
-                        if (response.isSuccessful()) {
-                            String res = response.body();
-                            Toast.makeText(getActivity(), "Registered Successfully", Toast.LENGTH_LONG).show();
-                            openLoginPage();
-                        } else {
-                            String res = response.errorBody().string();
-                            Toast.makeText(getActivity(), "Not Registered", Toast.LENGTH_LONG).show();
-                            Log.e("Error Code", String.valueOf(response.code()));
-                            Log.e("Error Body", res);
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<String> call, Throwable t) {
-                    Toast.makeText(getActivity(), "Check Your Internet Connection", Toast.LENGTH_LONG).show();
-                }
-            });
+            makeRegister(getUserName,getEmail,getPassword,getSsn,getPhone,getCity);
         }
+    }
+
+    private void makeRegister(String username, String email, String pass, String ssn, String phone, String city){
+        User user = new User(username, email, pass, ssn, phone, city);
+        Call<String> call = RetrofitClient.getInstance().getApi().createUser(user);
+        call.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                try {
+                    if (response.isSuccessful()) {
+                        String res = response.body();
+                        Toast.makeText(getActivity(), "Registered Successfully", Toast.LENGTH_LONG).show();
+                        makeLogin(username,pass);
+                    } else {
+                        String res = response.errorBody().string();
+                        Toast.makeText(getActivity(), "Not Registered", Toast.LENGTH_LONG).show();
+                        Log.e("Error Code", String.valueOf(response.code()));
+                        Log.e("Error Body", res);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Toast.makeText(getActivity(), "Check Your Internet Connection", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void makeLogin(String user, String pass){
+        String type = "password";
+        Call<LoginResponse> call = RetrofitClient.getInstance().getApi()
+                .getUserLogin(user, pass, type);
+
+        //Toast.makeText(Login.this, username, Toast.LENGTH_LONG).show();
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                loginResponse = response.body();
+                try {
+                    if (response.isSuccessful()) {
+                        SharedPrefManager.getInstance(getActivity()).saveUser(loginResponse);
+                        openHomeActivity();
+                        sharedPre.edit().putBoolean("logged",true).apply();
+                    } else {
+                        String res = response.errorBody().string();
+                        Toast.makeText(getActivity(), "Incorrect username or password", Toast.LENGTH_LONG).show();
+                        //Log.e("Error Code", String.valueOf(response.code()));
+                        //Log.e("Error Body", response.errorBody().toString());
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Toast.makeText(getActivity(), "Internet isn't connect", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public void openHomeActivity() {
+        Intent intent = new Intent(getActivity(), MainPage.class);
+        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        getActivity().finish();
     }
 
     private boolean validateSSN() {

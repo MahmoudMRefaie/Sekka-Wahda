@@ -55,7 +55,7 @@ class ConfirmReservationDialog(private val tripId: Int, private val authToken: S
 
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (response.isSuccessful) {
-                    //Toast.makeText(context,response.body(), Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,"You reserve this trip, wait the confirmation notice", Toast.LENGTH_LONG).show()
                     Log.e("OnResponse : ", "Trip reserved")
                 } else {
                     Log.e("isn't successful : ", "this trip already reserved")

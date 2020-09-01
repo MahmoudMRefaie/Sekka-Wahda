@@ -288,7 +288,7 @@
                             android:layout_height="@dimen/_100sdp"
                             android:layout_centerHorizontal="true"
                             android:layout_below="@+id/header_car_image"
-                            android:src="@drawable/ic_baseline_directions_car" />
+                            android:src="@mipmap/ic_launcher_hint_car_foreground" />
                         <ImageView
                             android:id="@+id/edit_car_image"
                             android:layout_width="wrap_content"

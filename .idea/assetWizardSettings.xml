@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\User1\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\Al-Refa'i\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -74,23 +74,13 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
-                                      <entry key="foregroundClipartAsset">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio1/plugins/android/lib/android.jar!/images/material/icons/materialicons/directions_car/baseline_directions_car_24.xml" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
                                       <entry key="foregroundImage">
                                         <value>
                                           <PersistentState>
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\Al-Refa'i\Downloads\car.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -122,8 +112,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="foregroundAssetType" value="CLIP_ART" />
-                                      <entry key="outputName" value="ic_launcher_car" />
+                                      <entry key="outputName" value="ic_launcher_hint_car" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -140,7 +129,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\User1\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\Al-Refa'i\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -184,7 +173,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\User1\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\Al-Refa'i\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -248,7 +237,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\User1\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\Al-Refa'i\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>

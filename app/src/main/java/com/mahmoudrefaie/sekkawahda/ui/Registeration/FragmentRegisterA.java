@@ -59,7 +59,6 @@ public class FragmentRegisterA extends Fragment implements View.OnClickListener 
             bundle.putString("email", getEmail);
             bundle.putString("password", getPassword);
 
-
             //To open second fragment
             FragmentManager manager = getActivity().getSupportFragmentManager();
             FragmentRegisterB secondFragment = new FragmentRegisterB();

@@ -87,7 +87,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         preferenceHelper = new PreferenceHelper(this);
     }
 
-
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.btnLogin){
@@ -98,45 +97,43 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             String password = etPass.getEditText().getText().toString().trim();
             String grant_type = "password";
 
-            Call<LoginResponse> call = RetrofitClient.getInstance().getApi()
-                    .getUserLogin(username, password, grant_type);
-
-            //Toast.makeText(Login.this, username, Toast.LENGTH_LONG).show();
-            call.enqueue(new Callback<LoginResponse>() {
-                @Override
-                public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                    loginResponse = response.body();
-                    try {
-                        if (response.isSuccessful()) {
-                            String token = loginResponse.getAccess_token();
-                            SharedPreferences.Editor editor = getSharedPreferences("MY_APP", MODE_PRIVATE).edit();
-                            editor.putString("TOKEN", token);
-                            editor.apply();
-
-                            SharedPrefManager.getInstance(Login.this).saveUser(loginResponse);
-
-                            openHomeActivity();  //Problem at main Page
-                            sharedPre.edit().putBoolean("logged",true).apply();
-                        } else {
-                            String res = response.errorBody().string();
-                            Toast.makeText(Login.this, "Incorrect username or password", Toast.LENGTH_LONG).show();
-                            //Log.e("Error Code", String.valueOf(response.code()));
-                            //Log.e("Error Body", response.errorBody().toString());
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                       }
-                }
-                @Override
-                public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(Login.this, "Internet isn't connect", Toast.LENGTH_LONG).show();
-                }
-            });
+            makeLogin(username,password,grant_type);
         }
         else if(view.getId() == R.id.register){
             Intent intent = new Intent(Login.this, Registeration.class);
             startActivity(intent);
         }
+    }
+
+    private void makeLogin(String user, String pass, String type){
+        Call<LoginResponse> call = RetrofitClient.getInstance().getApi()
+                .getUserLogin(user, pass, type);
+
+        //Toast.makeText(Login.this, username, Toast.LENGTH_LONG).show();
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                loginResponse = response.body();
+                try {
+                    if (response.isSuccessful()) {
+                        SharedPrefManager.getInstance(Login.this).saveUser(loginResponse);
+                        openHomeActivity();
+                        sharedPre.edit().putBoolean("logged",true).apply();
+                    } else {
+                        String res = response.errorBody().string();
+                        Toast.makeText(Login.this, "Incorrect username or password", Toast.LENGTH_LONG).show();
+                        //Log.e("Error Code", String.valueOf(response.code()));
+                        //Log.e("Error Body", response.errorBody().toString());
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Toast.makeText(Login.this, "Internet isn't connect", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public void openHomeActivity() {

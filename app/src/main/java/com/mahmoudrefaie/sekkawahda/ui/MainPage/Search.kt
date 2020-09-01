@@ -121,12 +121,12 @@ class Search : AppCompatActivity(), View.OnClickListener {
                     var tripData: List<Trip> = response.body()!!
                     Log.e("OnResponse : ", tripData.toString())
                     //Toast.makeText(activity,tripData.toString(),Toast.LENGTH_LONG).show()
-                    showTripData(applicationContext, tripData)
+                    showTripData(this@Search, tripData)
                 } else {
                     refreshLayout.isRefreshing = false
                     Log.e("OnResponse : ", response.body().toString())
-                    Toast.makeText(applicationContext, response.body().toString(), Toast.LENGTH_LONG).show()
-                    Toast.makeText(applicationContext, response.code().toString(), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@Search, response.body().toString(), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@Search, response.code().toString(), Toast.LENGTH_LONG).show()
                 }
             }
         })
