@@ -8,3 +8,4 @@ the applicaiton show how to deal with APIs and get,post Posts, basic usage for `
 3. `Matrial Design` to make a handsome designs for UI
 4. `Recycler View` to get posts and show their in list
 5. `MVVM` using this architecture pattern
+6. `sdp` to make a responsive views
