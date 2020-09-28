@@ -11,6 +11,4 @@ the applicaiton show how to deal with APIs and get,post Posts, basic usage for `
 6. `sdp` to make a responsive views
 
 ## Demo
-![Sekka wahda 1](https://user-images.githubusercontent.com/55982701/94496760-94344180-01f5-11eb-80e3-0b7bd9a065fb.gif)
-
-![Sekka wahda 2](https://user-images.githubusercontent.com/55982701/94496857-d3fb2900-01f5-11eb-9fa0-be4b4690ba5b.gif)
+![Sekka wahda 1](https://user-images.githubusercontent.com/55982701/94496760-94344180-01f5-11eb-80e3-0b7bd9a065fb.gif)          ![Sekka wahda 2](https://user-images.githubusercontent.com/55982701/94496857-d3fb2900-01f5-11eb-9fa0-be4b4690ba5b.gif)
