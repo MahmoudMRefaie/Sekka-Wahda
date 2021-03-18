@@ -78,6 +78,8 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     lateinit var driverLicenseLayout: RelativeLayout
     @BindView(R.id.driver_license_result)
     lateinit var driverLicense: TextView
+    @BindView(R.id.edit_driver_license)
+    lateinit var editDriverLicense: ImageView
     @BindView(R.id.car_license_result)
     lateinit var carLicense: TextView
     @BindView(R.id.edit_car_license)
@@ -127,6 +129,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         editEmail.setOnClickListener(this)
         editPhone.setOnClickListener(this)
         editCarImage.setOnClickListener(this)
+        editDriverLicense.setOnClickListener(this)
         editCarLicense.setOnClickListener(this)
         editCarModel.setOnClickListener(this)
 
@@ -171,6 +174,9 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         }
         else if(view?.id == R.id.edit_car_license){
             editCarLicenseBottomDialog()
+        }
+        else if(view?.id == R.id.edit_driver_license){
+            editDriverLicenseBottomDialog()
         }
     }
 
@@ -255,7 +261,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         val driverLicenseBottomSheetDialog = EditDriverLicenseBottomSheetDialog()
         driverLicenseBottomSheetDialog.show(supportFragmentManager,"EditDriverLicenseBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("driver_license",carLicense.text.toString())
+        bundle.putString("driver_license",driverLicense.text.toString())
         driverLicenseBottomSheetDialog.arguments = bundle
     }
     override fun onEditDriverLicenseButtonClicked(text: String) {
@@ -296,75 +302,41 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
     private fun getProfileDataObserver(){
         getProfilePicObserver()
-        myProfileViewModel.fullName.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                username.text = t
-            }
+        myProfileViewModel.fullName.observe(this, Observer<String> { t -> username.text = t })
+        myProfileViewModel.driverTotalRate.observe(this, Observer<Float> { t -> ratingBar.rating = t!! })
+        myProfileViewModel.city.observe(this, Observer<String> { t -> city.text = t })
+        myProfileViewModel.email.observe(this, Observer<String> { t -> email.text = t })
+        myProfileViewModel.phoneNumber.observe(this, Observer<String> { t -> phoneNumber.text = t })
+        myProfileViewModel.ssn.observe(this, Observer<String> { t -> ssn.text = t })
+        myProfileViewModel.driverLicense.observe(this, Observer<String> {
+            driverLicense.text = it
+            /*if(driverLicense.text.toString().equals("") or(driverLicense.text == null) ){
+                //Create ImageView to editing driverLicense if driver text is empty or null
+                val addDriverLicense = ImageView(applicationContext)
+                addDriverLicense.setImageResource(R.drawable.edit_pin)
+                val relativeParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT)
+                relativeParams.addRule(RelativeLayout.CENTER_HORIZONTAL)
+                relativeParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
+                relativeParams.addRule(RelativeLayout.BELOW, R.id.header_car_image);
+                relativeParams.setMargins(0,0,20,0)
+                addDriverLicense.layoutParams = relativeParams
+                driverLicenseLayout.addView(addDriverLicense)
+                addDriverLicense.setOnClickListener(View.OnClickListener {
+                    editDriverLicenseBottomDialog()
+                })
+            }else
+                driverLicense.text = it*/
         })
-        myProfileViewModel.driverTotalRate.observe(this, object : Observer<Float> {
-            override fun onChanged(t: Float?) {
-                ratingBar.rating = t!!
-            }
-        })
-        myProfileViewModel.city.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                city.text = t
-            }
-        })
-        myProfileViewModel.email.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                email.text = t
-            }
-        })
-        myProfileViewModel.phoneNumber.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                phoneNumber.text = t
-            }
-        })
-        myProfileViewModel.ssn.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                ssn.text = t
-            }
-        })
-        myProfileViewModel.driverLicense.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                if(driverLicense.text.toString().equals("") || driverLicense.text == null){
-                    //Create ImageView to editing driverLicense if driver text is empty or null
-                    val addDriverLicense = ImageView(applicationContext)
-                    addDriverLicense.setImageResource(R.drawable.edit_pin)
-                    val relativeParams = RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT)
-                    relativeParams.addRule(RelativeLayout.CENTER_HORIZONTAL)
-                    relativeParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT)
-                    relativeParams.addRule(RelativeLayout.BELOW, R.id.header_car_image);
-                    relativeParams.setMargins(0,0,20,0)
-                    addDriverLicense.layoutParams = relativeParams
-                    driverLicenseLayout.addView(addDriverLicense)
-                    addDriverLicense.setOnClickListener(View.OnClickListener {
-                        editDriverLicenseBottomDialog()
-                    })
-                }
-            }
-        })
-        myProfileViewModel.carLicense.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                carLicense.text = t
-            }
-        })
-        myProfileViewModel.carModel.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                carModel.text = t
-            }
-        })
-        myProfileViewModel.carImageUrl.observe(this, object : Observer<String> {
-            override fun onChanged(t: String?) {
-                val carImageUrlResponse = t?.replace("~/", "")
-                val imageUrl = "https://seka.azurewebsites.net/$carImageUrlResponse"
-                Picasso.get()
-                        .load(imageUrl)
-                        .placeholder(R.drawable.ic_baseline_directions_car)
-                        .into(carImage)
-                profileProgressBar.visibility = View.INVISIBLE //hide profile details progress bar
-            }
+        myProfileViewModel.carLicense.observe(this, Observer<String> { t -> carLicense.text = t })
+        myProfileViewModel.carModel.observe(this, Observer<String> { t -> carModel.text = t })
+        myProfileViewModel.carImageUrl.observe(this, Observer<String> { t ->
+            val carImageUrlResponse = t?.replace("~/", "")
+            val imageUrl = "https://seka.azurewebsites.net/$carImageUrlResponse"
+            Picasso.get()
+                    .load(imageUrl)
+                    .placeholder(R.drawable.ic_baseline_directions_car)
+                    .into(carImage)
+            profileProgressBar.visibility = View.INVISIBLE //hide profile details progress bar
         })
     }
 
@@ -525,9 +497,9 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     }
 
     companion object {
-        private val IMAGE_PICK_CODE = 1000;
-        private val PERMISSION_CODE = 1001;
-        private val CAR_IMAGE_PICK_CODE = 2002;
+        private val IMAGE_PICK_CODE = 1000
+        private val PERMISSION_CODE = 1001
+        private val CAR_IMAGE_PICK_CODE = 2002
     }
 
 }

@@ -19,7 +19,7 @@ import retrofit2.Response
 import java.io.IOException
 import java.util.regex.Pattern
 
-class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickListener {
+class EditEmailBottomSheetDialog : BottomSheetDialogFragment() {
 
     private var bottomSheetListener : BottomSheetListener?= null
 
@@ -51,23 +51,15 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
             dismiss()
         })
 
-        save.setOnClickListener (this)
-        return v
-    }
-
-
-    override fun onClick(p0: View?) {
-        if(view?.id == R.id.cancel_btn){
-            dismiss()
-        }
-        else if(view?.id == R.id.save_btn){
+        save.setOnClickListener {
             if (!validateEmail()) {
-                return
+                  return@setOnClickListener
             }
             val editedEmail = editEmail.editText?.text.toString().trim()
             updateEmail(editedEmail,accessToken!!)
             dismiss()
         }
+        return v
     }
 
     interface BottomSheetListener{
@@ -79,7 +71,7 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
         try {
             bottomSheetListener = context as BottomSheetListener
         }catch (e : ClassCastException){
-            throw ClassCastException(context.toString() + " must implement BottomSheetListener")
+            throw ClassCastException("$context must implement BottomSheetListener")
         }
     }
 
@@ -106,20 +98,19 @@ class EditEmailBottomSheetDialog : BottomSheetDialogFragment(), View.OnClickList
     }
 
     private fun validateEmail(): Boolean {
-        val valiEmail: String = editEmail.getEditText()?.getText().toString().trim()
-
+        val valiEmail = editEmail.editText?.text.toString().trim()
         return if (valiEmail.isEmpty()) {
-            editEmail.setError("Email can't be empty")
+            editEmail.error = "Email can't be empty"
             false
         } else if (!isValidEmailAddress(valiEmail)) {
-            editEmail.setError("Not valid email")
+            editEmail.error = "Not valid email"
             false
         } else {
-            editEmail.setError(null)
+            editEmail.error = null
             true
         }
     }
-    fun isValidEmailAddress(email: String?): Boolean {
+    private fun isValidEmailAddress(email: String?): Boolean {
         val emailPattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$"
         val p = Pattern.compile(emailPattern)
         val m = p.matcher(email)

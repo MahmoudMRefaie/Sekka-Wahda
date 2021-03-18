@@ -88,12 +88,12 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\carimage_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_pin_white.xml.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\edit_pin_white.xml"
-    },
-    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logout.jpg.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\logout.jpg"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edit_pin_white.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\edit_pin_white.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\anim_exit_firstfrag_to_secondfrag.xml.flat",
@@ -156,16 +156,16 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dropdown_border.xml.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\dropdown_border.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_page.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_main_page.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpeg.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\logo.jpeg"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main_page.xml.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_main_page.xml"
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dropdown_border.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\dropdown_border.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reserved_user_profile.xml.flat",
@@ -288,12 +288,12 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_register_a.xml"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_car.png.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_car.png"
-    },
-    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_directions_car_white.xml.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_baseline_directions_car_white.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_car.png.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_car.png"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_hint_car_foreground.png.flat",
@@ -308,12 +308,12 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\anim\\from_secondfrag_to_firstfrag.xml"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_home.xml"
-    },
-    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_trips.xml.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\activity_my_trips.xml"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
@@ -400,16 +400,16 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\sw_logo.png"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_artisticaline.ttf.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\artisticaline.ttf"
-    },
-    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_foreground.xml.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_hint_car_round.png.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_hint_car_round.png"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\font_artisticaline.ttf.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\font\\artisticaline.ttf"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_hint_car.png.flat",
@@ -444,12 +444,12 @@
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_hint_car_foreground.png"
     },
     {
-        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_relative_layout_background.xml.flat",
-        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\relative_layout_background.xml"
-    },
-    {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_hint_car.png.flat",
         "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_hint_car.png"
+    },
+    {
+        "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_relative_layout_background.xml.flat",
+        "source": "E:\\3\\Android\\Projects\\Graduation Project\\app\\src\\main\\res\\drawable\\relative_layout_background.xml"
     },
     {
         "merged": "E:\\3\\Android\\Projects\\Graduation Project\\app\\build\\intermediates\\res\\merged\\debug\\drawable_post_background.xml.flat",

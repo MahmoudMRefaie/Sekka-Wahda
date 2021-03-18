@@ -36,7 +36,7 @@ class MainPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
         toolbar = findViewById(R.id.toolbar)
-        toolbar?.setTitle("Sekka Wahda")
+        toolbar?.title = "Sekka Wahda"
         setSupportActionBar(toolbar)
         viewPager = findViewById(R.id.view_pager)
         tabLayout = findViewById(R.id.tab_layout)
@@ -48,7 +48,7 @@ class MainPage : AppCompatActivity() {
         viewPagerAdapter.addFragment(homeFragment!!, "Home")
         viewPagerAdapter.addFragment(notificationsFragment!!, "Notifications")
         viewPagerAdapter.addFragment(moreFragment!!, "More")
-        viewPager?.setAdapter(viewPagerAdapter)
+        viewPager?.adapter = viewPagerAdapter
 
         searchIcon = findViewById(R.id.search)
         searchIcon?.setOnClickListener(View.OnClickListener {

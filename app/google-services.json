@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "567672059901",
+    "firebase_url": "https://sekka-wahda.firebaseio.com",
+    "project_id": "sekka-wahda",
+    "storage_bucket": "sekka-wahda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567672059901:android:21fb0c6d5fcdc4dfa74b94",
+        "android_client_info": {
+          "package_name": "com.mahmoudrefaie.sekkawahda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "567672059901-qkid3p0mi0cdv04pn05crga1fg8lieck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mahmoudrefaie.sekkawahda",
+            "certificate_hash": "4291828e9015a89999c36b51e571e7d8eaa9b84f"
+          }
+        },
+        {
+          "client_id": "567672059901-7mlsos2146ao3svul8d5gb0ifq5ulvb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGZ4tpanMrhTpaF84m1g1YEuOpbCQLC44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "567672059901-7mlsos2146ao3svul8d5gb0ifq5ulvb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -60,7 +60,7 @@ class EditDriverLicenseBottomSheetDialog : BottomSheetDialogFragment() , View.On
         try {
             bottomSheetListener = context as BottomSheetListener
         }catch (e : ClassCastException){
-            throw ClassCastException(context.toString() + " must implement BottomSheetListener")
+            throw ClassCastException("$context must implement BottomSheetListener")
         }
     }
 

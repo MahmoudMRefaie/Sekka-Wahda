@@ -79,7 +79,6 @@ class Search : AppCompatActivity(), View.OnClickListener {
                 editedDay = "0$day"
             else
                 editedDay = day.toString()
-
             //val date = "$day/$month/$year"
             val d = "$year-$editedMonth-$editedDay"
             show_date.setText(d)

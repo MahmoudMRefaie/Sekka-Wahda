@@ -80,7 +80,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
         tripDate = view.findViewById(R.id.date)
         tripDate?.setOnClickListener(this)
         mDateSetListener = OnDateSetListener { datePicker, year, month, day ->
-            var monthInAlpha = ""
+//            var monthInAlpha = ""
 //            when (month) {
 //                1 -> monthInAlpha = "Jan"
 //                2 -> monthInAlpha = "Feb"
@@ -95,7 +95,8 @@ class HomeFragment : Fragment() , View.OnClickListener {
 //                11 -> monthInAlpha = "Nov"
 //                12 -> monthInAlpha = "Dec"
 //            }
-
+            var month = month
+            month++
             var editedMonth: String? = null
             var editedDay: String? = null
             if(month<10)
@@ -109,7 +110,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
 
             //val date = "$day/$month/$year"
             val d = "$year-$editedMonth-$editedDay"
-            tripDate?.setText(d)
+            tripDate?. text = d
         }
 
         //TimePicker Dialog
@@ -235,8 +236,6 @@ class HomeFragment : Fragment() , View.OnClickListener {
         else if(view?.id == R.id.submit_post){
             val selectedFromCity = fromCity?.selectedItem.toString()
             val selectedToCity = toCity?.selectedItem.toString()
-            Toast.makeText(activity,"from : "+selectedFromCity,Toast.LENGTH_LONG).show()
-            Toast.makeText(activity,"to : "+selectedToCity,Toast.LENGTH_LONG).show()
             val selectedTime = tripTime?.text.toString()
             val selectedDate = tripDate?.text.toString()
             val selectedPlaceToMeet = placeToMeet?.text.toString()

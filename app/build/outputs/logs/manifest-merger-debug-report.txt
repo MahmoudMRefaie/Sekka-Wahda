@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3e31e81fa721df5f45570a49a840bd3a\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\03fb87fcfa05bc3aadc3a1b9d210b05b\navigation-ui-2.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:2:1-109:12
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c9dcd4206ba37ece7b14281b4e0be7d8\material-1.2.0-alpha06\AndroidManifest.xml:17:1-24:12
 MERGED from [com.nex3z:notification-badge:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\d585b6f0de82cbaa269b18ab90ca30a0\jetified-notification-badge-1.0.2\AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c847397fdd357f64f2d9ef1a52aaa01f\jetified-facebook-login-5.15.3\AndroidManifest.xml:21:1-31:12
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:21:1-52:12
+MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9fb4108c1ef19df01ab7952b590187b2\jetified-facebook-login-5.15.3\AndroidManifest.xml:21:1-31:12
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:21:1-52:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e8e149701e2a35210dceab9c69245f57\jetified-library-1.6.1\AndroidManifest.xml:6:1-15:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a7e8fdf86ade5ef5f02c562d507ce900\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a7c7e4abb7c78c2e435242c2feacfa69\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -25,17 +25,17 @@ MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Al-Refa'i\.gradle\ca
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\f30f62b9381829bda3bd1b1e349af0db\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c686dda2d48e45b3ff677d58bf2b2ff0\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\5689c6cd35284aef60666c3026def4ab\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9bfc898d53fc4966efd73fb9c1793450\jetified-material-ripple-1.0.2\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:17:1-42:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\0957c132b850d65cd4fea76e53711e42\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\591911f850d55da442588655dc1b909d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:2:1-11:12
-MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\0cf692e044505901dafce2dd9b3fe6e1\jetified-alerter-3.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\27e51048d4e01263b95bf4b8aff3fbc2\jetified-alerter-3.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\aa1b66f2513f3c575099ef26cfcc4741\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\b28bbf6a0a1243a80db01738fc12b697\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:21:1-53:12
+MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:21:1-53:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\1932d57aa8481d37662cad2a56c6dc5b\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\949665b614838401f20cc5bff290518c\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\002b93349738f964ae67ab9ea5d36c7f\jetified-play-services-auth-17.0.0\AndroidManifest.xml:17:1-39:12
@@ -79,23 +79,23 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\trans
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6ce0220ba080b4843834e81daa54e256\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\764c64f8f9d031964fb76b4bbd65df73\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\868af24722f0cad59a9b4d9098383d7c\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
-INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:2:1-13:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
+INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
 	package
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:4:5-43
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-64:12
+		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:1-66:12
 		INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:2:11-69
@@ -126,31 +126,31 @@ ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:11:22-90
 application
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:13:5-62:19
+ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:13:5-64:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:15:5-107:19
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c9dcd4206ba37ece7b14281b4e0be7d8\material-1.2.0-alpha06\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c9dcd4206ba37ece7b14281b4e0be7d8\material-1.2.0-alpha06\AndroidManifest.xml:22:5-20
 MERGED from [com.nex3z:notification-badge:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\d585b6f0de82cbaa269b18ab90ca30a0\jetified-notification-badge-1.0.2\AndroidManifest.xml:11:5-20
 MERGED from [com.nex3z:notification-badge:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\d585b6f0de82cbaa269b18ab90ca30a0\jetified-notification-badge-1.0.2\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c847397fdd357f64f2d9ef1a52aaa01f\jetified-facebook-login-5.15.3\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c847397fdd357f64f2d9ef1a52aaa01f\jetified-facebook-login-5.15.3\AndroidManifest.xml:28:5-29:19
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:29:5-50:19
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:29:5-50:19
+MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9fb4108c1ef19df01ab7952b590187b2\jetified-facebook-login-5.15.3\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9fb4108c1ef19df01ab7952b590187b2\jetified-facebook-login-5.15.3\AndroidManifest.xml:28:5-29:19
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:29:5-50:19
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:29:5-50:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a7c7e4abb7c78c2e435242c2feacfa69\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a7c7e4abb7c78c2e435242c2feacfa69\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7fcc8e759f74480488a806b1e2dded01\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7fcc8e759f74480488a806b1e2dded01\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\5689c6cd35284aef60666c3026def4ab\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\5689c6cd35284aef60666c3026def4ab\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9bfc898d53fc4966efd73fb9c1793450\jetified-material-ripple-1.0.2\AndroidManifest.xml:12:5-20
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9bfc898d53fc4966efd73fb9c1793450\jetified-material-ripple-1.0.2\AndroidManifest.xml:12:5-20
 MERGED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:23:5-40:19
-MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:28:5-51:19
-MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:28:5-51:19
+MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:28:5-51:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\949665b614838401f20cc5bff290518c\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\949665b614838401f20cc5bff290518c\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\002b93349738f964ae67ab9ea5d36c7f\jetified-play-services-auth-17.0.0\AndroidManifest.xml:22:5-37:19
@@ -169,8 +169,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Al
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\404a4cd9f1ff60678016bf5ac8a9384e\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\f301e4d93ccb264bb305362b5332b619\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\f301e4d93ccb264bb305362b5332b619\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\b2ca1b7b0bd8138e6eb89d9a718d7eca\core-1.2.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -249,65 +249,6 @@ category#android.intent.category.LAUNCHER
 ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:37:17-77
 	android:name
 		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:37:27-74
-meta-data#com.facebook.sdk.ApplicationId
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:41:9-44:45
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:19:9-21:63
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:19:9-21:63
-	tools:replace
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:44:13-42
-	android:value
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:43:13-52
-		REJECTED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:21:13-60
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:42:13-58
-activity#com.facebook.FacebookActivity
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:46:9-49:48
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:83:9-87:48
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:83:9-87:48
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
-	android:label
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:49:13-45
-	tools:ignore
-		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:87:13-45
-	android:configChanges
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:48:13-96
-	android:theme
-		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:47:13-57
-activity#com.facebook.CustomTabActivity
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:50:9-61:20
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:88:9-100:20
-MERGED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:88:9-100:20
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
-	tools:node
-		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:38:13-31
-	android:exported
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:52:13-36
-	tools:ignore
-		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:91:13-45
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:51:13-58
-intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/fb_login_protocol_scheme
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:53:13-60:29
-action#android.intent.action.VIEW
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:54:17-69
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:54:25-66
-category#android.intent.category.DEFAULT
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:56:17-76
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:56:27-73
-category#android.intent.category.BROWSABLE
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:57:17-78
-	android:name
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:57:27-75
-data
-ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:59:17-75
-	android:scheme
-		ADDED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml:59:23-72
 uses-sdk
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
@@ -322,10 +263,10 @@ MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Al-Ref
 MERGED from [com.google.android.material:material:1.2.0-alpha06] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c9dcd4206ba37ece7b14281b4e0be7d8\material-1.2.0-alpha06\AndroidManifest.xml:20:5-44
 MERGED from [com.nex3z:notification-badge:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\d585b6f0de82cbaa269b18ab90ca30a0\jetified-notification-badge-1.0.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.nex3z:notification-badge:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\d585b6f0de82cbaa269b18ab90ca30a0\jetified-notification-badge-1.0.2\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c847397fdd357f64f2d9ef1a52aaa01f\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c847397fdd357f64f2d9ef1a52aaa01f\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:25:5-27:41
-MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:25:5-27:41
+MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9fb4108c1ef19df01ab7952b590187b2\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-login:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9fb4108c1ef19df01ab7952b590187b2\jetified-facebook-login-5.15.3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:25:5-27:41
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:25:5-27:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e8e149701e2a35210dceab9c69245f57\jetified-library-1.6.1\AndroidManifest.xml:11:5-13:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e8e149701e2a35210dceab9c69245f57\jetified-library-1.6.1\AndroidManifest.xml:11:5-13:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a7e8fdf86ade5ef5f02c562d507ce900\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -354,8 +295,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Al-Refa'i\.gradle\caches
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\c686dda2d48e45b3ff677d58bf2b2ff0\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\5689c6cd35284aef60666c3026def4ab\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\5689c6cd35284aef60666c3026def4ab\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9bfc898d53fc4966efd73fb9c1793450\jetified-material-ripple-1.0.2\AndroidManifest.xml:8:5-10:41
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\9bfc898d53fc4966efd73fb9c1793450\jetified-material-ripple-1.0.2\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:21:5-44
@@ -366,16 +307,16 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\Al-Refa'i
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\591911f850d55da442588655dc1b909d\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
 MERGED from [com.intuit.sdp:sdp-android:1.0.6] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\808680810158abf44966918f17c1fb25\jetified-sdp-android-1.0.6\AndroidManifest.xml:7:5-9:41
-MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\0cf692e044505901dafce2dd9b3fe6e1\jetified-alerter-3.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\0cf692e044505901dafce2dd9b3fe6e1\jetified-alerter-3.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\27e51048d4e01263b95bf4b8aff3fbc2\jetified-alerter-3.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.tapadoo.android:alerter:3.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\27e51048d4e01263b95bf4b8aff3fbc2\jetified-alerter-3.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\aa1b66f2513f3c575099ef26cfcc4741\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\aa1b66f2513f3c575099ef26cfcc4741\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\44e7eb87b165f869a4aaf0850f02ea37\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\b28bbf6a0a1243a80db01738fc12b697\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\b28bbf6a0a1243a80db01738fc12b697\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:24:5-26:41
-MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:24:5-26:41
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\1932d57aa8481d37662cad2a56c6dc5b\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\1932d57aa8481d37662cad2a56c6dc5b\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\949665b614838401f20cc5bff290518c\jetified-firebase-auth-interop-19.0.0\AndroidManifest.xml:5:5-44
@@ -462,8 +403,8 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Al-Refa'i\.gradl
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\764c64f8f9d031964fb76b4bbd65df73\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\868af24722f0cad59a9b4d9098383d7c\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\868af24722f0cad59a9b4d9098383d7c\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:5:5-7:41
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 INJECTED from E:\3\Android\Projects\Graduation Project\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -486,6 +427,12 @@ MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Al-R
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:18:13-66
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:17:13-58
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:19:9-21:63
+	android:value
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:21:13-60
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:20:13-58
 activity#com.firebase.ui.auth.KickoffActivity
 ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:23:9-27:61
 	android:label
@@ -606,8 +553,50 @@ ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\ca
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:81:13-37
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:80:13-80
+activity#com.facebook.FacebookActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:83:9-87:48
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:30:9-33:66
+	android:label
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:86:13-45
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:87:13-45
+	android:configChanges
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:85:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:33:13-63
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:84:13-57
+activity#com.facebook.CustomTabActivity
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:88:9-100:20
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
+MERGED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:35:9-49:20
+	tools:node
+		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:38:13-31
+	android:exported
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:90:13-36
+	tools:ignore
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:91:13-45
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:89:13-58
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:@string/facebook_login_protocol_scheme
 ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:92:13-99:29
+action#android.intent.action.VIEW
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:93:17-69
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:93:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:95:17-76
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:95:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:96:17-78
+	android:name
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:96:27-75
+data
+ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:98:17-81
+	android:scheme
+		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:98:23-78
 provider#com.firebase.ui.auth.data.client.AuthUiInitProvider
 ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:102:9-106:38
 	android:authorities
@@ -619,21 +608,21 @@ ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\ca
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:6.2.1] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\58d4de3de0dcea34ee69aeb693737a9f\jetified-firebase-ui-auth-6.2.1\AndroidManifest.xml:103:13-79
 activity#com.facebook.CustomTabMainActivity
-ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:9-71
+ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:9-71
 	android:name
-		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:19-68
+		ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:34:19-68
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.${applicationId}+data:scheme:fbconnect
-ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
+ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:cct.com.mahmoudrefaie.sekkawahda+data:scheme:fbconnect
-ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e3c51b990292b125d0434b7e2abe868d\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
+ADDED from [com.facebook.android:facebook-common:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\57621a5e6e0a9c1596f742bbabcb9b54\jetified-facebook-common-5.15.3\AndroidManifest.xml:39:13-48:29
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\7f61104e114897c4da072a195f5ed6bd\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\ca62ca0b424ac66252fc6b32f15ac905\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
@@ -669,25 +658,25 @@ ADDED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:19.3.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\e5ffefd7d6930200cc15d7539c15fa64\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
 provider#com.facebook.internal.FacebookInitProvider
-ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:39:9-42:40
+ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:39:9-42:40
 	android:authorities
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:41:13-72
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:41:13-72
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:42:13-37
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:40:13-70
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:40:13-70
 receiver#com.facebook.CurrentAccessTokenExpirationBroadcastReceiver
-ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:44:9-50:20
+ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:44:9-50:20
 	android:exported
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:46:13-37
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:45:13-86
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:45:13-86
 intent-filter#action:name:com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:47:13-49:29
+ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:47:13-49:29
 action#com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED
-ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:17-95
+ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:17-95
 	android:name
-		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\a8af83c2c4685e4ae0b3a4b12a7009aa\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
+		ADDED from [com.facebook.android:facebook-core:5.15.3] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\fbf294b87949615782496bdc6693d39a\jetified-facebook-core-5.15.3\AndroidManifest.xml:48:25-92
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:17.0.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\002b93349738f964ae67ab9ea5d36c7f\jetified-play-services-auth-17.0.0\AndroidManifest.xml:23:9-27:75
 	android:excludeFromRecents
@@ -735,6 +724,6 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Al-Refa'i\.grad
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\f301e4d93ccb264bb305362b5332b619\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
 	android:name
-		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\3bdd9ae9dfeeff355fabdbb9e2d5ef87\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+		ADDED from [com.android.installreferrer:installreferrer:1.0] C:\Users\Al-Refa'i\.gradle\caches\transforms-2\files-2.1\6e7e591756a30b79cfcff8d2be10c61d\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
