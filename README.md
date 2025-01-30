@@ -1,5 +1,5 @@
 # Sekka-Wahda
-Sekka wahda Application to facilitate travelling by making a direct communication between car owner and passenger
+Sekka Wahda is an android application to facilitate travelling by making a direct communication between car owner and passenger
 the applicaiton show how to deal with APIs and get,post Posts, basic usage for `REST API`
 
 ## Libraries Used
