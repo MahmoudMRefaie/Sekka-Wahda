@@ -28,6 +28,8 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
 import com.mahmoudrefaie.sekkawahda.R
+import com.mahmoudrefaie.sekkawahda.databinding.ActivityMyProfileBinding
+import com.mahmoudrefaie.sekkawahda.databinding.ActivityRegisterationBinding
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
 import com.mahmoudrefaie.sekkawahda.ui.Profile.EditBottomSheetDialogs.*
 import com.squareup.picasso.Picasso
@@ -46,50 +48,53 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
                     EditEmailBottomSheetDialog.BottomSheetListener, EditPhoneBottomSheetDialog.BottomSheetListener,
                     EditCityBottomSheetDialog.BottomSheetListener, EditCarModelBottomSheetDialog.BottomSheetListener,
                     EditDriverLicenseBottomSheetDialog.BottomSheetListener, EditCarLicenseBottomSheetDialog.BottomSheetListener{
-    @BindView(R.id.toolbar)
-    lateinit var toolbar: Toolbar
-    @BindView(R.id.show_image)
-    lateinit var showProfilePic: CircleImageView
-    @BindView(R.id.username)
-    lateinit var username: TextView
-    @BindView(R.id.ratingBar)
-    lateinit var ratingBar: RatingBar
-    @BindView(R.id.edit_username)
-    lateinit var editUsername: ImageView
-    @BindView(R.id.city_result)
-    lateinit var city: TextView
-    @BindView(R.id.edit_city)
-    lateinit var editCity: ImageView
-    @BindView(R.id.email_result)
-    lateinit var email: TextView
-    @BindView(R.id.edit_email)
-    lateinit var editEmail: ImageView
-    @BindView(R.id.phone_result)
-    lateinit var phoneNumber: TextView
-    @BindView(R.id.edit_phone)
-    lateinit var editPhone: ImageView
-    @BindView(R.id.ssn_result)
-    lateinit var ssn: TextView
-    @BindView(R.id.car_image_img)
-    lateinit var carImage: ImageView
-    @BindView(R.id.edit_car_image)
-    lateinit var editCarImage: ImageView
-    @BindView(R.id.driver_license)
-    lateinit var driverLicenseLayout: RelativeLayout
-    @BindView(R.id.driver_license_result)
-    lateinit var driverLicense: TextView
-    @BindView(R.id.edit_driver_license)
-    lateinit var editDriverLicense: ImageView
-    @BindView(R.id.car_license_result)
-    lateinit var carLicense: TextView
-    @BindView(R.id.edit_car_license)
-    lateinit var editCarLicense: ImageView
-    @BindView(R.id.car_model_result)
-    lateinit var carModel: TextView
-    @BindView(R.id.edit_car_model)
-    lateinit var editCarModel: ImageView
-    @BindView(R.id.profile_progress_bar)
-    lateinit var profileProgressBar: ProgressBar
+
+    private lateinit var binding: ActivityMyProfileBinding
+
+//    @BindView(R.id.toolbar)
+//    lateinit var toolbar: Toolbar
+//    @BindView(R.id.show_image)
+//    lateinit var showProfilePic: CircleImageView
+//    @BindView(R.id.username)
+//    lateinit var username: TextView
+//    @BindView(R.id.ratingBar)
+//    lateinit var ratingBar: RatingBar
+//    @BindView(R.id.edit_username)
+//    lateinit var editUsername: ImageView
+//    @BindView(R.id.city_result)
+//    lateinit var city: TextView
+//    @BindView(R.id.edit_city)
+//    lateinit var editCity: ImageView
+//    @BindView(R.id.email_result)
+//    lateinit var email: TextView
+//    @BindView(R.id.edit_email)
+//    lateinit var editEmail: ImageView
+//    @BindView(R.id.phone_result)
+//    lateinit var phoneNumber: TextView
+//    @BindView(R.id.edit_phone)
+//    lateinit var editPhone: ImageView
+//    @BindView(R.id.ssn_result)
+//    lateinit var ssn: TextView
+//    @BindView(R.id.car_image_img)
+//    lateinit var carImage: ImageView
+//    @BindView(R.id.edit_car_image)
+//    lateinit var editCarImage: ImageView
+//    @BindView(R.id.driver_license)
+//    lateinit var driverLicenseLayout: RelativeLayout
+//    @BindView(R.id.driver_license_result)
+//    lateinit var driverLicense: TextView
+//    @BindView(R.id.edit_driver_license)
+//    lateinit var editDriverLicense: ImageView
+//    @BindView(R.id.car_license_result)
+//    lateinit var carLicense: TextView
+//    @BindView(R.id.edit_car_license)
+//    lateinit var editCarLicense: ImageView
+//    @BindView(R.id.car_model_result)
+//    lateinit var carModel: TextView
+//    @BindView(R.id.edit_car_model)
+//    lateinit var editCarModel: ImageView
+//    @BindView(R.id.profile_progress_bar)
+//    lateinit var profileProgressBar: ProgressBar
 
     private var accessToken: String? = null
 
@@ -102,12 +107,14 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_profile)
-        ButterKnife.bind(this)
+        binding = ActivityMyProfileBinding.inflate(getLayoutInflater())
+        setContentView(binding.root)
+//        setContentView(R.layout.activity_my_profile)
+//        ButterKnife.bind(this)
 
-        toolbar.setTitle("")
-        toolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.proj_main_color))
-        setSupportActionBar(toolbar)
+        binding.toolbar.setTitle("")
+        binding.toolbar.setBackgroundColor(ContextCompat.getColor(this,R.color.proj_main_color))
+        setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)          //BackArraw at ToolBar
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_arrow_back_blue_24dp)
 
@@ -123,15 +130,15 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         myProfileViewModel.getProfileData(userId!!,accessToken!!)                                      //to get profile data
         getProfileDataObserver()
 
-        showProfilePic.setOnClickListener(this)
-        editUsername.setOnClickListener(this)
-        editCity.setOnClickListener(this)
-        editEmail.setOnClickListener(this)
-        editPhone.setOnClickListener(this)
-        editCarImage.setOnClickListener(this)
-        editDriverLicense.setOnClickListener(this)
-        editCarLicense.setOnClickListener(this)
-        editCarModel.setOnClickListener(this)
+        binding.showImage.setOnClickListener(this)
+        binding.editUsername.setOnClickListener(this)
+        binding.editCity.setOnClickListener(this)
+        binding.editEmail.setOnClickListener(this)
+        binding.editPhone.setOnClickListener(this)
+        binding.editCarImage.setOnClickListener(this)
+        binding.editDriverLicense.setOnClickListener(this)
+        binding.editCarLicense.setOnClickListener(this)
+        binding.editCarModel.setOnClickListener(this)
 
     }
 
@@ -194,55 +201,55 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         val usernameBottomSheetDialog = EditUsernameBottomSheetDialog()
         usernameBottomSheetDialog.show(supportFragmentManager,"EditUsernameBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("username",username.text.toString())
+        bundle.putString("username",binding.username.text.toString())
         usernameBottomSheetDialog.arguments = bundle
     }
     override fun onEditUsernameButtonClicked(text: String) {
-        username.text = text
+        binding.username.text = text
     }
 
     private fun editCityBottomDialog() {
         val cityBottomSheetDialog = EditCityBottomSheetDialog()
         cityBottomSheetDialog.show(supportFragmentManager,"EditCityBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("city",city.text.toString())
+        bundle.putString("city",binding.cityResult.text.toString())
         cityBottomSheetDialog.arguments = bundle
     }
     override fun onEditCityButtonClicked(text: String) {
-        city.text = text
+        binding.cityResult.text = text
     }
 
     private fun editEmailBottomDialog() {
         val emailBottomSheetDialog = EditEmailBottomSheetDialog()
         emailBottomSheetDialog.show(supportFragmentManager,"EditEmailBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("email",email.text.toString())
+        bundle.putString("email",binding.emailResult.text.toString())
         emailBottomSheetDialog.arguments = bundle
     }
     override fun onEditEmailButtonClicked(text: String) {
-        email.text = text
+        binding.emailResult.text = text
     }
 
     private fun editPhoneNumberBottomDialog(){
         val phoneBottomSheetDialog = EditPhoneBottomSheetDialog()
         phoneBottomSheetDialog.show(supportFragmentManager,"EditPhoneBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("phone",phoneNumber.text.toString())
+        bundle.putString("phone",binding.phoneResult.text.toString())
         phoneBottomSheetDialog.arguments = bundle
     }
     override fun onEditPhoneButtonClicked(text: String) {
-        phoneNumber.text = text
+        binding.phoneResult.text = text
     }
 
     private fun editCarModelBottomDialog() {
         val carModelBottomSheetDialog = EditCarModelBottomSheetDialog()
         carModelBottomSheetDialog.show(supportFragmentManager,"EditCarModelBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("car_model",carModel.text.toString())
+        bundle.putString("car_model",binding.carModelResult.text.toString())
         carModelBottomSheetDialog.arguments = bundle
     }
     override fun onEditCarModelButtonClicked(text: String) {
-        carModel.text = text
+        binding.carModelResult.text = text
     }
     private fun uploadCarImage(carImagePart: MultipartBody.Part, token: String) {
         val call : Call<String>? = RetrofitClient.instance?.api?.updateProfileCarImage(carImagePart , "Bearer $token")
@@ -261,22 +268,22 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         val driverLicenseBottomSheetDialog = EditDriverLicenseBottomSheetDialog()
         driverLicenseBottomSheetDialog.show(supportFragmentManager,"EditDriverLicenseBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("driver_license",driverLicense.text.toString())
+        bundle.putString("driver_license",binding.driverLicenseResult.text.toString())
         driverLicenseBottomSheetDialog.arguments = bundle
     }
     override fun onEditDriverLicenseButtonClicked(text: String) {
-        driverLicense.text = text
+        binding.driverLicenseResult.text = text
     }
 
     private fun editCarLicenseBottomDialog() {
         val carLicenseBottomSheetDialog = EditCarLicenseBottomSheetDialog()
         carLicenseBottomSheetDialog.show(supportFragmentManager,"EditCarLicenseBottomSheetDialog")
         val bundle = Bundle()
-        bundle.putString("car_license",carLicense.text.toString())
+        bundle.putString("car_license",binding.carLicenseResult.text.toString())
         carLicenseBottomSheetDialog.arguments = bundle
     }
     override fun onEditCarLicenseButtonClicked(text: String) {
-        carLicense.text = text
+        binding.carLicenseResult.text = text
     }
 
     private fun getProfilePicObserver(){
@@ -289,11 +296,11 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
                 Picasso.get()
                         .load(imageUrl)
                         .placeholder(R.drawable.blank_profile_pic)
-                        .into(showProfilePic, object : com.squareup.picasso.Callback{
+                        .into(binding.showImage, object : com.squareup.picasso.Callback{
                             override fun onSuccess() {
                             }
                             override fun onError(e: Exception?) {
-                                showProfilePic.setImageDrawable(ContextCompat.getDrawable(applicationContext, R.drawable.blank_profile_pic))
+                                binding.showImage.setImageDrawable(ContextCompat.getDrawable(applicationContext, R.drawable.blank_profile_pic))
                             }
                         })
             }
@@ -302,14 +309,14 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
 
     private fun getProfileDataObserver(){
         getProfilePicObserver()
-        myProfileViewModel.fullName.observe(this, Observer<String> { t -> username.text = t })
-        myProfileViewModel.driverTotalRate.observe(this, Observer<Float> { t -> ratingBar.rating = t!! })
-        myProfileViewModel.city.observe(this, Observer<String> { t -> city.text = t })
-        myProfileViewModel.email.observe(this, Observer<String> { t -> email.text = t })
-        myProfileViewModel.phoneNumber.observe(this, Observer<String> { t -> phoneNumber.text = t })
-        myProfileViewModel.ssn.observe(this, Observer<String> { t -> ssn.text = t })
+        myProfileViewModel.fullName.observe(this, Observer<String> { t -> binding.username.text = t })
+        myProfileViewModel.driverTotalRate.observe(this, Observer<Float> { t -> binding.ratingBar.rating = t!! })
+        myProfileViewModel.city.observe(this, Observer<String> { t -> binding.cityResult.text = t })
+        myProfileViewModel.email.observe(this, Observer<String> { t -> binding.emailResult.text = t })
+        myProfileViewModel.phoneNumber.observe(this, Observer<String> { t -> binding.phoneResult.text = t })
+        myProfileViewModel.ssn.observe(this, Observer<String> { t -> binding.ssnResult.text = t })
         myProfileViewModel.driverLicense.observe(this, Observer<String> {
-            driverLicense.text = it
+            binding.driverLicenseResult.text = it
             /*if(driverLicense.text.toString().equals("") or(driverLicense.text == null) ){
                 //Create ImageView to editing driverLicense if driver text is empty or null
                 val addDriverLicense = ImageView(applicationContext)
@@ -327,16 +334,16 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
             }else
                 driverLicense.text = it*/
         })
-        myProfileViewModel.carLicense.observe(this, Observer<String> { t -> carLicense.text = t })
-        myProfileViewModel.carModel.observe(this, Observer<String> { t -> carModel.text = t })
+        myProfileViewModel.carLicense.observe(this, Observer<String> { t -> binding.carLicenseResult.text = t })
+        myProfileViewModel.carModel.observe(this, Observer<String> { t -> binding.carModelResult.text = t })
         myProfileViewModel.carImageUrl.observe(this, Observer<String> { t ->
             val carImageUrlResponse = t?.replace("~/", "")
             val imageUrl = "https://seka.azurewebsites.net/$carImageUrlResponse"
             Picasso.get()
                     .load(imageUrl)
                     .placeholder(R.drawable.ic_baseline_directions_car)
-                    .into(carImage)
-            profileProgressBar.visibility = View.INVISIBLE //hide profile details progress bar
+                    .into(binding.carImageImg)
+            binding.profileProgressBar.visibility = View.INVISIBLE //hide profile details progress bar
         })
     }
 
@@ -349,6 +356,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             PERMISSION_CODE -> {
                 if (grantResults.size > 0 && grantResults[0] ==
@@ -367,7 +375,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE && data != null && data.getData() != null) {
             val imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
-            showProfilePic.setImageURI(imageUri)
+            binding.showImage.setImageURI(imageUri)
             try {
                 val imagePartProfile = uriToMultipart(imageUri)
                 uploadProfilePic(imagePartProfile , accessToken!!)
@@ -377,7 +385,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
         }
         else if (resultCode == Activity.RESULT_OK && requestCode == CAR_IMAGE_PICK_CODE && data != null) {
             val imageUri = data.data   //This is imageUri which we use to get path of image , but it didn't give us the real path
-            carImage.setImageURI(imageUri)
+            binding.carImageImg.setImageURI(imageUri)
             try {
                 val carImagePart = uriToMultipart(imageUri)
                 uploadCarImage(carImagePart, accessToken!!)

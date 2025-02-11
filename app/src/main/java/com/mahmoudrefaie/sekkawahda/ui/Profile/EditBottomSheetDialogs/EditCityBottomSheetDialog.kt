@@ -41,13 +41,14 @@ class EditCityBottomSheetDialog : BottomSheetDialogFragment() , View.OnClickList
         save = v.findViewById(R.id.save_btn)
 
         //Cities Spinner
-        val adapter = ArrayAdapter.createFromResource(activity!!,
+        val adapter = ArrayAdapter.createFromResource(requireActivity(),
                 R.array.city_spinner, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         editCity.adapter = adapter
         editCity.setOnItemSelectedListener(object : OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(context!!,R.color.white))
+                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(context!!,
+                    com.nex3z.notificationbadge.R.color.white))
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")

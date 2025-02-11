@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/post_cardview.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/post_cardview.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_search.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_search.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/mytrips_cardview.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/mytrips_cardview.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/username_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/username_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/fragment_more.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/fragment_more.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/city_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/city_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/phone_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/phone_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/notification_item.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/notification_item.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/fragment_register_b.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/fragment_register_b.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/fragment_notifications.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/fragment_notifications.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/fragment_home.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/carmodel_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/carmodel_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/driverlicense_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/driverlicense_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_registeration.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_registeration.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_cancelation.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_cancelation.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/carlicense_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/carlicense_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/confirm_reservation_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/confirm_reservation_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/splash_screen.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/splash_screen.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_my_trips.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_my_trips.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/carimage_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/carimage_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_login.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_forgetpassword.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_forgetpassword.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/fragment_register_a.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/fragment_register_a.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_main_page.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_main_page.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/email_bottom_sheet_dialog.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/email_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_my_profile.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_my_profile.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_edit_my_profile.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_edit_my_profile.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_reservation.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_reservation.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_reserved_user_profile.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_reserved_user_profile.xml"
+    },
+    {
+        "merged": "com.mahmoudrefaie.sekkawahda.app-mergeReleaseResources-35:/layout/activity_not_reserved_user_profile.xml",
+        "source": "com.mahmoudrefaie.sekkawahda.app-main-37:/layout/activity_not_reserved_user_profile.xml"
+    }
+]

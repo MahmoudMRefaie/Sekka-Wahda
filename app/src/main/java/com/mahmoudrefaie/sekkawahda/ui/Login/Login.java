@@ -15,6 +15,7 @@ import com.mahmoudrefaie.sekkawahda.R;
 import com.mahmoudrefaie.sekkawahda.Pojo.LoginResponse;
 import com.mahmoudrefaie.sekkawahda.SharedPreferences.PreferenceHelper;
 import com.mahmoudrefaie.sekkawahda.SharedPreferences.SharedPrefManager;
+import com.mahmoudrefaie.sekkawahda.databinding.ActivityLoginBinding;
 import com.mahmoudrefaie.sekkawahda.ui.MainPage.MainPage;
 import com.mahmoudrefaie.sekkawahda.ui.Registeration.Registeration;
 import com.google.android.material.textfield.TextInputLayout;
@@ -53,18 +54,20 @@ import com.squareup.picasso.Picasso;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
     private static final int MY_REQUIST_CODE = 2222; //Any number
-    @BindView(R.id.username)
-    TextInputLayout etUname;
-    @BindView(R.id.password)
-    TextInputLayout etPass;
-    @BindView(R.id.btnLogin)
-    Button btnLogin;
-    @BindView(R.id.forget)
-    TextView forget;
-    @BindView(R.id.register)
-    TextView register;
-    @BindView(R.id.terms)
-    TextView terms;
+    private ActivityLoginBinding binding;
+//
+//    @BindView(R.id.username)
+//    TextInputLayout etUname;
+//    @BindView(R.id.password)
+//    TextInputLayout etPass;
+//    @BindView(R.id.btnLogin)
+//    Button btnLogin;
+//    @BindView(R.id.forget)
+//    TextView forget;
+//    @BindView(R.id.register)
+//    TextView register;
+//    @BindView(R.id.terms)
+//    TextView terms;
 
     private PreferenceHelper preferenceHelper;
 
@@ -74,16 +77,22 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        //setContentView(R.layout.activity_login);
+        //ButterKnife.bind(this);
 
         sharedPre = getSharedPreferences("LOGIN",MODE_PRIVATE);
 
         if(sharedPre.getBoolean("logged",false))
             openHomeActivity();
 
-        btnLogin.setOnClickListener(this);
-        register.setOnClickListener(this);
+        //btnLogin.setOnClickListener(this);
+        binding.btnLogin.setOnClickListener(this);
+
+        binding.register.setOnClickListener(this);
         preferenceHelper = new PreferenceHelper(this);
     }
 
@@ -93,8 +102,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             if (!validateUsername() | !validatePassword()) {
                 return;
             }
-            String username = etUname.getEditText().getText().toString().trim();
-            String password = etPass.getEditText().getText().toString().trim();
+            String username = binding.username.getEditText().getText().toString().trim();
+            String password = binding.password.getEditText().getText().toString().trim();
             String grant_type = "password";
 
             makeLogin(username,password,grant_type);
@@ -156,28 +165,28 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
 
     private boolean validateUsername() {
-        String username = etUname.getEditText().getText().toString().trim();
+        String username = binding.username.getEditText().getText().toString().trim();
 
         if (username.isEmpty()) {
-            etUname.setError("Field can't be empty");
+            binding.username.setError("Field can't be empty");
             return false;
         } else if (username.length() > 20) {
-            etUname.setError("Username is too long");
+            binding.username.setError("Username is too long");
             return false;
         } else {
-            etUname.setError(null);
+            binding.username.setError(null);
             return true;
         }
     }
 
     private boolean validatePassword() {
-        String username = etPass.getEditText().getText().toString().trim();
+        String username = binding.password.getEditText().getText().toString().trim();
 
         if (username.isEmpty()) {
-            etPass.setError("Field can't be empty");
+            binding.password.setError("Field can't be empty");
             return false;
         } else {
-            etPass.setError(null);
+            binding.password.setError(null);
             return true;
         }
     }

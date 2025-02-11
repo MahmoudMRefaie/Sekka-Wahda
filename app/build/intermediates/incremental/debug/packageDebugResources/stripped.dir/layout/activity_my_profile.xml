@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/user_profile_background"
+    tools:context=".ui.Profile.MyProfile.MyProfile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <RelativeLayout
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/show_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                app:civ_border_color="#000000"
+                app:civ_border_width="0dp"
+                android:src="@drawable/blank_profile_pic"
+                tools:layout_editor_absoluteX="138dp"
+                tools:layout_editor_absoluteY="78dp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image"/>
+
+        <ImageView
+            android:id="@+id/edit_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/edit_pin_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/username"
+            app:layout_constraintTop_toTopOf="@+id/username" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:rating="3"
+            style="?android:attr/ratingBarStyleSmall"
+            android:colorControlNormal="@color/proj_sub_color"
+            android:colorControlActivated="@color/white"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username"/>
+
+        <LinearLayout
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/city_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_details_background">
+
+                        <TextView
+                            android:id="@+id/header_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="City"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/city_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_city"
+                            android:layout_alignLeft="@+id/header_city"
+                            android:layout_marginLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/profile_details_background">
+
+                        <TextView
+                            android:id="@+id/header_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Email"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/email_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_email"
+                            android:layout_alignLeft="@+id/header_email"
+                            android:layout_marginLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/phone_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/profile_details_background">
+
+                        <TextView
+                            android:id="@+id/header_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Phone number"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/phone_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_phone"
+                            android:layout_alignLeft="@+id/header_phone"
+                            android:layout_marginLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ssn_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/profile_details_background">
+
+                        <TextView
+                            android:id="@+id/header_ssn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="SSN"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ssn_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_ssn"
+                            android:layout_alignLeft="@+id/header_ssn"
+                            android:layout_marginLeft="10dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView_car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/profile_details_background"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/car_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/header_car_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Car Image"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <ImageView
+                            android:id="@+id/car_image_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/header_car_image"
+                            android:src="@mipmap/ic_launcher_hint_car_foreground" />
+                        <ImageView
+                            android:id="@+id/edit_car_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/header_car_image"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/driver_license"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/header_driver_license"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Driver License"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/driver_license_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_driver_license"
+                            android:layout_alignLeft="@+id/header_driver_license"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_driver_license"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/car_license"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/header_car_license"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Car License"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/car_license_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_car_license"
+                            android:layout_alignLeft="@+id/header_car_license"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp" />
+                        <ImageView
+                            android:id="@+id/edit_car_license"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginVertical="5dp"
+                        android:background="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/car_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/header_car_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="20dp"
+                            android:text="Car Model"
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/car_model_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/header_car_model"
+                            android:layout_alignLeft="@+id/header_car_model"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="30dp"
+                            android:text=""
+                            android:textColor="@color/proj_main_color"
+                            android:textSize="20sp"/>
+                        <ImageView
+                            android:id="@+id/edit_car_model"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/edit_pin"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/profile_progress_bar"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/proj_sub_color"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
+
+

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-33:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-34:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/Users/alrefai/.gradle/caches/transforms-3/74e1c5a4b6f8b19d27d0df0be1ca99fe/transformed/material-1.2.0-alpha06/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/2fd85739b8cc1e456fba412064941c55/transformed/material-1.4.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

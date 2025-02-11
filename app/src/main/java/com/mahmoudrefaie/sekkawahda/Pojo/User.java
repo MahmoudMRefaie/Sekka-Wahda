@@ -3,37 +3,37 @@ package com.mahmoudrefaie.sekkawahda.Pojo;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("UserID")
+    @SerializedName("userId")
     private String userID;
-    @SerializedName("UserName")
+    @SerializedName("userName")
     private String userName;
-    @SerializedName("ImageUrl")
+    @SerializedName("profilePic")
     private String profilePicImage;
-    @SerializedName("UserEmailID")
+    @SerializedName("userEmailID")
     private String userEmailID;
-    @SerializedName("UserPassword")
+    @SerializedName("userPassword")
     private String userPassword;
-    @SerializedName("SSN")
+    @SerializedName("ssn")
     private String ssn;
-    @SerializedName("PhoneNumber")
+    @SerializedName("phoneNumber")
     private String phoneNumber;
     @SerializedName("city")
     private String city;
-    @SerializedName("grant_type")
+    @SerializedName("grantType")
     private String grantType;
-    @SerializedName("FullName")
+    @SerializedName("fullName")
     private String fullName;
-    @SerializedName("DriverTotalRate")
+    @SerializedName("driverTotalRate")
     private float driverTotalRate;
-    @SerializedName("CarImageUrl")
+    @SerializedName("carImageUrl")
     private String carImageUrl;
-    @SerializedName("DriverLicense")
+    @SerializedName("driverLicense")
     private String driverLicense;
-    @SerializedName("CarLicense")
+    @SerializedName("carLicense")
     private String carLicense;
-    @SerializedName("CarModel")
+    @SerializedName("carModel")
     private String carModel;
-    @SerializedName("TypeOfProfile")
+    @SerializedName("profile_type")
     private String profileType;
 
     public User(String userName, String userEmailID, String userPassword, String ssn, String phoneNumber, String city) {

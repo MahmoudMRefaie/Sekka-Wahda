@@ -10,29 +10,33 @@ import androidx.appcompat.widget.Toolbar
 import butterknife.BindView
 import butterknife.ButterKnife
 import com.mahmoudrefaie.sekkawahda.R
+import com.mahmoudrefaie.sekkawahda.databinding.ActivityLoginBinding
+import com.mahmoudrefaie.sekkawahda.databinding.ActivityRegisterationBinding
 import com.mahmoudrefaie.sekkawahda.ui.Login.Login
 
 class Registeration : AppCompatActivity(), View.OnClickListener {
-    @JvmField
-    @BindView(R.id.login)
-    var login: TextView? = null
 
-    @JvmField
-    @BindView(R.id.toolbar)
-    var toolbar: Toolbar? = null
+    private lateinit var binding: ActivityRegisterationBinding
 
-    @JvmField
-    @BindView(R.id.sign_up)
-    var signUp: TextView? = null
+//    @JvmField
+//    @BindView(R.id.login)
+//    var login: TextView? = null
+//
+//    @JvmField
+//    @BindView(R.id.toolbar)
+//    var toolbar: Toolbar? = null
+
     private var firstFragment: FragmentRegisterA? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registeration)
-        ButterKnife.bind(this)
+        binding = ActivityRegisterationBinding.inflate(getLayoutInflater());
+        setContentView(binding.root)
+        //setContentView(R.layout.activity_registeration)
+        //ButterKnife.bind(this)
 
         //BackArraw at ToolBar
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_arrow_back_blue_24dp)
         supportActionBar!!.title = ""
@@ -45,13 +49,13 @@ class Registeration : AppCompatActivity(), View.OnClickListener {
                 .addToBackStack("first_fragment")
                 .commit()
 
-        login!!.setOnClickListener(this)
+        binding.login!!.setOnClickListener(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
-                onBackPressed()
+                Activity.onBackPressed()()
                 return true
             }
         }

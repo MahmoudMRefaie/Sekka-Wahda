@@ -1,20 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-33:/values-v16/values-v16.xml",
+            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-34:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/alrefai/.gradle/caches/transforms-3/e17241c24095b012e0990353aab0fba1/transformed/core-1.2.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/3fca41be0e3970027cb323412fefb41c/transformed/jetified-Alerter-7.2.4/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "238"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "304"
                     }
                 },
                 {
-                    "source": "/Users/alrefai/.gradle/caches/transforms-3/f57d764a6c220db6250025309400f96f/transformed/appcompat-1.1.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/64a1e768b85a5d056fbcab0ddefdb9ca/transformed/appcompat-1.2.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -33,22 +42,13 @@
                     }
                 },
                 {
-                    "source": "/Users/alrefai/.gradle/caches/transforms-3/0642d845068d872251825d824fdadf0c/transformed/jetified-alerter-3.0.0/res/values-v16/values-v16.xml",
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/91796803f353a4d0c1baeedcc700b8f7/transformed/core-1.5.0/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "238"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "304"
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

@@ -45,7 +45,8 @@ class Search : AppCompatActivity(), View.OnClickListener {
         from_city.adapter = fromCityAdapter
         from_city.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(applicationContext,R.color.white))
+                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(applicationContext,
+                    com.nex3z.notificationbadge.R.color.white))
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
@@ -58,7 +59,8 @@ class Search : AppCompatActivity(), View.OnClickListener {
         to_city.adapter = toCityAdapter
         to_city.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parentView: AdapterView<*>, selectedItemView: View, position: Int, id: Long) {
-                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(applicationContext,R.color.white))
+                (parentView.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(applicationContext,
+                    com.nex3z.notificationbadge.R.color.white))
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")

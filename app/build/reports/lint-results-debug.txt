@@ -1,0 +1,2000 @@
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:59: Error: This support library should not use a different version (29) than the compileSdkVersion (34) [GradleCompatible]
+    implementation 'com.android.support:design:29.0.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:68: Error: This support library should not use a different version (29) than the compileSdkVersion (34) [GradleCompatible]
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:71: Error: This support library should not use a different version (29) than the compileSdkVersion (34) [GradleCompatible]
+    implementation 'com.android.support:cardview-v7:29.0.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleCompatible":
+   There are some combinations of libraries, or tools and libraries, that are
+   incompatible, or can lead to bugs. One such incompatibility is compiling
+   with a version of the Android support libraries that is not the latest
+   version (or in particular, a version lower than your targetSdkVersion).
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml:7: Warning: READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO or READ_MEDIA_AUDIO. [ScopedStorage]
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml:8: Warning: WRITE_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to write to shared storage, use the MediaStore.createWriteRequest intent. [ScopedStorage]
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:14: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:13: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:14: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:14: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:14: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:22: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+                android:layout_height="match_parent">
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_a.xml:11: Warning: This RelativeLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:12: Warning: This androidx.constraintlayout.widget.ConstraintLayout should use android:layout_height="wrap_content" [ScrollViewSize]
+        android:layout_height="match_parent">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScrollViewSize":
+   ScrollView children must set their layout_width or layout_height attributes
+   to wrap_content rather than fill_parent or match_parent in the scrolling
+   dimension
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/More/MoreFragment.kt:78: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+            editor.commit()
+                   ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/PreferenceHelper.java:24: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        edit.commit();
+             ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/PreferenceHelper.java:33: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        edit.commit();
+             ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/PreferenceHelper.java:42: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        edit.commit();
+             ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/PreferenceHelper.java:51: Warning: Consider using apply() instead; commit writes its data to persistent storage immediately, whereas apply will handle it in the background [ApplySharedPref]
+        edit.commit();
+             ~~~~~~~~
+
+   Explanation for issues of type "ApplySharedPref":
+   Consider using apply() instead of commit on shared preferences. Whereas
+   commit blocks and writes its data to persistent storage immediately, apply
+   will handle it in the background.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/More/MoreFragment.kt:75: Warning: SharedPreferences.edit() without a corresponding commit() or apply() call [CommitPrefEdits]
+            val editorAuth: SharedPreferences.Editor = appAuth?.edit()!!
+                                                       ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "CommitPrefEdits":
+   After calling edit() on a SharedPreference, you must call commit() or
+   apply() on the editor to save the results.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/MyProfile/MyProfile.kt:352: Warning: Field requires API level 19 (current min is 16): android.content.Intent#ACTION_OPEN_DOCUMENT [InlinedApi]
+        val gallery = Intent(Intent.ACTION_OPEN_DOCUMENT)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InlinedApi":
+   This check scans through all the Android API field references in the
+   application and flags certain constants, such as static final integers and
+   Strings, which were introduced in later versions. These will actually be
+   copied into the class files rather than being referenced, which means that
+   the value is available even when running on older devices. In some cases
+   that's fine, and in other cases it can result in a runtime crash or
+   incorrect behavior. It depends on the context, so consider the code
+   carefully and decide whether it's safe and can be suppressed or whether the
+   code needs to be guarded.
+
+   If you really want to use this API and don't need to support older devices
+   just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+   files.
+
+   If your code is deliberately accessing newer APIs, and you have ensured
+   (e.g. with conditional execution) that this code will only ever be called
+   on a supported platform, then you can annotate your class or method with
+   the @TargetApi annotation specifying the local minimum SDK to apply, such
+   as @TargetApi(11), such that this check considers 11 rather than your
+   manifest file's minimum SDK as the required API level.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:25: Error: This view is not constrained vertically: at runtime it will jump to the top unless you add a vertical constraint [MissingConstraints]
+            <RelativeLayout
+             ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingConstraints":
+   The layout editor allows you to place widgets anywhere on the canvas, and
+   it records the current position with designtime attributes (such as
+   layout_editor_absoluteX). These attributes are not applied at runtime, so
+   if you push your layout on a device, the widgets may appear in a different
+   location than shown in the editor. To fix this, make sure a widget has both
+   horizontal and vertical constraints by dragging from the edge connections.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml: Error: When targeting Android 13 or higher, posting a permission requires holding the POST_NOTIFICATIONS permission (usage from com.squareup.picasso.RemoteViewsAction.NotificationAction) [NotificationPermission]
+
+   Explanation for issues of type "NotificationPermission":
+   When targeting Android 13 and higher, posting permissions requires holding
+   the runtime permission android.permission.POST_NOTIFICATIONS.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml:20: Warning: Attribute usesCleartextTraffic is only used in API level 23 and higher (current min is 16) [UnusedAttribute]
+        android:usesCleartextTraffic="true">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:19: Warning: Attribute textDirection is only used in API level 17 and higher (current min is 16) [UnusedAttribute]
+        android:textDirection="ltr"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:35: Warning: Attribute textFontWeight is only used in API level 28 and higher (current min is 16) [UnusedAttribute]
+        android:textFontWeight="35"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:41: Warning: Attribute textFontWeight is only used in API level 28 and higher (current min is 16) [UnusedAttribute]
+        android:textFontWeight="35"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:81: Warning: Attribute colorControlNormal is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlNormal="@color/proj_sub_color"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:82: Warning: Attribute colorControlActivated is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlActivated="@color/white"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:126: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                            android:backgroundTint="@color/colorBlack"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:127: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                            android:overlapAnchor="false"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:332: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_main_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:91: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                    android:backgroundTint="@color/light_logo_color"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_main_page.xml:10: Warning: Attribute layoutDirection is only used in API level 17 and higher (current min is 16) [UnusedAttribute]
+    android:layoutDirection="ltr">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:75: Warning: Attribute colorControlNormal is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlNormal="@color/proj_sub_color"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:76: Warning: Attribute colorControlActivated is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlActivated="@color/white"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:445: Warning: Attribute indeterminateTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:indeterminateTint="@color/proj_sub_color"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:64: Warning: Attribute colorControlNormal is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlNormal="@color/proj_sub_color"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:65: Warning: Attribute colorControlActivated is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlActivated="@color/white"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:221: Warning: Attribute indeterminateTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:indeterminateTint="@color/proj_sub_color"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:19: Warning: Attribute textDirection is only used in API level 17 and higher (current min is 16) [UnusedAttribute]
+        android:textDirection="ltr"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:34: Warning: Attribute textFontWeight is only used in API level 28 and higher (current min is 16) [UnusedAttribute]
+        android:textFontWeight="35"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:50: Warning: Attribute textFontWeight is only used in API level 28 and higher (current min is 16) [UnusedAttribute]
+        android:textFontWeight="35"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:64: Warning: Attribute colorControlNormal is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlNormal="@color/proj_sub_color"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:65: Warning: Attribute colorControlActivated is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:colorControlActivated="@color/white"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:373: Warning: Attribute indeterminateTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+            android:indeterminateTint="@color/proj_sub_color"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:58: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:backgroundTint="@color/white"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:59: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:overlapAnchor="false"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:90: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:backgroundTint="@color/white"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:91: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:overlapAnchor="false"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:150: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:backgroundTint="@color/proj_sub_color"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:59: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:88: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:66: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:95: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:61: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:90: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:33: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:backgroundTint="@color/white"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:34: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:overlapAnchor="false"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:62: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:90: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:65: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:94: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:66: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:95: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:31: Warning: Attribute elevation is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:elevation="10dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:94: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/colorBlack"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:96: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:overlapAnchor="false"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:115: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/colorBlack"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:117: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:overlapAnchor="false"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:199: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                                android:backgroundTint="@color/proj_main_color"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:219: Warning: Attribute indeterminateTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:indeterminateTint="@color/proj_sub_color"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:72: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:backgroundTint="@color/colorBlack"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:73: Warning: Attribute overlapAnchor is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                android:overlapAnchor="false"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:153: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/unclickable_Button"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:66: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:95: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:82: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"/>
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/user_profile_background.xml:9: Warning: Attribute height is only used in API level 23 and higher (current min is 16) [UnusedAttribute]
+    <item android:height="350dp">
+          ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:68: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/proj_sub_color"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:97: Warning: Attribute backgroundTint is only used in API level 21 and higher (current min is 16) [UnusedAttribute]
+                        android:backgroundTint="@color/white"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterA.kt:49: Error: Use requireActivity() instead of activity!! [UseRequireInsteadOfGet from fragment-1.3.5]
+            val manager = activity!!.supportFragmentManager
+                          ~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterB.kt:163: Error: Use requireActivity() instead of activity!! [UseRequireInsteadOfGet from fragment-1.3.5]
+        activity!!.finish()
+        ~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Registeration/FragmentRegisterB.kt:217: Error: Use requireActivity() instead of activity!! [UseRequireInsteadOfGet from fragment-1.3.5]
+        activity!!.finish()
+        ~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt:152: Error: Use requireContext() instead of context!! [UseRequireInsteadOfGet from fragment-1.3.5]
+        val toCityAdapter = ArrayAdapter.createFromResource(context!!,
+                                                            ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt:158: Error: Use requireContext() instead of context!! [UseRequireInsteadOfGet from fragment-1.3.5]
+        val fromCityAdapter = ArrayAdapter.createFromResource(context!!,
+                                                              ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/HomeFragment.kt:336: Error: Use requireActivity() instead of activity!! [UseRequireInsteadOfGet from fragment-1.3.5]
+        val datePickerDialog = DatePickerDialog(activity!!, android.R.style.Theme_Holo_Light_Dialog, mDateSetListener, year, month, day)
+                                                ~~~~~~~~~~
+
+   Explanation for issues of type "UseRequireInsteadOfGet":
+   AndroidX added new "require____()" versions of common "get___()" APIs, such
+   as getContext/getActivity/getArguments/etc. Rather than wrap these in
+   something like requireNotNull(), using these APIs will allow the underlying
+   component to try to tell you _why_ it was null, and thus yield a better
+   error message.
+
+   Vendor: Android Open Source Project (fragment-1.3.5)
+   Identifier: fragment-1.3.5
+   Feedback: https://issuetracker.google.com/issues/new?component=192731
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/SplashScreen.java:17: Warning: The application should not provide its own launch screen [CustomSplashScreen]
+public class SplashScreen extends AppCompatActivity {
+             ~~~~~~~~~~~~
+
+   Explanation for issues of type "CustomSplashScreen":
+   Starting in Android 12 (API 31+), the application's Launch Screen is
+   provided by the system and the application should not create its own,
+   otherwise the user will see two splashscreens. Please check the
+   SplashScreen class to check how the Splash Screen can be controlled and
+   customized.
+
+   https://developer.android.com/guide/topics/ui/splash-screen
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Notifications/NotificationsFragment.kt:41: Error: @layout/fragment_notifications does not contain a declaration with id refreshLayout [MissingInflatedId]
+        refreshLayout = view.findViewById(R.id.refreshLayout)
+                                          ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingInflatedId":
+   Checks calls to layout inflation and makes sure that the referenced ids are
+   found in the corresponding layout (or at least one of them, if the layout
+   has multiple configurations.)
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:240: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/ic_baseline_directions_car" />
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:250: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/ic_baseline_image_24"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_main_page.xml:33: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                    android:src="@drawable/ic_search_black_24dp"
+                    ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:64: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+            android:src="@drawable/edit_pin_white"
+            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:141: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:178: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:216: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:300: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:343: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:387: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:430: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/edit_pin"/>
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:172: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/ic_baseline_directions_car" />
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:254: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                            android:src="@drawable/ic_baseline_directions_car" />
+                            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:27: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                android:src="@drawable/ic_baseline_directions_car_white" />
+                ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:34: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                android:src="@drawable/ic_baseline_image_white_24"/>
+                ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:66: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+            android:src="@drawable/ic_baseline_directions_car"/>
+            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:104: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+            android:src="@drawable/ic_baseline_arrow_left_24"/>
+            ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:25: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                android:src="@drawable/ic_person_black_24dp"/>
+                ~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:25: Error: When using VectorDrawableCompat, you need to use app:srcCompat [VectorDrawableCompat]
+                android:src="@drawable/ic_person_black_24dp"/>
+                ~~~~~~~~~~~
+
+   Explanation for issues of type "VectorDrawableCompat":
+   To use VectorDrawableCompat, you need to make two modifications to your
+   project. First, set android.defaultConfig.vectorDrawables.useSupportLibrary
+   = true in your build.gradle file, and second, use app:srcCompat instead of
+   android:src to refer to vector drawables.
+
+   https://developer.android.com/guide/topics/graphics/vector-drawable-resources
+   https://medium.com/androiddevelopers/using-vector-assets-in-android-apps-4318fd662eb9
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:42: Warning: A newer version of androidx.appcompat:appcompat than 1.0.2 is available: 1.7.0 [GradleDependency]
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:43: Warning: A newer version of androidx.constraintlayout:constraintlayout than 1.1.3 is available: 2.2.0 [GradleDependency]
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:44: Warning: A newer version of androidx.vectordrawable:vectordrawable than 1.1.0 is available: 1.2.0 [GradleDependency]
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:45: Warning: A newer version of androidx.navigation:navigation-fragment than 2.2.1 is available: 2.8.6 [GradleDependency]
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:46: Warning: A newer version of androidx.navigation:navigation-ui than 2.2.1 is available: 2.8.6 [GradleDependency]
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:49: Warning: A newer version of androidx.test:runner than 1.1.1 is available: 1.6.2 [GradleDependency]
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:50: Warning: A newer version of androidx.test.espresso:espresso-core than 3.1.1 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:58: Warning: A newer version of com.google.android.material:material than 1.2.0-alpha06 is available: 1.12.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.2.0-alpha06'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:89: Warning: A newer version of com.google.firebase:firebase-auth than 19.3.0 is available: 23.2.0 [GradleDependency]
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:98: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.2.0 is available: 2.8.7 [GradleDependency]
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:100: Warning: A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.2.0 is available: 2.8.7 [GradleDependency]
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:18: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="30dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:37: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="28dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:49: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="28dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:18: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="30dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:36: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="28dp"/>
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:52: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="28dp"/>
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:43: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="15dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:54: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="15dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:43: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="15dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:54: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+                android:textSize="15dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/splash_screen.xml:25: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        android:textSize="70dp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/styles.xml:28: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        <item name="android:textSize">12dp</item>
+                                      ~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/styles.xml:40: Warning: Should use "sp" instead of "dp" for text sizes [SpUsage]
+        <item name="android:textSize">12dp</item>
+                                      ~~~~
+
+   Explanation for issues of type "SpUsage":
+   When setting text sizes, you should normally use sp, or "scale-independent
+   pixels". This is like the dp unit, but it is also scaled by the user's font
+   size preference. It is recommend you use this unit when specifying font
+   sizes, so they will be adjusted for both the screen density and the user's
+   preference.
+
+   There are cases where you might need to use dp; typically this happens when
+   the text is in a container with a specific dp-size. This will prevent the
+   text from spilling outside the container. Note however that this means that
+   the user's font size settings are not respected, so consider adjusting the
+   layout itself to be more flexible.
+
+   https://developer.android.com/training/multiscreen/screendensities.html
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:32: Error: "registerHint" is not translated in "ar" (Arabic) [MissingTranslation]
+    <string name="registerHint">Create an account to access all features</string>
+            ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:45: Error: "hello_blank_fragment" is not translated in "ar" (Arabic) [MissingTranslation]
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:47: Error: "facebook_app_id" is not translated in "ar" (Arabic) [MissingTranslation]
+    <string name="facebook_app_id">1114891582215561</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:48: Error: "fb_login_protocol_scheme" is not translated in "ar" (Arabic) [MissingTranslation]
+    <string name="fb_login_protocol_scheme">fb1114891582215561</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "MissingTranslation":
+   If an application has more than one locale, then all the strings declared
+   in one language should also be translated in all other languages.
+
+   If the string should not be translated, you can add the attribute
+   translatable="false" on the <string> element, or you can define all your
+   non-translatable strings in a resource file called donottranslate.xml. Or,
+   you can ignore the issue with a tools:ignore="MissingTranslation"
+   attribute.
+
+   You can tell lint (and other tools) which language is the default language
+   in your res/values/ folder by specifying tools:locale="languageCode" for
+   the root <resources> element in your resource file. (The tools prefix
+   refers to the namespace declaration http://schemas.android.com/tools.)
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml:9: Warning: Did you mean android.permission.READ_EXTERNAL_STORAGE? [SystemPermissionTypo]
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/AndroidManifest.xml:10: Warning: Did you mean android.permission.WRITE_EXTERNAL_STORAGE? [SystemPermissionTypo]
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SystemPermissionTypo":
+   This check looks for required permissions that look like well-known system
+   permissions or permissions from the Android SDK, but aren't, and may be
+   typos.
+
+   Please double check the permission value you have supplied.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:122: Warning: Invalid layout param in a LinearLayout: layout_centerVertical [ObsoleteLayoutParam]
+                                android:layout_centerVertical="true"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:134: Warning: Invalid layout param in a LinearLayout: layout_below [ObsoleteLayoutParam]
+                        android:layout_below="@+id/place_to_meet"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:135: Warning: Invalid layout param in a LinearLayout: layout_centerHorizontal [ObsoleteLayoutParam]
+                        android:layout_centerHorizontal="true"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteLayoutParam":
+   The given layout_param is not defined for the given layout, meaning it has
+   no effect. This usually happens when you change the parent layout or move
+   view code around without updating the layout params. This will cause
+   useless attribute processing at runtime, and is misleading for others
+   reading the layout so the parameter should be removed.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/Profile/MyProfile/RealPathUtil.kt:21: Warning: Unnecessary; SDK_INT is never < 16 [ObsoleteSdkInt]
+            if (Build.VERSION.SDK_INT < 11) {
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/SharedPreferences/SharedPrefManager.java:11: Warning: Do not place Android context classes in static fields (static reference to SharedPrefManager which has field cont pointing to Context); this is a memory leak [StaticFieldLeak]
+    private static SharedPrefManager mInstance;
+            ~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:6: Warning: Possible overdraw: Root element paints background #fff with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="#fff"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_trips.xml:8: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:7: Warning: Possible overdraw: Root element paints background #fff with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="#fff"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:6: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_notifications.xml:6: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/splash_screen.xml:7: Warning: Possible overdraw: Root element paints background #848BB5 with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="#848BB5">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:7: Warning: Possible overdraw: Root element paints background @color/proj_main_color with a theme that also paints a background (inferred theme is @style/AppTheme) [Overdraw]
+    android:background="@color/proj_main_color">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/back_arrow_button.xml:2: Warning: The resource R.drawable.back_arrow_button appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/buttons.xml:2: Warning: The resource R.drawable.buttons appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:2: Warning: The resource R.layout.carimage_bottom_sheet_dialog appears to be unused [UnusedResources]
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:6: Warning: The resource R.color.login_bottons appears to be unused [UnusedResources]
+    <color name="login_bottons">#B0B8E9</color>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:8: Warning: The resource R.color.colorGreen appears to be unused [UnusedResources]
+    <color name="colorGreen">#60FF60</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:9: Warning: The resource R.color.colorPrimaryDark appears to be unused [UnusedResources]
+    <color name="colorPrimaryDark">#00574B</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:11: Warning: The resource R.color.colorBorder appears to be unused [UnusedResources]
+    <color name="colorBorder">#343144</color>
+           ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:12: Warning: The resource R.color.colorSolid appears to be unused [UnusedResources]
+    <color name="colorSolid">#D39A18</color>
+           ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:13: Warning: The resource R.color.header appears to be unused [UnusedResources]
+    <color name="header">#1A91DA</color>
+           ~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:16: Warning: The resource R.color.colorArrowDarker appears to be unused [UnusedResources]
+    <color name="colorArrowDarker">#3F51B5</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:18: Warning: The resource R.color.sign_in_text appears to be unused [UnusedResources]
+    <color name="sign_in_text">#1B065A</color>
+           ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:19: Warning: The resource R.color.Button_gredient_start appears to be unused [UnusedResources]
+    <color name="Button_gredient_start">#FF9800</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:20: Warning: The resource R.color.Button_gredient_center appears to be unused [UnusedResources]
+    <color name="Button_gredient_center">#FF9F20</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:21: Warning: The resource R.color.Button_gredient_end appears to be unused [UnusedResources]
+    <color name="Button_gredient_end">#FFB756</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:33: Warning: The resource R.color.black_with_ten_transparency appears to be unused [UnusedResources]
+    <color name="black_with_ten_transparency">#1A000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/colors.xml:36: Warning: The resource R.color.mtrl_textinput_default_box_stroke_color appears to be unused [UnusedResources]
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:3: Warning: The resource R.dimen.activity_horizontal_margin appears to be unused [UnusedResources]
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:4: Warning: The resource R.dimen.activity_vertical_margin appears to be unused [UnusedResources]
+    <dimen name="activity_vertical_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:6: Warning: The resource R.dimen.viewWidth appears to be unused [UnusedResources]
+    <dimen name="viewWidth">115dp</dimen>
+           ~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:7: Warning: The resource R.dimen.viewHeight appears to be unused [UnusedResources]
+    <dimen name="viewHeight">2dp</dimen>
+           ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:8: Warning: The resource R.dimen.viewMarginTop appears to be unused [UnusedResources]
+    <dimen name="viewMarginTop">40dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:9: Warning: The resource R.dimen.headerSize appears to be unused [UnusedResources]
+    <dimen name="headerSize">50sp</dimen>
+           ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:10: Warning: The resource R.dimen.createAccSize appears to be unused [UnusedResources]
+    <dimen name="createAccSize">20sp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:11: Warning: The resource R.dimen.createMarginTop appears to be unused [UnusedResources]
+    <dimen name="createMarginTop">5dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:12: Warning: The resource R.dimen.boxWidth appears to be unused [UnusedResources]
+    <dimen name="boxWidth">270dp</dimen>
+           ~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:13: Warning: The resource R.dimen.userBoxMarginTop appears to be unused [UnusedResources]
+    <dimen name="userBoxMarginTop">2dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:16: Warning: The resource R.dimen.privacyMarginTop appears to be unused [UnusedResources]
+    <dimen name="privacyMarginTop">5dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:17: Warning: The resource R.dimen.regBtnWidth appears to be unused [UnusedResources]
+    <dimen name="regBtnWidth">300dp</dimen>
+           ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:18: Warning: The resource R.dimen.regBtnMarginTop appears to be unused [UnusedResources]
+    <dimen name="regBtnMarginTop">10dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:20: Warning: The resource R.dimen.alreadySize appears to be unused [UnusedResources]
+    <dimen name="alreadySize">20sp</dimen>
+           ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:21: Warning: The resource R.dimen.signInSize appears to be unused [UnusedResources]
+    <dimen name="signInSize">20sp</dimen>
+           ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/dimens.xml:24: Warning: The resource R.dimen.loginBottonsRadius appears to be unused [UnusedResources]
+    <dimen name="loginBottonsRadius">10dp</dimen>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/menu/home_top_navigation.xml:2: Warning: The resource R.menu.home_top_navigation appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml:1: Warning: The resource R.drawable.ic_baseline_camera_alt_24 appears to be unused [UnusedResources]
+<vector android:height="40dp" android:tint="?attr/colorControlNormal"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_baseline_directions_car_white.xml:1: Warning: The resource R.drawable.ic_baseline_directions_car_white appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_baseline_image_white_24.xml:1: Warning: The resource R.drawable.ic_baseline_image_white_24 appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_facebook_logo.xml:1: Warning: The resource R.drawable.ic_facebook_logo appears to be unused [UnusedResources]
+<vector
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_gmail_logo.xml:1: Warning: The resource R.drawable.ic_gmail_logo appears to be unused [UnusedResources]
+<vector android:height="24dp" android:viewportHeight="512"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_launcher_background.xml:2: Warning: The resource R.drawable.ic_launcher_background appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/mipmap-anydpi-v26/ic_launcher_car.xml:2: Warning: The resource R.mipmap.ic_launcher_car appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_launcher_car_background.xml:2: Warning: The resource R.drawable.ic_launcher_car_background appears to be unused [UnusedResources]
+<vector
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_launcher_car_foreground.xml:1: Warning: The resource R.drawable.ic_launcher_car_foreground appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/mipmap-anydpi-v26/ic_launcher_car_round.xml:2: Warning: The resource R.mipmap.ic_launcher_car_round appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_launcher_foreground.xml:2: Warning: The resource R.drawable.ic_launcher_foreground appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/mipmap-anydpi-v26/ic_launcher_hint_car.xml:2: Warning: The resource R.mipmap.ic_launcher_hint_car appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_launcher_hint_car_background.xml:2: Warning: The resource R.drawable.ic_launcher_hint_car_background appears to be unused [UnusedResources]
+<vector
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/mipmap-anydpi-v26/ic_launcher_hint_car_round.xml:2: Warning: The resource R.mipmap.ic_launcher_hint_car_round appears to be unused [UnusedResources]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/ic_play_circle_filled_black_24dp.xml:1: Warning: The resource R.drawable.ic_play_circle_filled_black_24dp appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/logo.jpeg: Warning: The resource R.drawable.logo appears to be unused [UnusedResources]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/logout.jpg: Warning: The resource R.drawable.logout appears to be unused [UnusedResources]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/notification_badge.xml:2: Warning: The resource R.drawable.notification_badge appears to be unused [UnusedResources]
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/person_background.xml:1: Warning: The resource R.drawable.person_background appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/post_background.xml:2: Warning: The resource R.drawable.post_background appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/register_page_border.xml:1: Warning: The resource R.drawable.register_page_border appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/rounded_button.xml:2: Warning: The resource R.drawable.rounded_button appears to be unused [UnusedResources]
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+^
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:4: Warning: The resource R.array.numbers appears to be unused [UnusedResources]
+    <string-array name="numbers">
+                  ~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:33: Warning: The resource R.string.createAcc appears to be unused [UnusedResources]
+    <string name="createAcc">Create your accont</string>
+            ~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:40: Warning: The resource R.string.alreadyHave appears to be unused [UnusedResources]
+    <string name="alreadyHave">already have an account? </string>
+            ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:41: Warning: The resource R.string.signIn appears to be unused [UnusedResources]
+    <string name="signIn">Sign In </string>
+            ~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:45: Warning: The resource R.string.hello_blank_fragment appears to be unused [UnusedResources]
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:47: Warning: The resource R.string.facebook_app_id appears to be unused [UnusedResources]
+    <string name="facebook_app_id">1114891582215561</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/strings.xml:48: Warning: The resource R.string.fb_login_protocol_scheme appears to be unused [UnusedResources]
+    <string name="fb_login_protocol_scheme">fb1114891582215561</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/styles.xml:11: Warning: The resource R.style.FaceTheme appears to be unused [UnusedResources]
+    <style name="FaceTheme" parent="AppTheme">
+           ~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/styles.xml:43: Warning: The resource R.style.inactive appears to be unused [UnusedResources]
+    <style name="inactive" parent="Theme.MaterialComponents.Light">
+           ~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/values/styles.xml:54: Warning: The resource R.style.RippleStyleWhite appears to be unused [UnusedResources]
+    <style name="RippleStyleWhite">
+           ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:97: Warning: This RelativeLayout layout or its LinearLayout parent is possibly unnecessary; transfer the background attribute to the other view [UselessParent]
+                    <RelativeLayout
+                     ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UselessParent":
+   A layout with children that has no siblings, is not a scrollview or a root
+   layout, and does not have a background, can be removed and have its
+   children moved directly into the parent for a flatter and more efficient
+   layout hierarchy.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:36: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:33: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:33: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:33: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:21: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:21: Warning: This namespace declaration is redundant [RedundantNamespace]
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RedundantNamespace":
+   In Android XML documents, only specify the namespace on the root/document
+   element. Namespace declarations elsewhere in the document are typically
+   accidental leftovers from copy/pasting XML from other files or
+   documentation.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/blank_profile_pic.jpg: Warning: Found bitmap drawable res/drawable/blank_profile_pic.jpg in densityless folder [IconLocation]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/logo.jpeg: Warning: Found bitmap drawable res/drawable/logo.jpeg in densityless folder [IconLocation]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/logout.jpg: Warning: Found bitmap drawable res/drawable/logout.jpg in densityless folder [IconLocation]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/sw_logo.png: Warning: Found bitmap drawable res/drawable/sw_logo.png in densityless folder [IconLocation]
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/drawable/sw_logo_emp.png: Warning: Found bitmap drawable res/drawable/sw_logo_emp.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:26: Warning: The view name (@+id/edittexjornynumber) suggests this is a number, but it does not include a numeric inputType (such as 'numberSigned') [TextFields]
+        android:inputType="textMultiLine"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:28: id defined here
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:169: Warning: This text field does not specify an inputType [TextFields]
+                    <EditText
+                     ~~~~~~~~
+
+   Explanation for issues of type "TextFields":
+   Providing an inputType attribute on a text field improves usability because
+   depending on the data to be input, optimized keyboards can be shown to the
+   user (such as just digits and parentheses for a phone number). 
+
+   The lint detector also looks at the id of the view, and if the id offers a
+   hint of the purpose of the field (for example, the id contains the phrase
+   phone or email), then lint will also ensure that the inputType contains the
+   corresponding type attributes.
+
+   If you really want to keep the text field generic, you can suppress this
+   warning by setting inputType="text".
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:24: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:40: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:22: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:38: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:169: Warning: Missing autofillHints attribute [Autofill]
+                    <EditText
+                     ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:45: Information: Add suffix -ktx to enable the Kotlin extensions for this library [KtxExtensionAvailable]
+    implementation 'androidx.navigation:navigation-fragment:2.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/build.gradle:46: Information: Add suffix -ktx to enable the Kotlin extensions for this library [KtxExtensionAvailable]
+    implementation 'androidx.navigation:navigation-ui:2.2.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KtxExtensionAvailable":
+   Android KTX extensions augment some libraries with support for modern
+   Kotlin language features like extension functions, extension properties,
+   lambdas, named parameters, coroutines, and more.
+
+   In Kotlin projects, use the KTX version of a library by replacing the
+   dependency in your build.gradle file. For example, you can replace
+   androidx.fragment:fragment with androidx.fragment:fragment-ktx.
+
+   https://developer.android.com/kotlin/ktx
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:234: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:242: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:14: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:58: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:133: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:170: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:208: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:285: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:292: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:335: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:379: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:422: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:166: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_registeration.xml:90: Warning: Missing contentDescription attribute on image [ContentDescription]
+                    <ImageView
+                     ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:248: Warning: Missing contentDescription attribute on image [ContentDescription]
+                        <ImageView
+                         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:22: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:28: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:61: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:99: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/splash_screen.xml:9: Warning: Missing contentDescription attribute on image [ContentDescription]
+    <ImageView
+     ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/ConfirmReservationDialog.kt:29: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        message.text = "Are you sure you want to reserve $driverName trip ?"
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/ConfirmReservationDialog.kt:29: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        message.text = "Are you sure you want to reserve $driverName trip ?"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/java/com/mahmoudrefaie/sekkawahda/ui/MainPage/NavigationFragments/Home/ConfirmReservationDialog.kt:29: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        message.text = "Are you sure you want to reserve $driverName trip ?"
+                                                                    ~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:17: Warning: Hardcoded string "cancelation", should use @string resource [HardcodedText]
+        android:text="cancelation"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:36: Warning: Hardcoded string "Journy number", should use @string resource [HardcodedText]
+        android:hint="Journy number"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:57: Warning: Hardcoded string "dscribtion", should use @string resource [HardcodedText]
+        android:hint="dscribtion"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:68: Warning: Hardcoded string "Confirm", should use @string resource [HardcodedText]
+        android:text="Confirm"
+        ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:63: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+                android:hint="Username"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:180: Warning: Hardcoded string "SSN", should use @string resource [HardcodedText]
+                            android:text="SSN"
+                            ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:192: Warning: Hardcoded string "14num", should use @string resource [HardcodedText]
+                            android:text="14num"
+                            ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:229: Warning: Hardcoded string "Car Image", should use @string resource [HardcodedText]
+                            android:text="Car Image"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:266: Warning: Hardcoded string "Driver License", should use @string resource [HardcodedText]
+                                android:hint="Driver License"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:284: Warning: Hardcoded string "Car License", should use @string resource [HardcodedText]
+                                android:hint="Car License"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:302: Warning: Hardcoded string "Car Model", should use @string resource [HardcodedText]
+                                android:hint="Car Model"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:331: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:344: Warning: Hardcoded string "LogOut", should use @string resource [HardcodedText]
+                android:text="LogOut"
+                ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:40: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+                android:hint="Username"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:63: Warning: Hardcoded string "Password", should use @string resource [HardcodedText]
+                android:hint="Password"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:94: Warning: Hardcoded string "Login", should use @string resource [HardcodedText]
+                    android:text="Login"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:106: Warning: Hardcoded string "forgotten password?", should use @string resource [HardcodedText]
+            android:text="forgotten password?"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:129: Warning: Hardcoded string "Don't have an account ? ", should use @string resource [HardcodedText]
+                android:text="Don't have an account ? "
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:138: Warning: Hardcoded string "REGISTER", should use @string resource [HardcodedText]
+                android:text="REGISTER"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_login.xml:148: Warning: Hardcoded string "Terms ,conditions & privacy policy", should use @string resource [HardcodedText]
+            android:text="Terms ,conditions &amp; privacy policy"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:119: Warning: Hardcoded string "City", should use @string resource [HardcodedText]
+                            android:text="City"
+                            ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:156: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+                            android:text="Email"
+                            ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:193: Warning: Hardcoded string "Phone number", should use @string resource [HardcodedText]
+                            android:text="Phone number"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:231: Warning: Hardcoded string "SSN", should use @string resource [HardcodedText]
+                            android:text="SSN"
+                            ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:280: Warning: Hardcoded string "Car Image", should use @string resource [HardcodedText]
+                            android:text="Car Image"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:320: Warning: Hardcoded string "Driver License", should use @string resource [HardcodedText]
+                            android:text="Driver License"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:364: Warning: Hardcoded string "Car License", should use @string resource [HardcodedText]
+                            android:text="Car License"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:407: Warning: Hardcoded string "Car Model", should use @string resource [HardcodedText]
+                            android:text="Car Model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_trips.xml:29: Warning: Hardcoded string "My Trips", should use @string resource [HardcodedText]
+                    android:text="My Trips"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:108: Warning: Hardcoded string "City", should use @string resource [HardcodedText]
+                            android:text="City"
+                            ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:161: Warning: Hardcoded string "Car Image", should use @string resource [HardcodedText]
+                            android:text="Car Image"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:192: Warning: Hardcoded string "Car Model", should use @string resource [HardcodedText]
+                            android:text="Car Model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_registeration.xml:43: Warning: Hardcoded string "Sign Up", should use @string resource [HardcodedText]
+            android:text="Sign Up"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_registeration.xml:128: Warning: Hardcoded string "Already have an account? ", should use @string resource [HardcodedText]
+                android:text="Already have an account? "
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_registeration.xml:137: Warning: Hardcoded string "LOGIN", should use @string resource [HardcodedText]
+                android:text="LOGIN"
+                ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:17: Warning: Hardcoded string "Reservation", should use @string resource [HardcodedText]
+        android:text="Reservation"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:35: Warning: Hardcoded string "Name", should use @string resource [HardcodedText]
+        android:hint="Name"
+        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:51: Warning: Hardcoded string "Address", should use @string resource [HardcodedText]
+        android:hint="Address"
+        ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reservation.xml:67: Warning: Hardcoded string "Confirm", should use @string resource [HardcodedText]
+        android:text="Confirm"/>
+        ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:108: Warning: Hardcoded string "City", should use @string resource [HardcodedText]
+                            android:text="City"
+                            ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:136: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+                            android:text="Email"
+                            ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:165: Warning: Hardcoded string "Phone number", should use @string resource [HardcodedText]
+                            android:text="Phone number"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:194: Warning: Hardcoded string "SSN", should use @string resource [HardcodedText]
+                            android:text="SSN"
+                            ~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:243: Warning: Hardcoded string "Car Image", should use @string resource [HardcodedText]
+                            android:text="Car Image"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:274: Warning: Hardcoded string "Driver License", should use @string resource [HardcodedText]
+                            android:text="Driver License"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:309: Warning: Hardcoded string "Car License", should use @string resource [HardcodedText]
+                            android:text="Car License"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:343: Warning: Hardcoded string "Car Model", should use @string resource [HardcodedText]
+                            android:text="Car Model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:42: Warning: Hardcoded string "Journey from", should use @string resource [HardcodedText]
+                            android:text="Journey from"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:74: Warning: Hardcoded string "Journey to", should use @string resource [HardcodedText]
+                            android:text="Journey to"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:106: Warning: Hardcoded string "Date", should use @string resource [HardcodedText]
+                            android:text="Date"
+                            ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:124: Warning: Hardcoded string "select date", should use @string resource [HardcodedText]
+                                android:text="select date"
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:153: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+                                android:text="Search"
+                                ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:63: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:92: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:33: Warning: Hardcoded string "Car License", should use @string resource [HardcodedText]
+                android:hint="Car License"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:70: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:99: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:29: Warning: Hardcoded string "Car Model", should use @string resource [HardcodedText]
+                android:hint="Car Model"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:65: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:94: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:61: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:89: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:32: Warning: Hardcoded string "Driver License", should use @string resource [HardcodedText]
+                android:hint="Driver License"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:69: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:98: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:33: Warning: Hardcoded string "Email", should use @string resource [HardcodedText]
+                android:hint="Email"
+                ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:70: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:99: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:62: Warning: Hardcoded string "Write a post", should use @string resource [HardcodedText]
+                    android:hint="Write a post"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:84: Warning: Hardcoded string "Journey From", should use @string resource [HardcodedText]
+                        android:text="Journey From"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:105: Warning: Hardcoded string "To", should use @string resource [HardcodedText]
+                        android:text="To"
+                        ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:134: Warning: Hardcoded string "Date & Time", should use @string resource [HardcodedText]
+                        android:text="Date &amp; Time"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:146: Warning: Hardcoded string "trip date", should use @string resource [HardcodedText]
+                        android:hint="trip date"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:157: Warning: Hardcoded string "trip time", should use @string resource [HardcodedText]
+                        android:hint="trip time"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:175: Warning: Hardcoded string "place to meet", should use @string resource [HardcodedText]
+                        android:hint="place to meet"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:202: Warning: Hardcoded string "POST", should use @string resource [HardcodedText]
+                                android:text="POST" />
+                                ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:35: Warning: Hardcoded string "See your profile", should use @string resource [HardcodedText]
+            android:text="See your profile"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:75: Warning: Hardcoded string "My Trips", should use @string resource [HardcodedText]
+            android:text="My Trips"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:113: Warning: Hardcoded string "Log out", should use @string resource [HardcodedText]
+            android:text="Log out"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_notifications.xml:26: Warning: Hardcoded string "Notifications", should use @string resource [HardcodedText]
+                android:text="Notifications"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_a.xml:89: Warning: Hardcoded string "Next", should use @string resource [HardcodedText]
+                    android:text="Next"
+                    ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:129: Warning: Hardcoded string "Previous", should use @string resource [HardcodedText]
+                        android:text="Previous"
+                        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/menu/home_top_navigation.xml:6: Warning: Hardcoded string "Home", should use @string resource [HardcodedText]
+        android:title="Home"/>
+        ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/menu/home_top_navigation.xml:11: Warning: Hardcoded string "Navigation", should use @string resource [HardcodedText]
+        android:title="Navigation"/>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/menu/home_top_navigation.xml:16: Warning: Hardcoded string "Search", should use @string resource [HardcodedText]
+        android:title="Search"/>
+        ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/menu/home_top_navigation.xml:21: Warning: Hardcoded string "More", should use @string resource [HardcodedText]
+        android:title="More" />
+        ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:31: Warning: Hardcoded string "Mahmoud Refaie", should use @string resource [HardcodedText]
+                android:text="Mahmoud Refaie"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:42: Warning: Hardcoded string "2", should use @string resource [HardcodedText]
+                android:text="2"
+                ~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:53: Warning: Hardcoded string "days ago", should use @string resource [HardcodedText]
+                android:text="days ago"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:72: Warning: Hardcoded string "Journey From", should use @string resource [HardcodedText]
+                    android:text="Journey From"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:81: Warning: Hardcoded string "Luxor", should use @string resource [HardcodedText]
+                    android:text="Luxor"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:91: Warning: Hardcoded string "To", should use @string resource [HardcodedText]
+                    android:text="To"
+                    ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:101: Warning: Hardcoded string "Cairo", should use @string resource [HardcodedText]
+                    android:text="Cairo"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:117: Warning: Hardcoded string "Date & Time", should use @string resource [HardcodedText]
+                    android:text="Date &amp; Time"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:127: Warning: Hardcoded string "1 May", should use @string resource [HardcodedText]
+                    android:text="1 May"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:138: Warning: Hardcoded string "10:30 AM", should use @string resource [HardcodedText]
+                    android:text="10:30 AM"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:159: Warning: Hardcoded string "place to meet", should use @string resource [HardcodedText]
+                    android:text="place to meet"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:177: Warning: Hardcoded string "State", should use @string resource [HardcodedText]
+                    android:text="State"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:187: Warning: Hardcoded string "Trip reserved", should use @string resource [HardcodedText]
+                    android:text="Trip reserved"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:33: Warning: Hardcoded string "Phone number", should use @string resource [HardcodedText]
+                android:hint="Phone number"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:70: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:99: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:31: Warning: Hardcoded string "Mahmoud Refaie", should use @string resource [HardcodedText]
+                android:text="Mahmoud Refaie"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:42: Warning: Hardcoded string "2", should use @string resource [HardcodedText]
+                android:text="2"
+                ~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:53: Warning: Hardcoded string "days ago", should use @string resource [HardcodedText]
+                android:text="days ago"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:78: Warning: Hardcoded string "Reserve", should use @string resource [HardcodedText]
+                        android:text="Reserve"
+                        ~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:99: Warning: Hardcoded string "Journey From", should use @string resource [HardcodedText]
+                    android:text="Journey From"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:108: Warning: Hardcoded string "Luxor", should use @string resource [HardcodedText]
+                    android:text="Luxor"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:118: Warning: Hardcoded string "To", should use @string resource [HardcodedText]
+                    android:text="To"
+                    ~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:128: Warning: Hardcoded string "Cairo", should use @string resource [HardcodedText]
+                    android:text="Cairo"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:144: Warning: Hardcoded string "Date & Time", should use @string resource [HardcodedText]
+                    android:text="Date &amp; Time"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:154: Warning: Hardcoded string "1 May", should use @string resource [HardcodedText]
+                    android:text="1 May"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:165: Warning: Hardcoded string "10:30 AM", should use @string resource [HardcodedText]
+                    android:text="10:30 AM"
+                    ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:185: Warning: Hardcoded string "place to meet", should use @string resource [HardcodedText]
+                    android:text="place to meet"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:35: Warning: Hardcoded string "Username", should use @string resource [HardcodedText]
+                android:hint="Username"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:72: Warning: Hardcoded string "Save", should use @string resource [HardcodedText]
+                        android:text="Save"
+                        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:101: Warning: Hardcoded string "Cancel", should use @string resource [HardcodedText]
+                        android:text="Cancel"
+                        ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:47: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+        android:paddingLeft="10dp"
+        ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_cancelation.xml:47: Warning: Consider adding android:paddingStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="10dp"
+        ~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:190: Warning: Consider adding android:layout_alignStart="@+id/header_ssn" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_ssn"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:191: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:247: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:249: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_edit_my_profile.xml:345: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:layout_gravity="right"/>
+                                        ~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_main_page.xml:34: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_alignParentRight="true"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_main_page.xml:35: Warning: Consider adding android:layout_marginEnd="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginRight="@dimen/_20sdp"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:63: Warning: Consider adding android:layout_marginEnd="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginRight="@dimen/_20sdp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:128: Warning: Consider adding android:layout_alignStart="@+id/header_city" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_city"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:129: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:138: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:140: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:165: Warning: Consider adding android:layout_alignStart="@+id/header_email" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_email"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:166: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:175: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:177: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:203: Warning: Consider adding android:layout_alignStart="@+id/header_phone" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_phone"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:204: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:213: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:215: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:241: Warning: Consider adding android:layout_alignStart="@+id/header_ssn" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_ssn"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:242: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:297: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:299: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:329: Warning: Consider adding android:layout_alignStart="@+id/header_driver_license" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_driver_license"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:330: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:331: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:340: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:342: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:373: Warning: Consider adding android:layout_alignStart="@+id/header_car_license" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_car_license"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:374: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:375: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:384: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:386: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:416: Warning: Consider adding android:layout_alignStart="@+id/header_car_model" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_car_model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:417: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:418: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:427: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_profile.xml:429: Warning: Consider adding android:layout_marginEnd="20dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="20dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_my_trips.xml:34: Warning: Consider adding android:layout_marginStart="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:117: Warning: Consider adding android:layout_alignStart="@+id/header_city" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_city"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:118: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:201: Warning: Consider adding android:layout_alignStart="@+id/header_car_model" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_car_model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:202: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_not_reserved_user_profile.xml:203: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:117: Warning: Consider adding android:layout_alignStart="@+id/header_city" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_city"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:118: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:145: Warning: Consider adding android:layout_alignStart="@+id/header_email" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_email"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:146: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:175: Warning: Consider adding android:layout_alignStart="@+id/header_phone" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_phone"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:176: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:204: Warning: Consider adding android:layout_alignStart="@+id/header_ssn" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_ssn"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:205: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:283: Warning: Consider adding android:layout_alignStart="@+id/header_driver_license" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_driver_license"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:284: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:285: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:318: Warning: Consider adding android:layout_alignStart="@+id/header_car_license" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_car_license"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:319: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:320: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:352: Warning: Consider adding android:layout_alignStart="@+id/header_car_model" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignLeft="@+id/header_car_model"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:353: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginLeft="10dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_reserved_user_profile.xml:354: Warning: Consider adding android:layout_marginEnd="30dp" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_marginRight="30dp"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:50: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:82: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/activity_search.xml:114: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                            android:layout_alignParentRight="true"
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:32: Warning: Consider adding android:layout_toEndOf="@+id/car_image" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/car_image"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:46: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:74: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carimage_bottom_sheet_dialog.xml:75: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:53: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:81: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carlicense_bottom_sheet_dialog.xml:82: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:48: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:76: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/carmodel_bottom_sheet_dialog.xml:77: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:48: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:75: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/city_bottom_sheet_dialog.xml:76: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:52: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:80: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/driverlicense_bottom_sheet_dialog.xml:81: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:53: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:81: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/email_bottom_sheet_dialog.xml:82: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:46: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="10dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:47: Warning: Consider adding android:layout_toEndOf="@+id/profPicUser" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/profPicUser"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:93: Warning: Consider adding android:layout_toEndOf="@+id/journey_from_TextView" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_toRightOf="@+id/journey_from_TextView"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:103: Warning: Consider adding android:layout_toEndOf="@+id/from_city" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_toRightOf="@+id/from_city"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:114: Warning: Consider adding android:layout_toEndOf="@+id/to_TextView" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_toRightOf="@+id/to_TextView"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:144: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="10dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:145: Warning: Consider adding android:layout_toEndOf="@+id/date_time_TextView" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_toRightOf="@+id/date_time_TextView"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:155: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_marginLeft="10dp"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_home.xml:156: Warning: Consider adding android:layout_toEndOf="@+id/date" to better support right-to-left layouts [RtlHardcoded]
+                        android:layout_toRightOf="@+id/date"
+                        ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:29: Warning: Consider adding android:layout_toEndOf="@+id/profile_pic" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_toRightOf="@+id/profile_pic"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:30: Warning: Consider adding android:layout_marginStart="@dimen/_15sdp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="@dimen/_15sdp"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:37: Warning: Consider adding android:layout_toEndOf="@+id/profile_pic" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_toRightOf="@+id/profile_pic"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:40: Warning: Consider adding android:layout_marginStart="@dimen/_25sdp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="@dimen/_25sdp"/>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:65: Warning: Consider adding android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentLeft="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:72: Warning: Consider adding android:layout_marginStart="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="@dimen/_20sdp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:73: Warning: Consider adding android:layout_toEndOf="@id/my_trips_logo" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_toRightOf="@id/my_trips_logo"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:103: Warning: Consider adding android:layout_alignParentStart="true" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignParentLeft="true"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:110: Warning: Consider adding android:layout_marginStart="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="@dimen/_20sdp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_more.xml:111: Warning: Consider adding android:layout_toEndOf="@id/logout_logo" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_toRightOf="@id/logout_logo"
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_notifications.xml:31: Warning: Consider adding android:layout_marginStart="@dimen/_20sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="@dimen/_20sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_a.xml:77: Warning: Consider adding android:layout_alignEnd="@+id/pass" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_alignRight="@+id/pass"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/fragment_register_b.xml:139: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="20dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:32: Warning: Consider adding android:layout_toEndOf="@+id/post_profPic" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_profPic"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:36: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="10dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:45: Warning: Consider adding android:layout_toEndOf="@+id/post_profPic" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_profPic"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:46: Warning: Consider adding android:layout_alignStart="@+id/usernameProf" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignLeft="@+id/usernameProf"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:47: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="10dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:56: Warning: Consider adding android:layout_toEndOf="@+id/post_date_time" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_date_time"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:57: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="5dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:84: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:85: Warning: Consider adding android:layout_toEndOf="@+id/journey_from_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/journey_from_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:90: Warning: Consider adding android:layout_marginStart="30dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="30dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:96: Warning: Consider adding android:layout_toEndOf="@+id/from_city" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/from_city"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:104: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:105: Warning: Consider adding android:layout_toEndOf="@+id/to_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/to_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:130: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:132: Warning: Consider adding android:layout_toEndOf="@+id/date_time_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:141: Warning: Consider adding android:layout_marginStart="30dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="30dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:143: Warning: Consider adding android:layout_toEndOf="@+id/date" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/date"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:190: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/mytrips_cardview.xml:192: Warning: Consider adding android:layout_toEndOf="@+id/date_time_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:53: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:81: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/phone_bottom_sheet_dialog.xml:82: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:32: Warning: Consider adding android:layout_toEndOf="@+id/post_profPic" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_profPic"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:36: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="10dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:45: Warning: Consider adding android:layout_toEndOf="@+id/post_profPic" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_profPic"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:46: Warning: Consider adding android:layout_alignStart="@+id/usernameProf" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignLeft="@+id/usernameProf"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:47: Warning: Consider adding android:layout_marginStart="10dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="10dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:56: Warning: Consider adding android:layout_toEndOf="@+id/post_date_time" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toRightOf="@+id/post_date_time"
+                ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:57: Warning: Consider adding android:layout_marginStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginLeft="5dp"/>
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:65: Warning: Consider adding android:layout_alignEnd="@+id/post_details" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignRight="@+id/post_details"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:111: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:112: Warning: Consider adding android:layout_toEndOf="@+id/journey_from_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/journey_from_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:117: Warning: Consider adding android:layout_marginStart="30dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="30dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:123: Warning: Consider adding android:layout_toEndOf="@+id/from_city" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/from_city"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:131: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:132: Warning: Consider adding android:layout_toEndOf="@+id/to_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/to_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:157: Warning: Consider adding android:layout_marginStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="20dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:159: Warning: Consider adding android:layout_toEndOf="@+id/date_time_TextView" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:168: Warning: Consider adding android:layout_marginStart="30dp" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_marginLeft="30dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/post_cardview.xml:170: Warning: Consider adding android:layout_toEndOf="@+id/date" to better support right-to-left layouts [RtlHardcoded]
+                    android:layout_toRightOf="@+id/date"/>
+                    ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:55: Warning: Consider adding android:layout_alignParentEnd="true" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_alignParentRight="true"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:83: Warning: Consider adding android:layout_marginEnd="@dimen/_10sdp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="@dimen/_10sdp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/alrefai/MR/Learn/GraduationProject/Sekka-Wahda/app/src/main/res/layout/username_bottom_sheet_dialog.xml:84: Warning: Consider adding android:layout_toStartOf="@+id/saveBtn_cardview" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_toLeftOf="@+id/saveBtn_cardview"
+                ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+35 errors, 497 warnings

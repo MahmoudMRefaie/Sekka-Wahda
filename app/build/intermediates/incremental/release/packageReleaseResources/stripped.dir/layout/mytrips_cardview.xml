@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginTop="15dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="15dp"
+    card_view:cardBackgroundcolor="#000000"
+    android:id="@+id/post_card">
+
+        <RelativeLayout
+            android:id="@+id/post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/post_profPic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_person_black_24dp"/>
+
+            <TextView
+                android:id="@+id/usernameProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mahmoud Refaie"
+                android:layout_toRightOf="@+id/post_profPic"
+                android:textSize="@dimen/postUsername"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/colorUser"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/post_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="15dp"
+                android:layout_below="@+id/usernameProf"
+                android:layout_toRightOf="@+id/post_profPic"
+                android:layout_alignLeft="@+id/usernameProf"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/post_date_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="days ago"
+                android:textSize="15dp"
+                android:layout_below="@+id/usernameProf"
+                android:layout_toRightOf="@+id/post_date_time"
+                android:layout_marginLeft="5dp"/>
+
+            <RelativeLayout
+                android:id="@+id/post_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_profPic"
+                android:background="@drawable/post_details_background"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/journey_from_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journey From"
+                    android:textSize="@dimen/postDetail"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:id="@+id/from_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luxor"
+                    android:textSize="@dimen/postDetail"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/journey_from_TextView"/>
+                <TextView
+                    android:id="@+id/to_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="To"
+                    android:textSize="@dimen/postDetail"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_toRightOf="@+id/from_city"/>
+                <TextView
+                    android:id="@+id/to_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cairo"
+                    android:textSize="@dimen/postDetail"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/to_TextView"/>
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@+id/journey_from_TextView"/>
+                <TextView
+                    android:id="@+id/date_time_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date &amp; Time"
+                    android:textSize="@dimen/postDetail"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/line1"/>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 May"
+                    android:textSize="@dimen/postDetail"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:30 AM"
+                    android:textSize="@dimen/postDetail"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_below="@+id/line1"
+                    android:layout_toRightOf="@+id/date"/>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@+id/date_time_TextView"/>
+
+                <TextView
+                    android:id="@+id/place_to_meet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line2"
+                    android:textColor="#3F51B5"
+                    android:text="place to meet"
+                    android:textSize="@dimen/postDetail"
+                    android:background="@null"/>
+
+
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorBlack"
+                    android:layout_below="@+id/place_to_meet"/>
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:textSize="@dimen/postDetail"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@+id/line3"/>
+                <TextView
+                    android:id="@+id/state_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trip reserved"
+                    android:textSize="@dimen/postDetail"
+                    android:textColor="#3F51B5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/line3"
+                    android:layout_toRightOf="@+id/date_time_TextView"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    namespace "com.mahmoudrefaie.sekkawahda"
     compileSdkVersion 34
     buildToolsVersion '34.0.0'
     defaultConfig {
@@ -27,7 +28,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -80,7 +88,7 @@ dependencies {
     // Firebase authentication
     implementation 'com.google.firebase:firebase-auth:19.3.0'
     //Firebase UI
-    implementation 'com.firebaseui:firebase-ui-auth:6.2.1'
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
 
     //M4 3arf a lazmtha bs da bsbb Error zhrly fi dex :D
     implementation 'com.android.support:multidex:1.0.3'
@@ -95,5 +103,5 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     //alerter
-    implementation 'com.tapadoo.android:alerter:3.0.0'
+    implementation 'com.github.Tapadoo:Alerter:7.2.4'
 }

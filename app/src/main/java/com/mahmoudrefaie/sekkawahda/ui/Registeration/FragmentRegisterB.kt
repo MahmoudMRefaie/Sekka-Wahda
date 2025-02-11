@@ -48,10 +48,10 @@ class FragmentRegisterB : Fragment(), View.OnClickListener {
         previous?.setOnClickListener(this)
         registerBtn = view.findViewById(R.id.regBtn)
         registerBtn?.setOnClickListener(this)
-        sharedPre = activity!!.getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+        sharedPre = requireActivity().getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
 
         //City Spinner
-        val adapter = ArrayAdapter.createFromResource(activity!!,
+        val adapter = ArrayAdapter.createFromResource(requireActivity(),
                 R.array.city_spinner, android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         city?.setAdapter(adapter)
@@ -73,7 +73,7 @@ class FragmentRegisterB : Fragment(), View.OnClickListener {
         if (view.id == R.id.previous) {
 
             //To open second fragment
-            val manager = activity!!.supportFragmentManager
+            val manager = requireActivity().supportFragmentManager
             val firstFragment = FragmentRegisterA()
             manager.beginTransaction()
                     .setCustomAnimations(R.anim.from_firstfrag_to_secondfrag, R.anim.exit_firstfrag_to_secondfrag,
@@ -91,9 +91,9 @@ class FragmentRegisterB : Fragment(), View.OnClickListener {
             val getCity = city!!.selectedItem.toString()
 
             //Using Bundle to receive username, email, password data from another fragment
-            val getUserName = arguments!!.getString("username")
-            val getEmail = arguments!!.getString("email")
-            val getPassword = arguments!!.getString("password")
+            val getUserName = requireArguments().getString("username")
+            val getEmail = requireArguments().getString("email")
+            val getPassword = requireArguments().getString("password")
             makeRegister(getUserName, getEmail, getPassword, getSsn, getPhone, getCity)
         }
     }

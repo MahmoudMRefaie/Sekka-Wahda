@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="city_spinner">
+        <item>Select City:</item>
+        <item>Aswan</item>
+        <item>Luxor</item>
+        <item>Qena</item>
+        <item>Sohag</item>
+        <item>Assiut</item>
+        <item>Minia</item>
+        <item>Beni Swief</item>
+        <item>Cairo</item>
+        <item>Alexandria</item>
+        <item>Red Sea</item>
+        <item>Esmailia</item>
+        <item>Suiz</item>
+        <item>El-Sharkia</item>
+        <item>El-Monofia</item>
+        <item>El-Gharbia</item>
+        <item>El-Dakahlia</item>
+    </string-array>
+    <string-array name="numbers">
+        <item>count</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <color name="Button_gredient_center">#FF9F20</color>
+    <color name="Button_gredient_end">#FFB756</color>
+    <color name="Button_gredient_start">#FF9800</color>
+    <color name="background_gredient_center">#E8E8E8</color>
+    <color name="background_gredient_end">#F6F6F6</color>
+    <color name="background_gredient_start">#D5D5D5</color>
+    <color name="black_with_ten_transparency">#1A000000</color>
+    <color name="colorArrowDarker">#3F51B5</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#1971D5</color>
+    <color name="colorBorder">#343144</color>
+    <color name="colorGreen">#60FF60</color>
+    <color name="colorGrey">#726F6F</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorSolid">#D39A18</color>
+    <color name="colorUser">#1D297A</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="dark_logo_color">#1C0458</color>
+    <color name="header">#1A91DA</color>
+    <color name="light_logo_color">#9FA9E8</color>
+    <color name="login_bottons">#B0B8E9</color>
+    <color name="medium_logo_color">#838AB6</color>
+    <color name="mtrl_textinput_default_box_stroke_color" ns1:override="true">#000000</color>
+    <color name="proj_main_color">#022135</color>
+    <color name="proj_sub_color">#C65D01</color>
+    <color name="register_gredient_center">#B0B8E9</color>
+    <color name="register_gredient_end">#9FA9E8</color>
+    <color name="register_gredient_start">#C3C9ED</color>
+    <color name="sign_in_text">#1B065A</color>
+    <color name="unclickable_Button">#8D8D8D</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="alreadySize">20sp</dimen>
+    <dimen name="boxPaddingHorizontal">10dp</dimen>
+    <dimen name="boxWidth">270dp</dimen>
+    <dimen name="createAccSize">20sp</dimen>
+    <dimen name="createMarginTop">5dp</dimen>
+    <dimen name="headerSize">50sp</dimen>
+    <dimen name="loginBottonsRadius">10dp</dimen>
+    <dimen name="postDetail">15sp</dimen>
+    <dimen name="postUsername">20sp</dimen>
+    <dimen name="privacyMarginTop">5dp</dimen>
+    <dimen name="regBtnMarginTop">10dp</dimen>
+    <dimen name="regBtnSize">15sp</dimen>
+    <dimen name="regBtnWidth">300dp</dimen>
+    <dimen name="signInSize">20sp</dimen>
+    <dimen name="spinnerHeight">45dp</dimen>
+    <dimen name="userBoxMarginTop">2dp</dimen>
+    <dimen name="viewHeight">2dp</dimen>
+    <dimen name="viewMarginTop">40dp</dimen>
+    <dimen name="viewWidth">115dp</dimen>
+    <string name="alreadyHave">already have an account? </string>
+    <string name="app_name">Sekka Wahda</string>
+    <string name="createAcc">Create your accont</string>
+    <string name="default_web_client_id" translatable="false">567672059901-7mlsos2146ao3svul8d5gb0ifq5ulvb7.apps.googleusercontent.com</string>
+    <string name="emailReg">Email</string>
+    <string name="facebook_app_id">1114891582215561</string>
+    <string name="fb_login_protocol_scheme">fb1114891582215561</string>
+    <string name="firebase_database_url" translatable="false">https://sekka-wahda.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">567672059901</string>
+    <string name="google_api_key" translatable="false">AIzaSyCGZ4tpanMrhTpaF84m1g1YEuOpbCQLC44</string>
+    <string name="google_app_id" translatable="false">1:567672059901:android:21fb0c6d5fcdc4dfa74b94</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCGZ4tpanMrhTpaF84m1g1YEuOpbCQLC44</string>
+    <string name="google_storage_bucket" translatable="false">sekka-wahda.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="passReg">Password</string>
+    <string name="phoneReg">Phone Number</string>
+    <string name="privacy">I agree the Terms of Use &amp; Privacy Policy</string>
+    <string name="project_id" translatable="false">sekka-wahda</string>
+    <string name="registerHint">Create an account to access all features</string>
+    <string name="registerReg">Register</string>
+    <string name="signIn">Sign In </string>
+    <string name="ssnReg">SSN</string>
+    <string name="userReg">Username</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/proj_sub_color</item>
+        <item name="colorPrimaryDark">@color/proj_main_color</item>
+        <item name="colorAccent">@color/colorWhite</item>
+    </style>
+    <style name="FaceTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="RippleStyleGrey">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">@color/colorGrey</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+    <style name="RippleStyleWhite">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">@color/colorWhite</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+    <style name="TextInputLayoutStyleEdit" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="colorControlActivated">@color/proj_main_color</item>    //Floating label color
+    </style>
+    <style name="TextInputLayoutStyleEditProfile" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/proj_sub_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="hintTextAppearance">@style/activeEdit</item>
+    </style>
+    <style name="TextInputLayoutStyleLogin" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/proj_main_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextAppearance">@style/activeLog</item>
+    </style>
+    <style name="TextInputLayoutStyleRegisteration" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/proj_main_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextAppearance">@style/activeLog</item>
+    </style>
+    <style name="activeEdit" parent="Theme.MaterialComponents.Light">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColor">@color/proj_main_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="activeLog" parent="Theme.MaterialComponents.Light">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColor">@color/proj_main_color</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="inactive" parent="Theme.MaterialComponents.Light">
+        <item name="android:textColorPrimary">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+</resources>

@@ -5,17 +5,11 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.mahmoudrefaie.sekkawahda.Network.RetrofitClient
-import com.mahmoudrefaie.sekkawahda.Pojo.NotificationResponse
 import com.mahmoudrefaie.sekkawahda.Pojo.Trip
 import com.mahmoudrefaie.sekkawahda.R
-import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Home.PostsListAdapter
-import com.mahmoudrefaie.sekkawahda.ui.MainPage.NavigationFragments.Notifications.NotificationAdapter
 import kotlinx.android.synthetic.main.activity_my_trips.*
 import retrofit2.Call
 import retrofit2.Callback

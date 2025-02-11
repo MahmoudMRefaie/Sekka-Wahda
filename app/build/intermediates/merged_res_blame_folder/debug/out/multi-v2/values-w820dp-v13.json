@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-33:/values-w820dp-v13/values-w820dp-v13.xml",
+            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-34:/values-w820dp-v13/values-w820dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/alrefai/.gradle/caches/transforms-3/0642d845068d872251825d824fdadf0c/transformed/jetified-alerter-3.0.0/res/values-w820dp-v13/values-w820dp-v13.xml",
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/3fca41be0e3970027cb323412fefb41c/transformed/jetified-Alerter-7.2.4/res/values-w820dp-v13/values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
