@@ -54,7 +54,7 @@ class NotificationsFragment : Fragment() {
         call?.enqueue(object : Callback<List<NotificationResponse>> {
             override fun onFailure(call: Call<List<NotificationResponse>>, t: Throwable) {
                 refreshLayout?.isRefreshing = false
-                Log.e("onFailure loading posts", t.message)
+                Log.e("onFailure loading posts", t.message!!)
                 Toast.makeText(activity, "Check your connection", Toast.LENGTH_LONG).show()
             }
 

@@ -1,9 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: com.balysv:material-ripple:1.0.2@aar">
+  <library name="Gradle: com.balysv:material-ripple:1.0.2@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bfc898d53fc4966efd73fb9c1793450/jetified-material-ripple-1.0.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bfc898d53fc4966efd73fb9c1793450/jetified-material-ripple-1.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9bfc898d53fc4966efd73fb9c1793450/jetified-material-ripple-1.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bb11916e01d68d5d594e22b589553196/transformed/jetified-material-ripple-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bb11916e01d68d5d594e22b589553196/transformed/jetified-material-ripple-1.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bb11916e01d68d5d594e22b589553196/transformed/jetified-material-ripple-1.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.balysv/material-ripple/1.0.2/ed8a7ced09e531cc44a86c8f024a28302452df0c/material-ripple-1.0.2-javadoc.jar!/" />

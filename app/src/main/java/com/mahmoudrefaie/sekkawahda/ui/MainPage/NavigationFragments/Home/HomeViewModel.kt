@@ -26,7 +26,7 @@ class HomeViewModel: ViewModel() {
         val call: Call<List<Trip>>? = RetrofitClient.instance?.api?.getTrips("Bearer $authToken")
         call?.enqueue(object: Callback<List<Trip>> {
             override fun onFailure(call: Call<List<Trip>>, t: Throwable) {
-                Log.e("onFailure loading posts",t.message)
+                Log.e("onFailure loading posts",t.message!!)
                 //Toast.makeText(activity,"Check your connection",Toast.LENGTH_LONG).show()
             }
             override fun onResponse(call: Call<List<Trip>>, response: Response<List<Trip>>) {

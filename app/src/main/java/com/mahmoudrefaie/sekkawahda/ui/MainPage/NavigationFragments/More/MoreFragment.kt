@@ -88,7 +88,7 @@ class MoreFragment : Fragment(), View.OnClickListener {
             override fun onFailure(call: Call<UserIdResponse?>, t: Throwable) {
                 //Toast.makeText(this@Profile, "Check your connection", Toast.LENGTH_LONG).show()
                 Toast.makeText(activity, "OnFailure : " + t.message, Toast.LENGTH_LONG).show()
-                Log.e("onFailure : ", t.message)
+                Log.e("onFailure : ", t.message!!)
             }
 
             override fun onResponse(call: Call<UserIdResponse>, response: Response<UserIdResponse>) {

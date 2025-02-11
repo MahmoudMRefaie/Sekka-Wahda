@@ -197,7 +197,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
         call?.enqueue(object : Callback<List<Trip>> {
             override fun onFailure(call: Call<List<Trip>>, t: Throwable) {
                 refreshLayout.isRefreshing = false
-                Log.e("onFailure loading posts", t.message)
+                Log.e("onFailure loading posts", t.message!!)
                 Toast.makeText(activity, "Check your connection", Toast.LENGTH_LONG).show()
             }
 
@@ -260,7 +260,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
             override fun onFailure(call: Call<UserIdResponse?>, t: Throwable) {
                 //Toast.makeText(this@Profile, "Check your connection", Toast.LENGTH_LONG).show()
                 Toast.makeText(activity, "OnFailure : " + t.message, Toast.LENGTH_LONG).show()
-                Log.e("onFailure : ", t.message)
+                Log.e("onFailure : ", t.message!!)
             }
 
             override fun onResponse(call: Call<UserIdResponse>, response: Response<UserIdResponse>) {
@@ -288,7 +288,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
 
                                 override fun onError(e: Exception?) {
                                     userProfilePic?.setImageResource(R.drawable.blank_profile_pic);
-                                    Log.e("CallBack ", e?.message)
+                                    Log.e("CallBack ", e?.message!!)
                                 }
                             })
 
@@ -307,7 +307,7 @@ class HomeFragment : Fragment() , View.OnClickListener {
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 //Toast.makeText(this@Profile, "Check your connection", Toast.LENGTH_LONG).show()
                 Toast.makeText(activity, "OnFailure : " + t.message, Toast.LENGTH_LONG).show()
-                Log.e("onFailure post trip : ", t.message)
+                Log.e("onFailure post trip : ", t.message!!)
             }
 
             override fun onResponse(call: Call<String>, response: Response<String>) {

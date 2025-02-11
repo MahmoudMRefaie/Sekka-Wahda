@@ -60,13 +60,13 @@ class MyProfileViewModel : ViewModel() {
         val call : Call<String>? = RetrofitClient.instance?.api?.getProfilePic("Bearer $authToken")
         call?.enqueue(object : Callback<String>{
             override fun onFailure(call: Call<String?>, t: Throwable) {
-                Log.e("onFailure : ",t.message)
+                Log.e("onFailure : ",t.message!!)
             }
 
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if(response.isSuccessful){
                     profilePic.value = response.body()
-                    Log.e("OnResponse Pic : ", response.body())
+                    Log.e("OnResponse Pic : ", response.body()!!)
                 }else{
                     Log.e("OnResponse Pic : ", "isn't successful")
                 }

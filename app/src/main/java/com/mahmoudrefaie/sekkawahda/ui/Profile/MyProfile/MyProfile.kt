@@ -391,7 +391,7 @@ class MyProfile : AppCompatActivity(), View.OnClickListener, EditUsernameBottomS
     private fun uriToMultipart(fileUri : Uri?) : MultipartBody.Part {
         //Log.e("RealPath ", getRealPathFromUri(fileUri!!)) //this function to get real path from Uri
         //val realPath = getRealPathFromUri(fileUri)!!
-        Log.e("RealPath ", RealPathUtil.getRealPath(this,fileUri))
+        Log.e("RealPath ", RealPathUtil.getRealPath(this,fileUri)!!)
         val realPath = RealPathUtil.getRealPath(this,fileUri)!!
         val file = File(realPath)
         val fileBody = RequestBody.create(MediaType.parse("multipart/form-data"), file)  //convert file to multipart

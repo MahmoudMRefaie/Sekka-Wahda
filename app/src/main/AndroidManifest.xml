@@ -30,7 +30,9 @@
         <activity android:name=".ui.Cancelation" />
         <activity android:name=".ui.Reservation" />
         <activity android:name=".ui.Login.Login" />
-        <activity android:name=".ui.SplashScreen">
+        <activity
+            android:name=".ui.SplashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,9 +1,9 @@
 <component name="libraryTable">
-  <library name="Gradle: com.nex3z:notification-badge:1.0.2@aar">
+  <library name="Gradle: com.nex3z:notification-badge:1.0.2@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d585b6f0de82cbaa269b18ab90ca30a0/jetified-notification-badge-1.0.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d585b6f0de82cbaa269b18ab90ca30a0/jetified-notification-badge-1.0.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d585b6f0de82cbaa269b18ab90ca30a0/jetified-notification-badge-1.0.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/07ed25c66b4fb67e32f2826ba5f4a8ea/transformed/jetified-notification-badge-1.0.2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/07ed25c66b4fb67e32f2826ba5f4a8ea/transformed/jetified-notification-badge-1.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/07ed25c66b4fb67e32f2826ba5f4a8ea/transformed/jetified-notification-badge-1.0.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nex3z/notification-badge/1.0.2/99a9d534ccbe10b13acf7ae7272be550deda66a4/notification-badge-1.0.2-javadoc.jar!/" />

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mahmoudrefaie.sekkawahda.app-mergeDebugResources-33:/values-w820dp-v13/values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/alrefai/.gradle/caches/transforms-3/0642d845068d872251825d824fdadf0c/transformed/jetified-alerter-3.0.0/res/values-w820dp-v13/values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

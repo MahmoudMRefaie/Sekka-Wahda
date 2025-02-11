@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Graduation Project-sekka_Wa7da.iml" filepath="$PROJECT_DIR$/.idea/modules/Graduation Project-sekka_Wa7da.iml" group="sekka_Wa7da" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sekka-Wahda.sekka_Wa7da.iml" filepath="$PROJECT_DIR$/.idea/modules/Sekka-Wahda.sekka_Wa7da.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="sekka Wa7da/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekka Wa7da-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekka Wa7da-app.iml" group="sekka Wa7da/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" filepath="$PROJECT_DIR$/.idea/modules/sekka_Wa7da.iml" group="sekka_Wa7da" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/sekka_Wa7da.app.unitTest.iml" />
     </modules>
   </component>
 </project>

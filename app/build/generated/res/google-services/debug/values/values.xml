@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">567672059901-7mlsos2146ao3svul8d5gb0ifq5ulvb7.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://sekka-wahda.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">567672059901</string>
+    <string name="google_api_key" translatable="false">AIzaSyCGZ4tpanMrhTpaF84m1g1YEuOpbCQLC44</string>
+    <string name="google_app_id" translatable="false">1:567672059901:android:21fb0c6d5fcdc4dfa74b94</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCGZ4tpanMrhTpaF84m1g1YEuOpbCQLC44</string>
+    <string name="google_storage_bucket" translatable="false">sekka-wahda.appspot.com</string>
+    <string name="project_id" translatable="false">sekka-wahda</string>
+</resources>

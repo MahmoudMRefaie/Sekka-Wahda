@@ -47,7 +47,7 @@ class MyTrips : AppCompatActivity() {
         call?.enqueue(object : Callback<List<Trip>> {
             override fun onFailure(call: Call<List<Trip>>, t: Throwable) {
                 swipe_refresh?.isRefreshing = false
-                Log.e("onFailure loading posts", t.message)
+                Log.e("onFailure loading posts", t.message!!)
                 Toast.makeText(applicationContext, "Check your connection", Toast.LENGTH_LONG).show()
             }
 
